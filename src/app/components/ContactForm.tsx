@@ -45,10 +45,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
         setSuccess(true);
         setForm({ name: "", email: "", message: "" });
       } else {
-        setError(t('contact.error'));
+        setError(t('contact.error') as string);
       }
     } catch {
-      setError(t('contact.error'));
+      setError(t('contact.error') as string);
     } finally {
       setSending(false);
     }
@@ -93,7 +93,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
                 transition={{ duration: 0.6, delay: 0.2 }}
               />
             </motion.svg>
-            <span>{t('contact.success')}</span>
+            <span>{t('contact.success') as string}</span>
           </motion.div>
         )}
       </AnimatePresence>
@@ -109,7 +109,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
           {error}
         </motion.div>
       )}
-      <label className="text-white font-medium">{t('contact.name')}
+      <label className="text-white font-medium">{t('contact.name') as string}
         <input
           type="text"
           name="name"
@@ -117,11 +117,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
           onChange={handleChange}
           required
           className="mt-1 w-full rounded bg-[#313338] text-white p-2 border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
-          aria-label={t('contact.name')}
+          aria-label={t('contact.name') as string}
           disabled={sending}
         />
       </label>
-      <label className="text-white font-medium">{t('contact.email')}
+      <label className="text-white font-medium">{t('contact.email') as string}
         <input
           type="email"
           name="email"
@@ -129,11 +129,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
           onChange={handleChange}
           required
           className="mt-1 w-full rounded bg-[#313338] text-white p-2 border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
-          aria-label={t('contact.email')}
+          aria-label={t('contact.email') as string}
           disabled={sending}
         />
       </label>
-      <label className="text-white font-medium">{t('contact.message')}
+      <label className="text-white font-medium">{t('contact.message') as string}
         <textarea
           name="message"
           value={form.message}
@@ -141,7 +141,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
           required
           rows={4}
           className="mt-1 w-full rounded bg-[#313338] text-white p-2 border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
-          aria-label={t('contact.message')}
+          aria-label={t('contact.message') as string}
           disabled={sending}
         />
       </label>
@@ -150,7 +150,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
         className="mt-2 bg-[#5865f2] text-white font-semibold py-2 rounded hover:bg-[#4752c4] transition-colors disabled:opacity-60"
         disabled={sending}
       >
-        {sending ? t('contact.sending') : t('contact.send')}
+        {sending ? t('contact.sending') as string : t('contact.send') as string}
       </button>
     </motion.form>
   );

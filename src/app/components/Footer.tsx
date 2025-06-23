@@ -16,20 +16,20 @@ const Footer: React.FC = () => {
 
   const footerLinks = [
     {
-      title: t('footer.product'),
+      title: t('footer.product') as string,
       links: [
-        { label: t('nav.services'), href: '/services' },
-        { label: t('nav.expertise'), href: '/expertise' },
-        { label: t('nav.contact'), href: '/contact' },
-        { label: t('nav.about'), href: '/about' },
+        { label: t('nav.services') as string, href: '/services' },
+        { label: t('nav.expertise') as string, href: '/expertise' },
+        { label: t('nav.contact') as string, href: '/contact' },
+        { label: t('nav.about') as string, href: '/about' },
       ],
     },
     {
-      title: t('footer.policies'),
+      title: t('footer.policies') as string,
       links: [
-        { label: t('footer.terms'), href: '/policies/terms' },
-        { label: t('footer.privacy'), href: '/policies/privacy' },
-        { label: t('footer.cookies'), href: '/policies/cookies' },
+        { label: t('footer.terms') as string, href: '/policies/terms' },
+        { label: t('footer.privacy') as string, href: '/policies/privacy' },
+        { label: t('footer.cookies') as string, href: '/policies/cookies' },
       ],
     },
   ];
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
             <img src="/logo.png" alt="bugket logo" className="w-16 h-16 mb-2" />
             <div className="flex flex-col items-center md:items-start">
               {/* Language selector label */}
-              <span className="text-white/70 font-medium text-base mb-1">{t('footer.language')}</span>
+              <span className="text-white/70 font-medium text-base mb-1">{t('footer.language') as string}</span>
               {/* Language dropdown selector */}
               <div className="w-40 bg-white/10 rounded-2xl p-2 flex flex-row items-center gap-2 shadow-lg">
                 <select
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
       </div>
       {/* Copyright notice */}
       <div className="text-center text-white/60 text-sm mt-6 relative z-10">
-        &copy; {new Date().getFullYear()} bugket. {t('footer.rights')}
+        &copy; {new Date().getFullYear()} bugket. {t('footer.rights') as string }
       </div>
       {/* Large background text for branding */}
       <span

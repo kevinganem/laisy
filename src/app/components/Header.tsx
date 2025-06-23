@@ -32,7 +32,7 @@ const Header: React.FC = () => {
           href="/contact"
           className="bg-white text-[#23272a] font-bold px-7 py-2 rounded-full shadow-md border border-white/80 hover:bg-gray-200 transition-colors duration-200 text-lg"
         >
-          {t('nav.contact')}
+          {t('nav.contact') as string}
         </a>
       </div>
       {/* Centered navigation menu (not sticky) */}
@@ -51,7 +51,7 @@ const Header: React.FC = () => {
                   className="relative px-2 py-1 transition-colors duration-200 hover:text-[#57f287]"
                   tabIndex={0}
                 >
-                  <span className="z-10 relative">{label}</span>
+                  <span className="z-10 relative">{label as string}</span>
                   {/* Animated underline on hover */}
                   <span className="absolute left-0 bottom-0 w-full h-0.5 bg-gradient-to-r from-[#5865f2] via-[#57f287] to-[#eb459e] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 rounded-full" />
                 </a>
