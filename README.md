@@ -33,12 +33,6 @@
 
 ---
 
-## 🖼️ Screenshots
-
-> _Add your screenshots here_
-
----
-
 ## 🚀 Tech Stack
 
 - **Next.js 15** (App Router, SSR/CSR, TypeScript)
@@ -70,26 +64,6 @@
 
 ---
 
-## 🛠️ Getting Started
-
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/your-username/bugket.git
-   cd bugket
-   ```
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or yarn install
-   ```
-3. **Run the development server**
-   ```bash
-   npm run dev
-   # or yarn dev
-   ```
-4. **Open** [http://localhost:3000](http://localhost:3000) in your browser.
-
----
 
 ## 🌍 Multi-language Support
 
@@ -119,23 +93,9 @@
 
 ---
 
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br>
-Feel free to open an [issue](https://github.com/your-username/bugket/issues) or submit a pull request.
-
----
-
 ## 📄 License
 
 This project is [MIT](LICENSE) licensed.
-
----
-
-## 📫 Contact
-
-- [bugket website](https://bugket.com) _(replace with your real link)_
-- [contact@bugket.com](mailto:contact@bugket.com)
 
 ---
 
