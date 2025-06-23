@@ -2,6 +2,7 @@
 import React from 'react';
 import { useLanguage } from './LanguageProvider';
 import Link from 'next/link';
+import Image from 'next/image';
 
 /**
  * Header component for the main navigation bar.
@@ -15,9 +16,11 @@ const Header: React.FC = () => {
       {/* Sticky logo and brand name at the top-left, both clickable */}
       <div className="fixed top-4 left-0 z-50 flex items-center h-16 pl-6 py-2">
         <Link href="/" className="flex items-center group focus:outline-none" aria-label="Go to home">
-          <img
+          <Image
             src="/logo.png"
             alt="bugket logo"
+            width={40}
+            height={40}
             className="w-9 h-9 md:w-10 md:h-10 object-contain mr-2 transition-transform duration-200 group-hover:scale-105"
             style={{ minWidth: 32, minHeight: 32 }}
           />

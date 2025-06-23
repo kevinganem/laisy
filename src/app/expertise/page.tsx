@@ -3,6 +3,9 @@ import React from "react";
 import AnimatedSection from "../components/AnimatedSection";
 import ExpertiseBlock from "../components/ExpertiseBlock";
 import { useLanguage } from "../components/LanguageProvider";
+import Image from 'next/image';
+import { FaCogs, FaUsers, FaChartLine, FaVrCardboard, FaNetworkWired, FaRobot, FaUnity, FaPlaystation, FaXbox, FaApple, FaAndroid, FaSteam } from "react-icons/fa";
+import { SiUnity, SiPlaystation, SiSteam } from "react-icons/si";
 
 /**
  * ExpertisePage component
@@ -35,6 +38,21 @@ const ExpertisePage: React.FC = () => {
   const history = t('expertise.history') as HistoryItem[];
   const tools = t('expertise.tools') as (ToolItem | string)[];
 
+  const iconMap: Record<string, React.ReactNode> = {
+    FaCogs: <FaCogs size={40} />,
+    FaUsers: <FaUsers size={40} />,
+    FaChartLine: <FaChartLine size={40} />,
+    FaVrCardboard: <FaVrCardboard size={40} />,
+    FaNetworkWired: <FaNetworkWired size={40} />,
+    FaRobot: <FaRobot size={40} />,
+    Unity: <SiUnity size={36} className="text-[#fff]" />,
+    PlayStation: <SiPlaystation size={36} className="text-[#003087]" />,
+    Xbox: <FaXbox size={36} color="#107C10" />,
+    iOS: <FaApple size={36} className="text-[#fff]" />,
+    Android: <FaAndroid size={36} className="text-[#3DDC84]" />,
+    Steam: <SiSteam size={36} className="text-[#171A21]" />,
+  };
+
   return (
     <div className="flex flex-col gap-24">
       {/* Hero section: expertise pitch and illustration */}
@@ -47,9 +65,11 @@ const ExpertisePage: React.FC = () => {
             </p>
           </div>
           <div className="flex-1 flex justify-center items-center z-10">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
               alt="QA Dashboard Illustration"
+              width={340}
+              height={340}
               className="w-[260px] h-[260px] md:w-[340px] md:h-[340px] object-cover rounded-3xl shadow-2xl border-4 border-[#57f287] bg-[#23272a]"
               draggable={false}
             />
@@ -70,8 +90,8 @@ const ExpertisePage: React.FC = () => {
         <div className="flex flex-wrap gap-8 justify-center">
           {Array.isArray(stats) && stats.map((s: StatItem, i) => (
             <div key={i} className="bg-white/10 border border-white/10 rounded-2xl px-8 py-6 flex flex-col items-center shadow-lg">
-              <span className="text-3xl md:text-4xl font-extrabold text-[#57f287] drop-shadow-neon">{(s as any).value}</span>
-              <span className="text-gray-200 text-sm mt-2 uppercase tracking-widest">{(s as any).label}</span>
+              <span className="text-3xl md:text-4xl font-extrabold text-[#57f287] drop-shadow-neon">{s.value}</span>
+              <span className="text-gray-200 text-sm mt-2 uppercase tracking-widest">{s.label}</span>
             </div>
           ))}
         </div>
@@ -82,8 +102,8 @@ const ExpertisePage: React.FC = () => {
           <div className="flex flex-row gap-8 items-center justify-center w-full overflow-x-auto pb-2">
             {Array.isArray(history) && history.map((h: HistoryItem, i) => (
               <div key={i} className="flex flex-col items-center min-w-[160px]">
-                <span className="bg-[#5865f2] text-white px-4 py-2 rounded-full text-base font-bold shadow-neon mb-2">{(h as any).year}</span>
-                <span className="text-white text-sm bg-black/40 px-3 py-2 rounded-xl shadow-md text-center">{(h as any).event}</span>
+                <span className="bg-[#5865f2] text-white px-4 py-2 rounded-full text-base font-bold shadow-neon mb-2">{h.year}</span>
+                <span className="text-white text-sm bg-black/40 px-3 py-2 rounded-xl shadow-md text-center">{h.event}</span>
                 <span className="w-16 h-1 bg-gradient-to-r from-[#5865f2] via-[#57f287] to-[#eb459e] my-2 rounded-full" />
               </div>
             ))}
@@ -96,7 +116,7 @@ const ExpertisePage: React.FC = () => {
           {Array.isArray(expertise) && expertise.map((e: ExpertiseItem, i) => (
             <ExpertiseBlock
               key={i}
-              icon={e.icon}
+              icon={iconMap[(e as any).icon]}
               title={e.title}
               description={e.desc}
               className="bg-gradient-to-br from-[#232946]/80 via-[#3a1c71]/70 to-[#5865f2]/30 bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl border border-[#5865f2]/20 hover:scale-[1.03] transition-transform duration-300 min-h-[220px]"
@@ -109,8 +129,8 @@ const ExpertisePage: React.FC = () => {
         <div className="flex flex-wrap gap-8 justify-center items-center">
           {Array.isArray(tools) && tools.map((t: ToolItem | string, i) => (
             <div key={i} className="flex flex-col items-center gap-2 bg-[#23272a]/80 px-6 py-4 rounded-2xl shadow-lg border border-[#5865f2]/20">
-              {typeof t === 'string' ? null : (t as any).icon}
-              <span className="text-white text-sm font-semibold mt-1">{typeof t === 'string' ? t : (t as any).name}</span>
+              {iconMap[typeof t === 'string' ? t : t.name]}
+              <span className="text-white text-sm font-semibold mt-1">{typeof t === 'string' ? t : t.name}</span>
             </div>
           ))}
         </div>

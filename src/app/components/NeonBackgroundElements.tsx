@@ -120,7 +120,7 @@ const NeonBackgroundElements: React.FC = () => {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10">
       <svg width="100%" height="100%" className="absolute inset-0 w-full h-full">
-        {stars.map((star, i) => (
+        {stars.map((star) => (
           <g
             key={star.key}
             style={{

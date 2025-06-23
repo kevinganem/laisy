@@ -2,6 +2,7 @@
 import React from "react";
 import AnimatedSection from "./components/AnimatedSection";
 import { useLanguage } from './components/LanguageProvider';
+import Image from 'next/image';
 
 /**
  * HomePage component
@@ -31,9 +32,11 @@ const HomePage: React.FC = () => {
             </div>
           </div>
           <div className="flex-1 flex justify-center items-center">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80"
               alt="QA Gaming Illustration"
+              width={420}
+              height={420}
               className="w-[340px] h-[340px] md:w-[420px] md:h-[420px] object-cover rounded-3xl shadow-2xl border-4 border-[#5865f2] bg-[#23272a]"
               draggable={false}
             />
@@ -49,9 +52,11 @@ const HomePage: React.FC = () => {
                 {/* Main image (alternates left/right on desktop) */}
                 <div className="flex-shrink-0 flex items-center justify-center h-full px-8 md:px-12 py-8 md:py-0">
                   <div className="w-[260px] h-[200px] md:w-[320px] md:h-[240px] flex items-center justify-center rounded-[2rem] overflow-hidden border-4 border-[#5865f2] bg-[#232946]/80 drop-shadow-neon">
-                    <img
+                    <Image
                       src={card.image}
                       alt={card.alt}
+                      width={320}
+                      height={240}
                       className="w-full h-full object-cover rounded-[2rem]"
                       draggable={false}
                     />

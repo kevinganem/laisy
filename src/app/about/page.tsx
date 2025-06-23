@@ -3,6 +3,7 @@ import React from "react";
 import AnimatedSection from "../components/AnimatedSection";
 import TeamMember from "../components/TeamMember";
 import { useLanguage } from "../components/LanguageProvider";
+import Image from 'next/image';
 
 /**
  * About page for bugket.
@@ -21,10 +22,12 @@ const AboutPage: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-neon leading-tight text-center" dangerouslySetInnerHTML={{ __html: t('about.hero') as string }} />
           <div className="flex gap-4 md:gap-8 justify-center items-center z-10">
             {Array.isArray(team) && team.map((m, i) => (
-              <img
+              <Image
                 key={i}
                 src={m.avatar}
                 alt={m.name}
+                width={128}
+                height={128}
                 className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[#5865f2] object-cover shadow-lg bg-[#232946]/80"
                 draggable={false}
               />
