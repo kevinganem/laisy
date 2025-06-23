@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import AnimatedSection from "./components/AnimatedSection";
-import { motion } from "framer-motion";
-import FloatingCardImage from "./components/FloatingCardImage";
 import { useLanguage } from './components/LanguageProvider';
 
 /**
@@ -22,14 +20,14 @@ const HomePage: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24 min-h-[420px]">
           <div className="flex-1 flex flex-col gap-6 items-start md:items-start justify-center">
             <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-neon leading-tight text-left md:text-left">
-              {t('hero.home')}
+              {t('hero.home') as string}
             </h1>
             <p className="text-lg md:text-xl text-gray-200 max-w-xl text-left md:text-left">
-              {t('hero.description')}
+              {t('hero.description') as string}
             </p>
             <div className="flex gap-4 mt-2">
-              <a href="/services" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg">{t('hero.services')}</a>
-              <a href="/contact" className="bg-[#23272a] text-white px-8 py-3 rounded-xl font-semibold border border-[#5865f2] hover:bg-[#313338] transition-colors text-lg">{t('hero.contact')}</a>
+              <a href="/services" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg">{t('hero.services') as string}</a>
+              <a href="/contact" className="bg-[#23272a] text-white px-8 py-3 rounded-xl font-semibold border border-[#5865f2] hover:bg-[#313338] transition-colors text-lg">{t('hero.contact') as string}</a>
             </div>
           </div>
           <div className="flex-1 flex justify-center items-center">

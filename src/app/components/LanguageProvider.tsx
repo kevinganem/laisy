@@ -8,7 +8,7 @@ import fr from '../../locales/fr.json';
 import es from '../../locales/es.json';
 import de from '../../locales/de.json';
 
-const TRANSLATIONS: Record<string, any> = { en, fr, es, de };
+const TRANSLATIONS: Record<string, Translations> = { en, fr, es, de };
 
 // Supported languages and their display labels
 const LANGUAGES = [
@@ -20,13 +20,13 @@ const LANGUAGES = [
 
 // Type for translation object (recursive for nested keys)
 interface Translations {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 interface LanguageContextProps {
   language: string;
   setLanguage: (lang: string) => void;
-  t: (key: string) => any;
+  t: (key: string) => unknown;
   languages: typeof LANGUAGES;
 }
 
@@ -68,9 +68,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   };
 
   // Translation function: supports dot notation for nested keys
-  const t = (key: string): any => {
-    const value = key.split('.').reduce((obj, k) => (obj && obj[k] !== undefined ? obj[k] : undefined), translations);
-    return value;
+  const t = (key: string): unknown => {
+    return key.split('.').reduce<unknown>((obj, k) => (obj && typeof obj === 'object' && k in obj ? (obj as Translations)[k] : undefined), translations);
   };
 
   return (

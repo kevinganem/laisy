@@ -4,42 +4,6 @@ import AnimatedSection from "../components/AnimatedSection";
 import TeamMember from "../components/TeamMember";
 import { useLanguage } from "../components/LanguageProvider";
 
-const TEAM = [
-  {
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-    name: "Alex Carter",
-    role: "QA Lead",
-    description: "10+ years in game QA, expert in automation and process optimization. Loves RPGs and coffee."
-  },
-  {
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-    name: "Jamie Lee",
-    role: "Senior QA Analyst",
-    description: "Specialist in multiplayer and cross-platform testing. Board game enthusiast and puzzle solver."
-  },
-  {
-    avatar: "https://randomuser.me/api/portraits/men/45.jpg",
-    name: "Chris Novak",
-    role: "Mobile QA Specialist",
-    description: "Mobile and VR QA wizard. Speedrunner and retro gaming fan."
-  }
-];
-
-const VALUES = [
-  "Player-first mindset",
-  "Transparency & trust",
-  "Continuous learning",
-  "Diversity & inclusion",
-  "Fun at work!"
-];
-
-const FUN_FACTS = [
-  "We have a Mario Kart tournament every Friday!",
-  "Our team speaks 7 languages.",
-  "We once found 1,000+ bugs in a single week.",
-  "Our office has more consoles than desks."
-];
-
 /**
  * About page for bugket.
  * Presents the company's story, mission, and team.

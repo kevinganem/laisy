@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { useLanguage } from './LanguageProvider';
+import Link from 'next/link';
 
 /**
  * Header component for the main navigation bar.
@@ -13,7 +14,7 @@ const Header: React.FC = () => {
     <>
       {/* Sticky logo and brand name at the top-left, both clickable */}
       <div className="fixed top-4 left-0 z-50 flex items-center h-16 pl-6 py-2">
-        <a href="/" className="flex items-center group focus:outline-none" aria-label="Go to home">
+        <Link href="/" className="flex items-center group focus:outline-none" aria-label="Go to home">
           <img
             src="/logo.png"
             alt="bugket logo"
@@ -23,7 +24,7 @@ const Header: React.FC = () => {
           <span className="text-2xl md:text-2xl font-extrabold text-white tracking-wide drop-shadow-neon ml-1 group-hover:text-[#5865f2] transition-colors duration-200 select-none">
             bugket
           </span>
-        </a>
+        </Link>
       </div>
       {/* Sticky contact button at the top-right */}
       <div className="fixed top-4 right-0 z-50 flex items-center h-16 pr-8 py-2">

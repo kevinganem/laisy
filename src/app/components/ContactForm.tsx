@@ -47,7 +47,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
       } else {
         setError(t('contact.error'));
       }
-    } catch (err) {
+    } catch {
       setError(t('contact.error'));
     } finally {
       setSending(false);
