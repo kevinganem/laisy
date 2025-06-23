@@ -28,7 +28,7 @@ const ContactPage: React.FC = () => {
             <span className="bg-[#5865f2] p-4 rounded-full shadow-lg animate-bounce">
               <FaCommentDots className="text-white text-3xl" />
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow-neon leading-tight" dangerouslySetInnerHTML={{ __html: t('contact.hero') }} />
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow-neon leading-tight" dangerouslySetInnerHTML={{ __html: t('contact.hero') as string }} />
           </div>
           {/* Neon particles */}
           <div className="absolute inset-0 pointer-events-none z-0">
@@ -67,9 +67,9 @@ const ContactPage: React.FC = () => {
       <AnimatedSection delay={0.2}>
         <div className="flex flex-col items-center gap-2 bg-white/10 border border-white/10 rounded-2xl p-8 max-w-md mx-auto shadow-lg backdrop-blur-md">
           <span className="flex items-center gap-2 text-[#57f287] text-xl font-bold drop-shadow-neon">
-            <FaMapMarkerAlt /> {t('contact.location')}
+            <FaMapMarkerAlt /> {t('contact.location') as string}
           </span>
-          <span className="text-gray-200 text-sm">{t('contact.remote')}</span>
+          <span className="text-gray-200 text-sm">{t('contact.remote') as string}</span>
         </div>
       </AnimatedSection>
     </div>

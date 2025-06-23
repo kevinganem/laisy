@@ -18,7 +18,7 @@ const AboutPage: React.FC = () => {
       {/* Hero section */}
       <AnimatedSection>
         <div className="relative flex flex-col items-center gap-6 min-h-[260px] mb-4">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-neon leading-tight text-center" dangerouslySetInnerHTML={{ __html: t('about.hero') }} />
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-neon leading-tight text-center" dangerouslySetInnerHTML={{ __html: t('about.hero') as string }} />
           <div className="flex gap-4 md:gap-8 justify-center items-center z-10">
             {Array.isArray(team) && team.map((m, i) => (
               <img

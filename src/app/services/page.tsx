@@ -32,9 +32,9 @@ const ServicesPage: React.FC = () => {
       <AnimatedSection>
         <div className="relative flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 min-h-[320px] mb-4 mx-auto">
           <div className="flex-1 flex flex-col gap-4 items-center justify-center z-10">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-neon leading-tight text-center" dangerouslySetInnerHTML={{ __html: t('services.hero') }} />
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-neon leading-tight text-center" dangerouslySetInnerHTML={{ __html: t('services.hero') as string }} />
             <p className="text-lg md:text-xl text-gray-200 max-w-xl text-center">
-              {t('services.description')}
+              {t('services.description') as string}
             </p>
           </div>
           <div className="flex-1 flex justify-center items-center z-10">
@@ -86,8 +86,8 @@ const ServicesPage: React.FC = () => {
       {/* CTA: call-to-action to contact bugket */}
       <AnimatedSection delay={0.2}>
         <div className="flex flex-col items-center gap-4">
-          <p className="text-xl text-white font-bold drop-shadow-neon">{t('services.cta')}</p>
-          <a href="/contact" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg">{t('services.ctaBtn')}</a>
+          <p className="text-xl text-white font-bold drop-shadow-neon">{t('services.cta') as string}</p>
+          <a href="/contact" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg">{t('services.ctaBtn') as string}</a>
         </div>
       </AnimatedSection>
     </div>
