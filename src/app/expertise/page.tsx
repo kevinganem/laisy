@@ -11,10 +11,30 @@ import { useLanguage } from "../components/LanguageProvider";
  */
 const ExpertisePage: React.FC = () => {
   const { t } = useLanguage();
-  const expertise = t('expertise.list') as any[];
-  const stats = t('expertise.stats') as any[];
-  const history = t('expertise.history') as any[];
-  const tools = t('expertise.tools') as any[];
+
+  interface ExpertiseItem {
+    icon: React.ReactNode;
+    title: string;
+    desc: string;
+  }
+  interface StatItem {
+    value: string;
+    label: string;
+  }
+  interface HistoryItem {
+    year: string;
+    event: string;
+  }
+  interface ToolItem {
+    icon: React.ReactNode;
+    name: string;
+  }
+
+  const expertise = t('expertise.list') as ExpertiseItem[];
+  const stats = t('expertise.stats') as StatItem[];
+  const history = t('expertise.history') as HistoryItem[];
+  const tools = t('expertise.tools') as (ToolItem | string)[];
+
   return (
     <div className="flex flex-col gap-24">
       {/* Hero section: expertise pitch and illustration */}
@@ -48,7 +68,7 @@ const ExpertisePage: React.FC = () => {
       {/* Stats: key numbers about bugket's QA experience */}
       <AnimatedSection>
         <div className="flex flex-wrap gap-8 justify-center">
-          {Array.isArray(stats) && stats.map((s, i) => (
+          {Array.isArray(stats) && stats.map((s: StatItem, i) => (
             <div key={i} className="bg-white/10 border border-white/10 rounded-2xl px-8 py-6 flex flex-col items-center shadow-lg">
               <span className="text-3xl md:text-4xl font-extrabold text-[#57f287] drop-shadow-neon">{(s as any).value}</span>
               <span className="text-gray-200 text-sm mt-2 uppercase tracking-widest">{(s as any).label}</span>
@@ -60,7 +80,7 @@ const ExpertisePage: React.FC = () => {
       <AnimatedSection delay={0.1}>
         <div className="flex flex-col items-center gap-8">
           <div className="flex flex-row gap-8 items-center justify-center w-full overflow-x-auto pb-2">
-            {Array.isArray(history) && history.map((h, i) => (
+            {Array.isArray(history) && history.map((h: HistoryItem, i) => (
               <div key={i} className="flex flex-col items-center min-w-[160px]">
                 <span className="bg-[#5865f2] text-white px-4 py-2 rounded-full text-base font-bold shadow-neon mb-2">{(h as any).year}</span>
                 <span className="text-white text-sm bg-black/40 px-3 py-2 rounded-xl shadow-md text-center">{(h as any).event}</span>
@@ -73,7 +93,7 @@ const ExpertisePage: React.FC = () => {
       {/* Expertise blocks: grid of QA specialties */}
       <AnimatedSection delay={0.2}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {Array.isArray(expertise) && expertise.map((e, i) => (
+          {Array.isArray(expertise) && expertise.map((e: ExpertiseItem, i) => (
             <ExpertiseBlock
               key={i}
               icon={e.icon}
@@ -87,7 +107,7 @@ const ExpertisePage: React.FC = () => {
       {/* Tools & technologies: icons of platforms and tools */}
       <AnimatedSection delay={0.3}>
         <div className="flex flex-wrap gap-8 justify-center items-center">
-          {Array.isArray(tools) && tools.map((t, i) => (
+          {Array.isArray(tools) && tools.map((t: ToolItem | string, i) => (
             <div key={i} className="flex flex-col items-center gap-2 bg-[#23272a]/80 px-6 py-4 rounded-2xl shadow-lg border border-[#5865f2]/20">
               {typeof t === 'string' ? null : (t as any).icon}
               <span className="text-white text-sm font-semibold mt-1">{typeof t === 'string' ? t : (t as any).name}</span>
