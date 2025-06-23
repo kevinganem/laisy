@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "expertise": "Expertise",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "product": "Product",
+    "policies": "Policies",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "language": "Language",
+    "rights": "All rights reserved."
+  },
+  "hero": {
+    "home": "Game QA, done right.",
+    "description": "bugket helps studios deliver flawless games to players worldwide. Our QA experts test on all platforms, all regions, all genres.",
+    "services": "Our Services",
+    "expertise": "Our Expertise",
+    "about": "About bugket",
+    "contact": "Contact Us"
+  },
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Thank you for contacting bugket! We'll get back to you soon.",
+    "error": "An error occurred. Please try again.",
+    "hero": "Let's build better games <span class='text-[#57f287]'>together</span>",
+    "location": "Paris, France",
+    "remote": "Remote & worldwide collaboration",
+    "socials": [
+      { "icon": "FaDiscord", "label": "Discord", "url": "#" },
+      { "icon": "FaTwitter", "label": "Twitter", "url": "#" },
+      { "icon": "FaEnvelope", "label": "Email", "url": "mailto:contact@bugket.com" }
+    ]
+  },
+  "policies": {
+    "terms_title": "Terms of Service",
+    "privacy_title": "Privacy Policy",
+    "cookies_title": "Cookies Policy"
+  },
+  "about": {
+    "hero": "Meet the <span class='text-[#eb459e]'>bugket crew</span>",
+    "team": [
+      {
+        "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+        "name": "Alex Carter",
+        "role": "QA Lead",
+        "description": "10+ years in game QA, expert in automation and process optimization. Loves RPGs and coffee."
+      },
+      {
+        "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+        "name": "Jamie Lee",
+        "role": "Senior QA Analyst",
+        "description": "Specialist in multiplayer and cross-platform testing. Board game enthusiast and puzzle solver."
+      },
+      {
+        "avatar": "https://randomuser.me/api/portraits/men/45.jpg",
+        "name": "Chris Novak",
+        "role": "Mobile QA Specialist",
+        "description": "Mobile and VR QA wizard. Speedrunner and retro gaming fan."
+      }
+    ],
+    "values": [
+      "Player-first mindset",
+      "Transparency & trust",
+      "Continuous learning",
+      "Diversity & inclusion",
+      "Fun at work!"
+    ],
+    "funFacts": [
+      "We have a Mario Kart tournament every Friday!",
+      "Our team speaks 7 languages.",
+      "We once found 1,000+ bugs in a single week.",
+      "Our office has more consoles than desks."
+    ]
+  },
+  "services": {
+    "hero": "All your QA needs, one <span class='text-[#5865f2]'>team</span>",
+    "description": "From bug hunting to platform certification, bugket covers every aspect of game QA with passion and precision.",
+    "list": [
+      { "icon": "FaBug", "title": "Functional Testing", "desc": "We find bugs before your players do. Manual and automated tests for every feature, every build." },
+      { "icon": "FaGamepad", "title": "Compatibility", "desc": "Tested on all platforms, devices, and controllers. No more nasty surprises on launch day." },
+      { "icon": "FaCheckCircle", "title": "Certification QA", "desc": "We help you pass PlayStation, Xbox, Nintendo, and mobile store requirements." },
+      { "icon": "FaRocket", "title": "Performance QA", "desc": "FPS, memory, load times: we profile and optimize for smooth gameplay everywhere." },
+      { "icon": "FaMobileAlt", "title": "Mobile QA", "desc": "iOS, Android, tablets: we cover all mobile devices and OS versions." },
+      { "icon": "FaShieldAlt", "title": "Security & Anti-Cheat", "desc": "Protect your game and your players with advanced security and anti-cheat testing." }
+    ],
+    "why": [
+      "Expert QA team with gaming passion",
+      "Fast turnaround & clear reporting",
+      "Player-first, fun-focused mindset"
+    ],
+    "cta": "Ready to level up your QA?",
+    "ctaBtn": "Contact bugket"
+  },
+  "expertise": {
+    "hero": "Level up your game's <span class='text-[#57f287]'>quality</span>",
+    "description": "Our expertise covers every aspect of QA, from automation to multiplayer, VR, and analytics. We help you ship better games, faster.",
+    "list": [
+      { "icon": "FaCogs", "title": "Automation & Tools", "desc": "Custom scripts and tools to speed up QA and catch more bugs." },
+      { "icon": "FaUsers", "title": "Multiplayer Testing", "desc": "Stress tests, matchmaking, and crossplay for seamless online experiences." },
+      { "icon": "FaChartLine", "title": "Analytics & Reporting", "desc": "Detailed bug tracking, analytics, and actionable reports for your team." },
+      { "icon": "FaVrCardboard", "title": "VR/AR QA", "desc": "Expertise in immersive and next-gen platforms." },
+      { "icon": "FaNetworkWired", "title": "Network & Latency", "desc": "Simulate real-world network conditions for robust online play." },
+      { "icon": "FaRobot", "title": "AI & Bot Testing", "desc": "Automated bots for repetitive and regression testing." }
+    ],
+    "stats": [
+      { "label": "Games Tested", "value": "+120" },
+      { "label": "Platforms", "value": "10+" },
+      { "label": "Bugs Found", "value": "30,000+" },
+      { "label": "QA Experts", "value": "25" }
+    ],
+    "history": [
+      { "year": "2017", "event": "bugket founded" },
+      { "year": "2018", "event": "First AAA project" },
+      { "year": "2020", "event": "Mobile & VR expansion" },
+      { "year": "2023", "event": "100th game tested" }
+    ],
+    "tools": [
+      "Unity", "PlayStation", "Xbox", "iOS", "Android", "Steam"
+    ]
+  },
+  "test": "It works!",
+  "homeCards": [
+    {
+      "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
+      "alt": "Global QA",
+      "title": "Global QA for Every Game",
+      "text": "bugket helps studios deliver flawless games to players worldwide. Our QA experts test on all platforms, all regions, all genres.",
+      "reverse": false
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80",
+      "alt": "Automation Tools",
+      "title": "Automation & Custom Tools",
+      "text": "We build and use custom tools to speed up testing, catch more bugs, and make your releases smoother.",
+      "reverse": true
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80",
+      "alt": "Next-gen Expertise",
+      "title": "Next-gen QA Expertise",
+      "text": "From multiplayer to VR, our team has hands-on experience with the latest gaming tech and standards.",
+      "reverse": false
+    }
+  ]
+} 

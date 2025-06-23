@@ -1,0 +1,112 @@
+"use client";
+import React from "react";
+import AnimatedSection from "../components/AnimatedSection";
+import TeamMember from "../components/TeamMember";
+import { useLanguage } from "../components/LanguageProvider";
+
+const TEAM = [
+  {
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Alex Carter",
+    role: "QA Lead",
+    description: "10+ years in game QA, expert in automation and process optimization. Loves RPGs and coffee."
+  },
+  {
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Jamie Lee",
+    role: "Senior QA Analyst",
+    description: "Specialist in multiplayer and cross-platform testing. Board game enthusiast and puzzle solver."
+  },
+  {
+    avatar: "https://randomuser.me/api/portraits/men/45.jpg",
+    name: "Chris Novak",
+    role: "Mobile QA Specialist",
+    description: "Mobile and VR QA wizard. Speedrunner and retro gaming fan."
+  }
+];
+
+const VALUES = [
+  "Player-first mindset",
+  "Transparency & trust",
+  "Continuous learning",
+  "Diversity & inclusion",
+  "Fun at work!"
+];
+
+const FUN_FACTS = [
+  "We have a Mario Kart tournament every Friday!",
+  "Our team speaks 7 languages.",
+  "We once found 1,000+ bugs in a single week.",
+  "Our office has more consoles than desks."
+];
+
+/**
+ * About page for bugket.
+ * Presents the company's story, mission, and team.
+ */
+const AboutPage: React.FC = () => {
+  const { t } = useLanguage();
+  const team = t('about.team');
+  const values = t('about.values');
+  const funFacts = t('about.funFacts');
+  return (
+    <div className="flex flex-col gap-24">
+      {/* Hero section */}
+      <AnimatedSection>
+        <div className="relative flex flex-col items-center gap-6 min-h-[260px] mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-neon leading-tight text-center" dangerouslySetInnerHTML={{ __html: t('about.hero') }} />
+          <div className="flex gap-4 md:gap-8 justify-center items-center z-10">
+            {Array.isArray(team) && team.map((m, i) => (
+              <img
+                key={i}
+                src={m.avatar}
+                alt={m.name}
+                className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[#5865f2] object-cover shadow-lg bg-[#232946]/80"
+                draggable={false}
+              />
+            ))}
+          </div>
+          {/* Neon particles */}
+          <div className="absolute inset-0 pointer-events-none z-0">
+            <svg width="100%" height="100%" className="absolute inset-0 animate-pulse" style={{ filter: 'blur(2px)' }}>
+              <circle cx="20%" cy="60%" r="14" fill="#5865f2" fillOpacity="0.18" />
+              <circle cx="80%" cy="30%" r="10" fill="#eb459e" fillOpacity="0.15" />
+              <circle cx="50%" cy="20%" r="8" fill="#57f287" fillOpacity="0.13" />
+              <circle cx="60%" cy="80%" r="10" fill="#5865f2" fillOpacity="0.12" />
+            </svg>
+          </div>
+        </div>
+      </AnimatedSection>
+      {/* Team section */}
+      <AnimatedSection>
+        <div className="flex flex-wrap gap-8 justify-center">
+          {Array.isArray(team) && team.map((m, i) => (
+            <TeamMember key={i} {...m} className="bg-white/10 border border-white/10 hover:scale-105 transition-transform duration-300 shadow-lg backdrop-blur-md" />
+          ))}
+        </div>
+      </AnimatedSection>
+      {/* Values */}
+      <AnimatedSection delay={0.1}>
+        <div className="flex flex-wrap gap-4 justify-center">
+          {Array.isArray(values) && values.map((v, i) => (
+            <span key={i} className="px-4 py-2 rounded-full bg-gradient-to-r from-[#5865f2] via-[#57f287] to-[#eb459e] text-white font-semibold text-sm shadow-neon animate-pulse">
+              {v}
+            </span>
+          ))}
+        </div>
+      </AnimatedSection>
+      {/* Fun facts */}
+      <AnimatedSection delay={0.2}>
+        <div className="flex flex-col items-center gap-2">
+          {Array.isArray(funFacts) && funFacts.map((f, i) => (
+            <span key={i} className="text-white bg-black/40 px-4 py-2 rounded-xl shadow-md text-base font-mono animate-fade-in">
+              {f}
+            </span>
+          ))}
+        </div>
+      </AnimatedSection>
+    </div>
+  );
+};
+
+export default AboutPage; 

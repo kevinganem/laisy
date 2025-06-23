@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "expertise": "Expertise",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "product": "Produkt",
+    "policies": "Richtlinien",
+    "terms": "Bedingungen",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies",
+    "language": "Sprache",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "hero": {
+    "home": "Game-QA, richtig gemacht.",
+    "description": "bugket hilft Studios, fehlerfreie Spiele an Spieler weltweit zu liefern. Unsere QA-Experten testen auf allen Plattformen, in allen Regionen und für alle Genres.",
+    "services": "Unsere Dienstleistungen",
+    "expertise": "Unsere Expertise",
+    "about": "Über bugket",
+    "contact": "Kontaktieren Sie uns"
+  },
+  "contact": {
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Senden",
+    "success": "Danke, dass Sie bugket kontaktiert haben! Wir melden uns in Kürze bei Ihnen.",
+    "hero": "Lasst uns gemeinsam bessere Spiele <span class='text-[#57f287]'>bauen</span>",
+    "location": "Paris, Frankreich",
+    "remote": "Remote & weltweite Zusammenarbeit",
+    "socials": [
+      { "icon": "FaDiscord", "label": "Discord", "url": "#" },
+      { "icon": "FaTwitter", "label": "Twitter", "url": "#" },
+      { "icon": "FaEnvelope", "label": "E-Mail", "url": "mailto:contact@bugket.com" }
+    ],
+    "error": "Es ist ein Fehler aufgetreten. Bitte versuche es erneut.",
+    "sending": "Senden..."
+  },
+  "services": {
+    "hero": "Alle deine QA-Bedürfnisse, ein <span class='text-[#5865f2]'>Team</span>",
+    "description": "Von der Fehlersuche bis zur Plattformzertifizierung deckt bugket jeden Aspekt des Game-QA mit Leidenschaft und Präzision ab.",
+    "list": [
+      { "icon": "FaBug", "title": "Funktionale Tests", "desc": "Wir finden Bugs, bevor es deine Spieler tun. Manuelle und automatisierte Tests für jede Funktion, jeden Build." },
+      { "icon": "FaGamepad", "title": "Kompatibilität", "desc": "Getestet auf allen Plattformen, Geräten und Controllern. Keine bösen Überraschungen am Launch-Tag." },
+      { "icon": "FaCheckCircle", "title": "Zertifizierungs-QA", "desc": "Wir helfen dir, die Anforderungen von PlayStation, Xbox, Nintendo und Mobile-Stores zu erfüllen." },
+      { "icon": "FaRocket", "title": "Performance-QA", "desc": "FPS, Speicher, Ladezeiten: Wir profilieren und optimieren für flüssiges Gameplay überall." },
+      { "icon": "FaMobileAlt", "title": "Mobile QA", "desc": "iOS, Android, Tablets: Wir testen alle mobilen Geräte und Betriebssystemversionen." },
+      { "icon": "FaShieldAlt", "title": "Sicherheit & Anti-Cheat", "desc": "Schütze dein Spiel und deine Spieler mit fortschrittlichen Sicherheits- und Anti-Cheat-Tests." }
+    ],
+    "why": [
+      "Erfahrenes QA-Team mit Gaming-Leidenschaft",
+      "Schnelle Umsetzung & klare Berichte",
+      "Spielerzentrierte, spaßorientierte Denkweise"
+    ],
+    "cta": "Bereit, dein QA zu verbessern?",
+    "ctaBtn": "Kontaktiere bugket"
+  },
+  "expertise": {
+    "hero": "Steigere die <span class='text-[#57f287]'>Qualität</span> deines Spiels",
+    "description": "Unsere Expertise deckt alle Aspekte des QA ab, von Automatisierung über Multiplayer, VR bis hin zu Analytics. Wir helfen dir, bessere Spiele schneller zu veröffentlichen.",
+    "list": [
+      { "icon": "FaCogs", "title": "Automatisierung & Tools", "desc": "Maßgeschneiderte Skripte und Tools, um das QA zu beschleunigen und mehr Bugs zu finden." },
+      { "icon": "FaUsers", "title": "Multiplayer-Tests", "desc": "Stresstests, Matchmaking und Crossplay für reibungslose Online-Erlebnisse." },
+      { "icon": "FaChartLine", "title": "Analytics & Reporting", "desc": "Detailliertes Bug-Tracking, Analysen und umsetzbare Berichte für dein Team." },
+      { "icon": "FaVrCardboard", "title": "VR/AR QA", "desc": "Expertise auf immersiven und Next-Gen-Plattformen." },
+      { "icon": "FaNetworkWired", "title": "Netzwerk & Latenz", "desc": "Simulation realer Netzwerkbedingungen für robustes Online-Gameplay." },
+      { "icon": "FaRobot", "title": "KI- & Bot-Tests", "desc": "Automatisierte Bots für wiederholte und Regressionstests." }
+    ],
+    "stats": [
+      { "label": "Getestete Spiele", "value": "+120" },
+      { "label": "Plattformen", "value": "10+" },
+      { "label": "Gefundene Bugs", "value": "30.000+" },
+      { "label": "QA-Experten", "value": "25" }
+    ],
+    "history": [
+      { "year": "2017", "event": "bugket gegründet" },
+      { "year": "2018", "event": "Erstes AAA-Projekt" },
+      { "year": "2020", "event": "Mobile- & VR-Expansion" },
+      { "year": "2023", "event": "100. Spiel getestet" }
+    ],
+    "tools": [
+      "Unity", "PlayStation", "Xbox", "iOS", "Android", "Steam"
+    ]
+  },
+  "about": {
+    "hero": "Lerne das <span class='text-[#eb459e]'>bugket-Team</span> kennen",
+    "team": [
+      {
+        "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+        "name": "Alex Carter",
+        "role": "QA-Leiter",
+        "description": "Über 10 Jahre Erfahrung im Game-QA, Experte für Automatisierung und Prozessoptimierung. Liebt RPGs und Kaffee."
+      },
+      {
+        "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+        "name": "Jamie Lee",
+        "role": "Senior QA-Analystin",
+        "description": "Spezialistin für Multiplayer- und plattformübergreifende Tests. Brettspiel-Enthusiastin und Rätsellöserin."
+      },
+      {
+        "avatar": "https://randomuser.me/api/portraits/men/45.jpg",
+        "name": "Chris Novak",
+        "role": "Mobile QA Spezialist",
+        "description": "Mobile- und VR-QA-Experte. Speedrunner und Retro-Gaming-Fan."
+      }
+    ],
+    "values": [
+      "Spielerzentrierte Denkweise",
+      "Transparenz & Vertrauen",
+      "Ständiges Lernen",
+      "Vielfalt & Inklusion",
+      "Spaß bei der Arbeit!"
+    ],
+    "funFacts": [
+      "Jeden Freitag veranstalten wir ein Mario Kart-Turnier!",
+      "Unser Team spricht 7 Sprachen.",
+      "Wir haben einmal über 1.000 Bugs in einer Woche gefunden.",
+      "Unser Büro hat mehr Konsolen als Schreibtische."
+    ]
+  },
+  "policies": {
+    "terms_title": "Nutzungsbedingungen",
+    "privacy_title": "Datenschutzrichtlinie",
+    "cookies_title": "Cookie-Richtlinie",
+    "terms": {
+      "sections": [
+        { "title": "1. Acceptance of Terms", "text": "By accessing or using bugket's services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services." },
+        { "title": "2. Services", "text": "bugket provides quality assurance (QA) testing services for video games. We reserve the right to modify or discontinue any service at any time without notice." },
+        { "title": "3. User Responsibilities", "text": "You agree to use our services lawfully and not to misuse, reverse engineer, or attempt to disrupt our platform or services." },
+        { "title": "4. Intellectual Property", "text": "All content, trademarks, and materials on bugket are the property of their respective owners. You may not use, copy, or distribute any content without permission." },
+        { "title": "5. Limitation of Liability", "text": "bugket is not liable for any damages or losses resulting from your use of our services. All services are provided 'as is' without warranty of any kind." },
+        { "title": "6. Changes to Terms", "text": "We may update these Terms of Service at any time. Continued use of our services constitutes acceptance of the new terms." },
+        { "title": "7. Contact", "text": "If you have any questions about these Terms, please contact us via the Contact page." }
+      ]
+    },
+    "privacy": {
+      "sections": [
+        { "title": "1. Introduction", "text": "bugket is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information." },
+        { "title": "2. Information We Collect", "text": "We may collect personal information such as your name, email address, and any details you provide via our contact forms. We also collect usage data through cookies and analytics tools." },
+        { "title": "3. Use of Information", "text": "Your information is used to provide and improve our services, respond to inquiries, and ensure the security of our platform. We do not sell your personal data to third parties." },
+        { "title": "4. Cookies", "text": "We use cookies to enhance your experience and analyze site usage. You can manage your cookie preferences in your browser settings. See our Cookies Policy for more details." },
+        { "title": "5. Data Security", "text": "We implement reasonable security measures to protect your data. However, no method of transmission over the Internet is 100% secure." },
+        { "title": "6. Your Rights", "text": "You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us." },
+        { "title": "7. Changes to This Policy", "text": "We may update this Privacy Policy from time to time. Please review it periodically for changes." },
+        { "title": "8. Contact", "text": "If you have any questions about this Privacy Policy, please contact us via the Contact page." }
+      ]
+    },
+    "cookies": {
+      "sections": [
+        { "title": "1. What Are Cookies?", "text": "Cookies are small text files stored on your device to help websites function and collect information about your usage." },
+        { "title": "2. How We Use Cookies", "text": "bugket uses cookies to improve your experience, analyze site traffic, and remember your preferences. Some cookies are essential for site functionality." },
+        { "title": "3. Types of Cookies We Use", "text": "Essential Cookies: Necessary for the website to function properly. Analytics Cookies: Help us understand how visitors interact with our site. Preference Cookies: Remember your language and other settings." },
+        { "title": "4. Managing Cookies", "text": "You can control and delete cookies through your browser settings. Disabling cookies may affect your experience on our site." },
+        { "title": "5. Changes to This Policy", "text": "We may update this Cookies Policy from time to time. Please review it periodically for changes." },
+        { "title": "6. Contact", "text": "If you have any questions about our use of cookies, please contact us via the Contact page." }
+      ]
+    }
+  },
+  "test": "Es funktioniert!",
+  "homeCards": [
+    {
+      "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
+      "alt": "Globales QA",
+      "title": "Globales QA für jedes Spiel",
+      "text": "bugket hilft Studios, fehlerfreie Spiele an Spieler weltweit zu liefern. Unsere QA-Experten testen auf allen Plattformen, in allen Genres, überall.",
+      "reverse": false
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80",
+      "alt": "Automatisierungstools",
+      "title": "Automatisierung & individuelle Tools",
+      "text": "Wir entwickeln und nutzen eigene Tools, um Tests zu beschleunigen, mehr Bugs zu finden und deine Releases reibungsloser zu machen.",
+      "reverse": true
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80",
+      "alt": "Next-Gen-Expertise",
+      "title": "Next-Gen QA-Expertise",
+      "text": "Von Multiplayer bis VR – unser Team hat praktische Erfahrung mit der neuesten Gaming-Technik und Standards.",
+      "reverse": false
+    }
+  ]
+} 

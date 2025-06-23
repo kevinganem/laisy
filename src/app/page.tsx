@@ -1,103 +1,76 @@
-import Image from "next/image";
+"use client";
+import React from "react";
+import AnimatedSection from "./components/AnimatedSection";
+import { motion } from "framer-motion";
+import FloatingCardImage from "./components/FloatingCardImage";
+import { useLanguage } from './components/LanguageProvider';
 
-export default function Home() {
+/**
+ * HomePage component
+ * Displays the main landing page with a hero section and alternating feature cards.
+ * Uses AnimatedSection for scroll-based reveal animations.
+ * Layout and style inspired by Discord/gaming UI.
+ */
+const HomePage: React.FC = () => {
+  const { t } = useLanguage();
+  const homeCards = t('homeCards');
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="flex flex-col gap-30">
+      {/* Hero section: main value proposition and call-to-action */}
+      <AnimatedSection>
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24 min-h-[420px]">
+          <div className="flex-1 flex flex-col gap-6 items-start md:items-start justify-center">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-neon leading-tight text-left md:text-left">
+              {t('hero.home')}
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 max-w-xl text-left md:text-left">
+              {t('hero.description')}
+            </p>
+            <div className="flex gap-4 mt-2">
+              <a href="/services" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg">{t('hero.services')}</a>
+              <a href="/contact" className="bg-[#23272a] text-white px-8 py-3 rounded-xl font-semibold border border-[#5865f2] hover:bg-[#313338] transition-colors text-lg">{t('hero.contact')}</a>
+            </div>
+          </div>
+          <div className="flex-1 flex justify-center items-center">
+            <img
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80"
+              alt="QA Gaming Illustration"
+              className="w-[340px] h-[340px] md:w-[420px] md:h-[420px] object-cover rounded-3xl shadow-2xl border-4 border-[#5865f2] bg-[#23272a]"
+              draggable={false}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </AnimatedSection>
+      {/* Cards section: alternating image/text feature highlights */}
+      <div className="flex flex-col gap-30 items-center">
+        {Array.isArray(homeCards) && homeCards.map((card, idx) => (
+          <AnimatedSection key={idx} delay={0.1 * idx}>
+            <div className="relative flex w-full max-w-5xl min-h-[440px]">
+              <div className={`flex flex-col md:flex-row w-full bg-gradient-to-br from-[#232946]/80 via-[#3a1c71]/70 to-[#5865f2]/30 bg-white/5 backdrop-blur-lg border border-white/10 rounded-[2.5rem] shadow-2xl min-h-[440px] max-w-5xl mx-auto transition-transform duration-300 hover:scale-[1.03] items-center ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}> 
+                {/* Main image (alternates left/right on desktop) */}
+                <div className="flex-shrink-0 flex items-center justify-center h-full px-8 md:px-12 py-8 md:py-0">
+                  <div className="w-[260px] h-[200px] md:w-[320px] md:h-[240px] flex items-center justify-center rounded-[2rem] overflow-hidden border-4 border-[#5865f2] bg-[#232946]/80 drop-shadow-neon">
+                    <img
+                      src={card.image}
+                      alt={card.alt}
+                      className="w-full h-full object-cover rounded-[2rem]"
+                      draggable={false}
+                    />
+                  </div>
+                </div>
+                {/* Text content for each feature card */}
+                <div className="flex-1 flex flex-col justify-center gap-4 px-8 md:px-12 py-8 md:py-0">
+                  <h2 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow-neon leading-tight">{card.title}</h2>
+                  <p className="text-lg md:text-xl text-gray-200 max-w-2xl">{card.text}</p>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default HomePage;

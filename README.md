@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🕹️ bugket — Game QA Testing Studio Website
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-15.3.4-blue?logo=nextdotjs)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.10-38bdf8?logo=tailwindcss)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12.18.1-ec4899?logo=framer)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript)
+![Status](https://img.shields.io/badge/status-in%20progress-blueviolet)
 
-First, run the development server:
+> **bugket** is a modern, immersive website for a video game QA testing company. Inspired by Discord's design language, it showcases services, expertise, team, and contact in a playful, professional, and animated way.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🎮 Product Vision
+
+**bugket** helps game studios deliver flawless games. This site is a digital showcase for bugket's QA expertise, services, and team, designed to:
+- Attract and reassure potential clients
+- Present a clear, engaging value proposition
+- Make contact easy and appealing
+
+---
+
+## ✨ Features
+
+- **Immersive UI/UX** inspired by Discord and gaming culture
+- **Animated backgrounds** (neon particles, floating SVGs, glassmorphism)
+- **Sticky navigation** and modern layout
+- **Multi-language support** (EN, FR, ES, DE)
+- **Animated sections and cards** (Framer Motion)
+- **Modular, reusable components**
+- **Accessible & responsive** (WCAG AA, mobile/tablet ready)
+- **Contact form** with email delivery (Formspree integration)
+- **SEO & performance optimized**
+
+---
+
+## 🖼️ Screenshots
+
+> _Add your screenshots here_
+
+---
+
+## 🚀 Tech Stack
+
+- **Next.js 15** (App Router, SSR/CSR, TypeScript)
+- **React 19**
+- **TailwindCSS 4** (utility-first, custom theme)
+- **Framer Motion 12** (animations, transitions)
+- **next-intl** (i18n)
+- **Formspree** (contact form backend)
+- **ESLint, Prettier** (code quality)
+
+---
+
+## 🗂️ Project Structure
+
+```
+/bugket
+  ├─ src/
+  │   ├─ app/
+  │   │   ├─ [section]/page.tsx   # Main pages (home, services, expertise, about, contact)
+  │   │   └─ components/          # Reusable UI components
+  │   ├─ locales/                 # i18n translation files (en, fr, es, de)
+  │   └─ types/                   # TypeScript types
+  ├─ public/                      # Static assets (images, icons, logo)
+  ├─ memory-bank/                 # Project context & documentation (Cursor methodology)
+  ├─ tailwind.config.js           # TailwindCSS config
+  ├─ next.config.ts               # Next.js config
+  └─ ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/your-username/bugket.git
+   cd bugket
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or yarn install
+   ```
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or yarn dev
+   ```
+4. **Open** [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌍 Multi-language Support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- All content is translatable (EN, FR, ES, DE)
+- Easily add new languages in `/src/locales/`
+- Language selector in the footer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📬 Contact Form
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Integrated with [Formspree](https://formspree.io/) for email delivery
+- Animated success/error feedback
+- Fully accessible and translatable
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🧩 Main Components
+
+- `Header` — Sticky logo, navigation, and contact button
+- `Footer` — Navigation, language selector, social links
+- `AnimatedSection` — Fade/slide-in animation for any block
+- `ServiceCard`, `ExpertiseBlock`, `TeamMember` — Modular, animated cards
+- `NeonBackgroundElements` — Animated SVG neon particles
+- `BackgroundImages` — Floating decorative images
+- `ContactForm` — Accessible, animated, Formspree-powered
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br>
+Feel free to open an [issue](https://github.com/your-username/bugket/issues) or submit a pull request.
+
+---
+
+## 📄 License
+
+This project is [MIT](LICENSE) licensed.
+
+---
+
+## 📫 Contact
+
+- [bugket website](https://bugket.com) _(replace with your real link)_
+- [contact@bugket.com](mailto:contact@bugket.com)
+
+---
+
+> _Made with passion for games and quality._
