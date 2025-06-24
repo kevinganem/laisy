@@ -10,6 +10,7 @@ const nextConfig = {
   images: { unoptimized: true },
   basePath: isProd ? '/bugket' : '',
   assetPrefix: isProd ? '/bugket' : '',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
