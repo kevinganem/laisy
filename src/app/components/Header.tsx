@@ -3,6 +3,7 @@ import React from 'react';
 import { useLanguage } from './LanguageProvider';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getPublicAssetPath } from '../utils/getPublicAssetPath';
 
 /**
  * Header component for the main navigation bar.
@@ -17,7 +18,7 @@ const Header: React.FC = () => {
       <div className="fixed top-4 left-0 z-50 flex items-center h-16 pl-6 py-2">
         <Link href="/" className="flex items-center group focus:outline-none" aria-label="Go to home">
           <Image
-            src="/logo.png"
+            src={getPublicAssetPath('/logo.png')}
             alt="bugket logo"
             width={40}
             height={40}

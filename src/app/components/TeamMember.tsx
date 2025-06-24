@@ -2,6 +2,7 @@
 import React from "react";
 import * as FramerMotion from "framer-motion";
 import Image from 'next/image';
+import { getPublicAssetPath } from '../utils/getPublicAssetPath';
 const motion = FramerMotion.motion;
 
 /**
@@ -34,7 +35,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ avatar, name, role, description
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {avatar && (typeof avatar === "string" ? (
-        <Image src={avatar} alt={name} width={80} height={80} className="mb-4 w-20 h-20 rounded-full object-cover border-4 border-[#5865f2]" />
+        <Image src={getPublicAssetPath(avatar as string)} alt={name} width={80} height={80} className="mb-4 w-20 h-20 rounded-full object-cover border-4 border-[#5865f2]" />
       ) : (
         <div className="mb-4" aria-hidden="true">{avatar}</div>
       ))}

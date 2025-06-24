@@ -3,6 +3,7 @@ import React from 'react';
 import { FaDiscord, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { useLanguage } from './LanguageProvider';
 import Image from 'next/image';
+import { getPublicAssetPath } from '../utils/getPublicAssetPath';
 
 /**
  * Footer component for the application.
@@ -50,7 +51,7 @@ const Footer: React.FC = () => {
           {/* Left section: logo above language selector */}
           <div className="flex flex-col items-center md:items-start gap-2 md:gap-4 justify-start">
             {/* Company logo, decorative but with alt for accessibility */}
-            <Image src="/logo.png" alt="bugket logo" width={64} height={64} className="w-16 h-16 mb-2" />
+            <Image src={getPublicAssetPath('/logo.png')} alt="bugket logo" width={64} height={64} className="w-16 h-16 mb-2" />
             <div className="flex flex-col items-center md:items-start">
               {/* Language selector label */}
               <span className="text-white/70 font-medium text-base mb-1">{t('footer.language') as string}</span>
