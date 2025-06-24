@@ -4,7 +4,7 @@ import AnimatedSection from "../components/AnimatedSection";
 import ExpertiseBlock from "../components/ExpertiseBlock";
 import { useLanguage } from "../components/LanguageProvider";
 import Image from 'next/image';
-import { FaCogs, FaUsers, FaChartLine, FaVrCardboard, FaNetworkWired, FaRobot, FaUnity, FaPlaystation, FaXbox, FaApple, FaAndroid, FaSteam } from "react-icons/fa";
+import { FaCogs, FaUsers, FaChartLine, FaVrCardboard, FaNetworkWired, FaRobot, FaXbox, FaApple, FaAndroid } from "react-icons/fa";
 import { SiUnity, SiPlaystation, SiSteam } from "react-icons/si";
 
 /**
@@ -116,7 +116,7 @@ const ExpertisePage: React.FC = () => {
           {Array.isArray(expertise) && expertise.map((e: ExpertiseItem, i) => (
             <ExpertiseBlock
               key={i}
-              icon={iconMap[(e as any).icon]}
+              icon={iconMap[e.icon as string]}
               title={e.title}
               description={e.desc}
               className="bg-gradient-to-br from-[#232946]/80 via-[#3a1c71]/70 to-[#5865f2]/30 bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl border border-[#5865f2]/20 hover:scale-[1.03] transition-transform duration-300 min-h-[220px]"

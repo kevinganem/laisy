@@ -4,6 +4,7 @@ import AnimatedSection from "../components/AnimatedSection";
 import ServiceCard from "../components/ServiceCard";
 import { FaBug, FaGamepad, FaCheckCircle, FaRocket, FaMobileAlt, FaShieldAlt, FaStar, FaClock, FaSmile } from "react-icons/fa";
 import { useLanguage } from "../components/LanguageProvider";
+import Image from 'next/image';
 
 const iconMap: Record<string, React.ReactNode> = {
   FaBug: <FaBug size={40} />,
@@ -38,9 +39,11 @@ const ServicesPage: React.FC = () => {
             </p>
           </div>
           <div className="flex-1 flex justify-center items-center z-10">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
               alt="QA Team Illustration"
+              width={340}
+              height={340}
               className="w-[260px] h-[260px] md:w-[340px] md:h-[340px] object-cover rounded-3xl shadow-2xl border-4 border-[#5865f2] bg-[#23272a]"
               draggable={false}
             />
