@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 // List of decorative background images with their positions and styles
 const images = [
-  { src: "/cyber_bug.png", alt: "Cyber bug", width: 100, style: { top: "8%", left: "6%", rotate: -8 } },
-  { src: "/gameboy.png", alt: "Gameboy", width: 140, style: { bottom: "10%", left: "12%", rotate: 6 } },
-  { src: "/glasses.png", alt: "Glasses", width: 120, style: { top: "18%", right: "10%", rotate: 12 } },
-  { src: "/logo_2.png", alt: "Logo 2", width: 84, style: { bottom: "16%", right: "8%", rotate: -10 } },
-  { src: "/logo_3.png", alt: "Logo 3", width: 84, style: { top: "50%", left: "50%", rotate: 0, translate: "-50%, -50%" } },
+  { src: "./cyber_bug.png", alt: "Cyber bug", width: 100, style: { top: "8%", left: "6%", rotate: -8 } },
+  { src: "./gameboy.png", alt: "Gameboy", width: 140, style: { bottom: "10%", left: "12%", rotate: 6 } },
+  { src: "./glasses.png", alt: "Glasses", width: 120, style: { top: "18%", right: "10%", rotate: 12 } },
+  { src: "./logo_2.png", alt: "Logo 2", width: 84, style: { bottom: "16%", right: "8%", rotate: -10 } },
+  { src: "./logo_3.png", alt: "Logo 3", width: 84, style: { top: "50%", left: "50%", rotate: 0, translate: "-50%, -50%" } },
 ];
 
 // Animation variants for floating effect
