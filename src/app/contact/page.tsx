@@ -20,10 +20,10 @@ const ContactPage: React.FC = () => {
   const socials = t('contact.socials');
 
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-8 pt-16 sm:pt-24">
       {/* Hero section */}
       <AnimatedSection>
-        <div className="relative flex flex-col items-center gap-6 min-h-[220px] mb-4">
+        <div className="relative flex flex-col items-center gap-6 min-h-24 mb-4">
           <div className="flex items-center gap-4 z-10">
             <span className="bg-[#5865f2] p-4 rounded-full shadow-lg animate-bounce">
               <FaCommentDots className="text-white text-3xl" />

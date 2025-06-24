@@ -15,23 +15,23 @@ const HomePage: React.FC = () => {
   const homeCards = t('homeCards');
 
   return (
-    <div className="flex flex-col gap-30">
+    <div className="flex flex-col gap-30 pt-16 sm:pt-24">
       {/* Hero section: main value proposition and call-to-action */}
       <AnimatedSection>
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24 min-h-[420px]">
-          <div className="flex-1 flex flex-col gap-6 items-start md:items-start justify-center">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-neon leading-tight text-left md:text-left">
+        <div className="max-w-5xl w-full mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 min-h-[420px]">
+          <div className="flex flex-col gap-6 items-center justify-center flex-1 text-center">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-neon leading-tight">
               {t('hero.home') as string}
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-xl text-left md:text-left">
+            <p className="text-lg md:text-xl text-gray-200 max-w-xl mx-auto">
               {t('hero.description') as string}
             </p>
-            <div className="flex gap-4 mt-2">
-              <a href="/services" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg">{t('hero.services') as string}</a>
-              <a href="/contact" className="bg-[#23272a] text-white px-8 py-3 rounded-xl font-semibold border border-[#5865f2] hover:bg-[#313338] transition-colors text-lg">{t('hero.contact') as string}</a>
+            <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full justify-center">
+              <a href="/services" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg w-full sm:w-auto text-center">{t('hero.services') as string}</a>
+              <a href="/contact" className="bg-[#23272a] text-white px-8 py-3 rounded-xl font-semibold border border-[#5865f2] hover:bg-[#313338] transition-colors text-lg w-full sm:w-auto text-center">{t('hero.contact') as string}</a>
             </div>
           </div>
-          <div className="flex-1 flex justify-center items-center">
+          <div className="flex justify-center items-center flex-1">
             <Image
               src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80"
               alt="QA Gaming Illustration"

@@ -28,10 +28,10 @@ const ServicesPage: React.FC = () => {
   const services = t('services.list');
   const whyBugket = t('services.why');
   return (
-    <div className="flex flex-col gap-24">
+    <div className="flex flex-col gap-24 pt-16 sm:pt-24">
       {/* Hero section: service pitch and illustration */}
       <AnimatedSection>
-        <div className="relative flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 min-h-[320px] mb-4 mx-auto">
+        <div className="relative max-w-5xl w-full mx-auto flex flex-col-reverse md:flex-row items-center gap-10 md:gap-20 min-h-[320px] mb-4">
           <div className="flex-1 flex flex-col gap-4 items-center justify-center z-10">
             <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-neon leading-tight text-center" dangerouslySetInnerHTML={{ __html: t('services.hero') as string }} />
             <p className="text-lg md:text-xl text-gray-200 max-w-xl text-center">

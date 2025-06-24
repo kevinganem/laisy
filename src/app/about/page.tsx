@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => {
   const values = t('about.values');
   const funFacts = t('about.funFacts');
   return (
-    <div className="flex flex-col gap-24">
+    <div className="flex flex-col gap-24 pt-16 sm:pt-24">
       {/* Hero section */}
       <AnimatedSection>
         <div className="relative flex flex-col items-center gap-6 min-h-[260px] mb-4">
