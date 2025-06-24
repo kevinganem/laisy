@@ -31,12 +31,12 @@ const Header: React.FC = () => {
       </div>
       {/* Sticky contact button at the top-right */}
       <div className="fixed top-4 right-0 z-50 flex items-center h-16 pr-8 py-2">
-        <a
+        <Link
           href="/contact"
           className="bg-white text-[#23272a] font-bold px-7 py-2 rounded-full shadow-md border border-white/80 hover:bg-gray-200 transition-colors duration-200 text-lg"
         >
           {t('nav.contact') as string}
-        </a>
+        </Link>
       </div>
       {/* Centered navigation menu (not sticky) */}
       <header className="w-full flex justify-center mt-4 mb-8">
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
               { href: '/about', label: t('nav.about') },
             ].map(({ href, label }) => (
               <li key={href}>
-                <a
+                <Link
                   href={href}
                   className="relative px-2 py-1 transition-colors duration-200 hover:text-[#57f287]"
                   tabIndex={0}
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
                   <span className="z-10 relative">{label as string}</span>
                   {/* Animated underline on hover */}
                   <span className="absolute left-0 bottom-0 w-full h-0.5 bg-gradient-to-r from-[#5865f2] via-[#57f287] to-[#eb459e] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 rounded-full" />
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

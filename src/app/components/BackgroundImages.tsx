@@ -1,14 +1,15 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 // List of decorative background images with their positions and styles
 const images = [
-  { src: "/cyber_bug.png", alt: "Cyber bug", style: { top: "8%", left: "6%", width: 100, rotate: -8 } },
-  { src: "/gameboy.png", alt: "Gameboy", style: { bottom: "10%", left: "12%", width: 140, rotate: 6 } },
-  { src: "/glasses.png", alt: "Glasses", style: { top: "18%", right: "10%", width: 120, rotate: 12 } },
-  { src: "/logo_2.png", alt: "Logo 2", style: { bottom: "16%", right: "8%", width: 84, rotate: -10 } },
-  { src: "/logo_3.png", alt: "Logo 3", style: { top: "50%", left: "50%", width: 84, rotate: 0, translate: "-50%, -50%" } },
+  { src: "/cyber_bug.png", alt: "Cyber bug", width: 100, style: { top: "8%", left: "6%", rotate: -8 } },
+  { src: "/gameboy.png", alt: "Gameboy", width: 140, style: { bottom: "10%", left: "12%", rotate: 6 } },
+  { src: "/glasses.png", alt: "Glasses", width: 120, style: { top: "18%", right: "10%", rotate: 12 } },
+  { src: "/logo_2.png", alt: "Logo 2", width: 84, style: { bottom: "16%", right: "8%", rotate: -10 } },
+  { src: "/logo_3.png", alt: "Logo 3", width: 84, style: { top: "50%", left: "50%", rotate: 0, translate: "-50%, -50%" } },
 ];
 
 // Animation variants for floating effect
@@ -36,16 +37,13 @@ const floatVariants = {
 const BackgroundImages: React.FC = () => (
   <div className="pointer-events-none fixed inset-0 w-full h-full -z-10 select-none">
     {images.map((img, i) => (
-      <motion.img
+      <motion.div
         key={img.src}
-        src={img.src}
-        alt=""
-        aria-hidden="true"
         className="absolute opacity-60 md:opacity-70 lg:opacity-80 drop-shadow-neon"
         style={{
           ...img.style,
           position: "absolute",
-          width: img.style.width,
+          width: img.width,
           minWidth: 40,
           maxWidth: 140,
           pointerEvents: "none",
@@ -57,7 +55,17 @@ const BackgroundImages: React.FC = () => (
         variants={floatVariants}
         initial={false}
         animate="animate"
-      />
+      >
+        <Image
+          src={img.src}
+          alt={img.alt}
+          width={img.width}
+          height={img.width}
+          draggable={false}
+          aria-hidden="true"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </motion.div>
     ))}
   </div>
 );
