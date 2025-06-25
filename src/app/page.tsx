@@ -60,7 +60,7 @@ const HomePage: React.FC = () => {
                   </div>
                   {/* Main image (alternates left/right on desktop) */}
                   <div className={`flex-shrink-0 flex items-center justify-center order-2 mt-2 md:mt-0 ${imagePadding}`}>
-                    <div className="w-64 h-56 md:w-80 md:h-60 flex items-center justify-center rounded-[2rem] overflow-hidden border-4 border-[#5865f2] bg-[#232946]/80 drop-shadow-neon">
+                    <div className="w-80 h-64 md:w-96 md:h-80 flex items-center justify-center rounded-[2rem] overflow-hidden border-4 border-[#5865f2] bg-[#232946]/80 drop-shadow-neon">
                       <Image
                         src={card.image}
                         alt={card.alt}

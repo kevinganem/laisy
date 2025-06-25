@@ -24,7 +24,7 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, className = "" }) => {
   return (
     <motion.div
-      className={`bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl shadow-xl p-8 flex flex-col items-center text-center min-h-[380px] ${className}`}
+      className={`bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl shadow-xl p-4 md:p-8 flex flex-col items-center text-center min-h-60 md:min-h-80 ${className}`}
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -35,8 +35,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, cla
           <span className="text-4xl text-[#5865f2]">{icon}</span>
         </div>
       )}
-      <h2 className="text-2xl font-bold text-white mb-3 leading-tight">{title}</h2>
-      <p className="text-gray-100 text-base leading-relaxed">{description}</p>
+      <h2 className="text-lg md:text-2xl font-bold text-white mb-3 leading-tight">{title}</h2>
+      <p className="text-gray-100 text-base md:text-lg leading-relaxed">{description}</p>
     </motion.div>
   );
 };
