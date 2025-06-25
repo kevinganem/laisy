@@ -14,6 +14,7 @@ const Header: React.FC = () => {
   const { t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   // Close menu on click outside
   useEffect(() => {
@@ -37,6 +38,16 @@ const Header: React.FC = () => {
     return () => document.removeEventListener('keydown', handleKey);
   }, [menuOpen]);
 
+  // Scroll effect for sticky header background (Discord style)
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 4);
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   const navLinks = [
     { href: '/', key: 'home' },
     { href: '/services', key: 'services' },
@@ -46,8 +57,9 @@ const Header: React.FC = () => {
 
   return (
     <>
-      {/* Sticky logo and brand name at the top-left, both clickable */}
-      <div className="fixed top-4 left-0 z-50 flex items-center h-16 pl-6 py-2">
+      {/* Sticky header bar: logo, contact, burger, all with background */}
+      <div className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 py-2 h-16 transition-colors duration-300 ${scrolled ? 'bg-[#5865f2]/90 backdrop-blur-md shadow-lg' : ''} md:bg-transparent md:backdrop-blur-none md:shadow-none`}>
+        {/* Logo and brand */}
         <Link href="/" className="flex items-center group focus:outline-none" aria-label="Go to home">
           <Image
             src={getPublicAssetPath('/logo.png')}
@@ -57,37 +69,37 @@ const Header: React.FC = () => {
             className="w-9 h-9 md:w-10 md:h-10 object-contain mr-2 transition-transform duration-200 group-hover:scale-105"
             style={{ minWidth: 32, minHeight: 32 }}
           />
-          <span className="text-2xl md:text-2xl font-extrabold text-white tracking-wide drop-shadow-neon ml-1 group-hover:text-[#5865f2] transition-colors duration-200 select-none">
+          <span className="text-2xl md:text-2xl font-extrabold text-white tracking-wide drop-shadow-neon ml-1 group-hover:text-[#232946] transition-colors duration-200 select-none">
             bugket
           </span>
         </Link>
-      </div>
-      {/* Sticky contact button and burger at the top-right (mobile only) */}
-      <div className="fixed top-4 right-0 z-50 flex items-center h-16 pr-4 md:pr-8 py-2 gap-2 md:gap-0">
-        <Link
-          href="/contact"
-          className="bg-white text-[#23272a] font-bold px-7 py-2 rounded-full shadow-md border border-white/80 hover:bg-gray-200 transition-colors duration-200 text-lg md:mr-0 mr-2"
-        >
-          {t('nav.contact') as string}
-        </Link>
-        {/* Hamburger menu button (mobile only) */}
-        <button
-          className="flex md:hidden items-center justify-center w-11 h-11 rounded-full bg-[#23272a]/80 border border-white/20 shadow-lg hover:bg-[#313338] transition-colors focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-          onClick={() => setMenuOpen((v) => !v)}
-        >
-          {menuOpen ? (
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-white">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-white">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
-            </svg>
-          )}
-        </button>
+        {/* Contact button and burger */}
+        <div className="flex items-center gap-2 md:gap-0">
+          <Link
+            href="/contact"
+            className="bg-white text-[#23272a] font-bold px-7 py-2 rounded-full shadow-md border border-white/80 hover:bg-gray-200 transition-colors duration-200 text-lg md:mr-0 mr-2"
+          >
+            {t('nav.contact') as string}
+          </Link>
+          {/* Hamburger menu button (mobile only) */}
+          <button
+            className="flex md:hidden items-center justify-center w-11 h-11 rounded-full bg-[#23272a]/80 border border-white/20 shadow-lg hover:bg-[#313338] transition-colors focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            {menuOpen ? (
+              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-white">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-white">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
       {/* Desktop navigation */}
       <header className="w-full flex justify-center mt-4 mb-8">

@@ -4,6 +4,7 @@ import { FaDiscord, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { useLanguage } from './LanguageProvider';
 import Image from 'next/image';
 import { getPublicAssetPath } from '../utils/getPublicAssetPath';
+import Link from 'next/link';
 
 /**
  * Footer component for the application.
@@ -83,13 +84,13 @@ const Footer: React.FC = () => {
                   <ul className="space-y-2">
                     {col.links.map((link: { label: string; href: string }) => (
                       <li key={col.title + '-' + link.label}>
-                        <a
+                        <Link
                           href={link.href}
                           className="hover:underline text-white/90 transition-colors text-center md:text-left block min-w-[80px]"
                           tabIndex={0}
                         >
                           {link.label}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
