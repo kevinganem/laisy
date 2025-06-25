@@ -48,6 +48,15 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Fermer le menu mobile si on passe en desktop
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth >= 768) setMenuOpen(false);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const navLinks = [
     { href: '/', key: 'home' },
     { href: '/services', key: 'services' },
@@ -58,7 +67,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Sticky header bar: logo, contact, burger, all with background */}
-      <div className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 py-2 h-16 transition-colors duration-300 ${scrolled ? 'bg-[#5865f2]/90 backdrop-blur-md shadow-lg' : ''} md:bg-transparent md:backdrop-blur-none md:shadow-none`}>
+      <div className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 py-2 h-16 transition-colors duration-300 ${scrolled ? 'bg-[#5865f2]/90 backdrop-blur-md shadow-lg' : ''} md:bg-transparent md:backdrop-blur-none md:shadow-none md:pointer-events-none`}>
         {/* Logo and brand */}
         <Link href="/" className="flex items-center group focus:outline-none" aria-label="Go to home">
           <Image

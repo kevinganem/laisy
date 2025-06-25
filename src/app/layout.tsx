@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import NeonBackgroundElements from "./components/NeonBackgroundElements";
 import BackgroundImages from "./components/BackgroundImages";
 import { LanguageProvider } from "./components/LanguageProvider";
+import { getPublicAssetPath } from "./utils/getPublicAssetPath";
 // import { AnimatePresence, motion } from "framer-motion"; // Uncomment for page transitions
 
 export const metadata: Metadata = {
@@ -29,8 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/icon.png" type="image/png" />
-        <link rel="icon" href="/favicon.ico" type="image/png" />
+        <link rel="icon" href={getPublicAssetPath('/favicon.ico')} type="image/x-icon" />
       </head>
       <body className="relative min-h-screen flex flex-col overflow-x-hidden">
         <LanguageProvider>
