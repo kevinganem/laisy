@@ -16,7 +16,6 @@ import Link from 'next/link';
  */
 const Footer: React.FC = () => {
   const { language, setLanguage, languages, t } = useLanguage();
-  const [openSection, setOpenSection] = React.useState<string | null>(null);
 
   const footerLinks = [
     {
