@@ -4,8 +4,8 @@ import AnimatedSection from "../components/AnimatedSection";
 import ExpertiseBlock from "../components/ExpertiseBlock";
 import { useLanguage } from "../components/LanguageProvider";
 import Image from 'next/image';
-import { FaCogs, FaUsers, FaChartLine, FaVrCardboard, FaNetworkWired, FaRobot, FaXbox, FaApple, FaAndroid } from "react-icons/fa";
-import { SiUnity, SiPlaystation, SiSteam } from "react-icons/si";
+import { FaCogs, FaUsers, FaChartLine, FaVrCardboard, FaNetworkWired, FaRobot, FaWindows } from "react-icons/fa";
+import { SiEpicgames, SiSteam } from "react-icons/si";
 
 /**
  * ExpertisePage component
@@ -45,12 +45,9 @@ const ExpertisePage: React.FC = () => {
     FaVrCardboard: <FaVrCardboard size={40} />,
     FaNetworkWired: <FaNetworkWired size={40} />,
     FaRobot: <FaRobot size={40} />,
-    Unity: <SiUnity size={36} className="text-[#fff]" />,
-    PlayStation: <SiPlaystation size={36} className="text-[#003087]" />,
-    Xbox: <FaXbox size={36} color="#107C10" />,
-    iOS: <FaApple size={36} className="text-[#fff]" />,
-    Android: <FaAndroid size={36} className="text-[#3DDC84]" />,
-    Steam: <SiSteam size={36} className="text-[#171A21]" />,
+    WinGDK: <FaWindows size={36} className="text-[#fff]" />,
+    'Epic Games': <SiEpicgames size={36} />,
+    Steam: <SiSteam size={36} />,
   };
 
   return (

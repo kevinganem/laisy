@@ -2,7 +2,7 @@
 import React from "react";
 import AnimatedSection from "../components/AnimatedSection";
 import ServiceCard from "../components/ServiceCard";
-import { FaBug, FaGamepad, FaCheckCircle, FaRocket, FaMobileAlt, FaShieldAlt, FaStar, FaClock, FaSmile } from "react-icons/fa";
+import { FaBug, FaGamepad, FaCheckCircle, FaRocket, FaWrench, FaShieldAlt, FaStar, FaClock, FaSmile } from "react-icons/fa";
 import { useLanguage } from "../components/LanguageProvider";
 import Image from 'next/image';
 
@@ -11,7 +11,7 @@ const iconMap: Record<string, React.ReactNode> = {
   FaGamepad: <FaGamepad size={40} />,
   FaCheckCircle: <FaCheckCircle size={40} />,
   FaRocket: <FaRocket size={40} />,
-  FaMobileAlt: <FaMobileAlt size={40} />,
+  FaWrench: <FaWrench size={40} />,
   FaShieldAlt: <FaShieldAlt size={40} />,
   FaStar: <FaStar size={28} className="text-[#57f287]" />,
   FaClock: <FaClock size={28} className="text-[#5865f2]" />,

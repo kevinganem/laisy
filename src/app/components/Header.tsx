@@ -67,7 +67,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Sticky header bar: logo, contact, burger, all with background */}
-      <div className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 py-2 h-16 transition-colors duration-300 ${scrolled ? 'bg-[#5865f2]/90 backdrop-blur-md shadow-lg' : ''} md:bg-transparent md:backdrop-blur-none md:shadow-none md:pointer-events-none`}>
+      <div className={`fixed top-0 left-0 w-full z-40 md:z-auto flex items-center justify-between px-4 py-2 h-16 transition-colors duration-300 ${scrolled ? 'bg-[#5865f2]/90 backdrop-blur-md shadow-lg' : ''} md:bg-transparent md:backdrop-blur-none md:shadow-none`}>
         {/* Logo and brand */}
         <Link href="/" className="flex items-center group focus:outline-none" aria-label="Go to home">
           <Image
@@ -112,7 +112,7 @@ const Header: React.FC = () => {
       </div>
       {/* Desktop navigation */}
       <header className="w-full flex justify-center mt-4 mb-8">
-        <nav className="bg-transparent max-w-4xl w-[95vw] items-center justify-center gap-8 px-8 py-3 mx-auto rounded-2xl hidden md:flex" aria-label="Main navigation">
+        <nav className="relative z-50 bg-transparent max-w-4xl w-[95vw] items-center justify-center gap-8 px-8 py-3 mx-auto rounded-2xl hidden md:flex" aria-label="Main navigation">
           <ul className="flex gap-6 text-white font-medium">
             {navLinks.map(({ href, key }) => (
               <li key={href}>
@@ -197,4 +197,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header; 
+export default Header;

@@ -20,10 +20,10 @@ const HomePage: React.FC = () => {
       <AnimatedSection>
         <div className="max-w-5xl w-full mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 min-h-[420px]">
           <div className="flex flex-col gap-6 items-center justify-center flex-1 text-center">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-neon leading-tight">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow-neon leading-tight uppercase">
               {t('hero.home') as string}
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-xl mx-auto">
+            <p className="text-base md:text-l text-gray-200 max-w-xl mx-auto">
               {t('hero.description') as string}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full justify-center">
@@ -55,8 +55,8 @@ const HomePage: React.FC = () => {
                 <div className={`flex flex-col ${flexDirection} w-full bg-gradient-to-br from-[#232946]/80 via-[#3a1c71]/70 to-[#5865f2]/30 bg-white/5 backdrop-blur-lg border border-white/10 rounded-[2.5rem] shadow-2xl mx-auto transition-transform duration-300 hover:scale-[1.03] items-center min-h-96 md:min-h-112 gap-4 md:gap-0 p-6 md:p-10`}>
                   {/* Text content for each feature card */}
                   <div className="flex-1 flex flex-col justify-center gap-4 px-6 md:px-12 pt-8 pb-2 md:py-0 order-1 w-full">
-                    <h2 className="text-2xl md:text-4xl font-extrabold text-white drop-shadow-neon leading-tight text-center md:text-left">{card.title}</h2>
-                    <p className="text-base md:text-xl text-gray-200 max-w-2xl text-center md:text-left">{card.text}</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow-neon leading-tight text-center md:text-left uppercase">{card.title}</h2>
+                    <p className="text-base md:text-l text-gray-200 max-w-2xl text-center md:text-left">{card.text}</p>
                   </div>
                   {/* Main image (alternates left/right on desktop) */}
                   <div className={`flex-shrink-0 flex items-center justify-center order-2 mt-2 md:mt-0 ${imagePadding}`}>

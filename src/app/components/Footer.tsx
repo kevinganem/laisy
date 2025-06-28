@@ -16,6 +16,7 @@ import Link from 'next/link';
  */
 const Footer: React.FC = () => {
   const { language, setLanguage, languages, t } = useLanguage();
+  const [openSection, setOpenSection] = React.useState<string | null>(null);
 
   const footerLinks = [
     {
@@ -80,7 +81,7 @@ const Footer: React.FC = () => {
                 </span>
               </div>
             </div>
-            {/* Right section: navigation links (Product, Policies) */}
+            {/* Right section: navigation links (Product, Policies) version grille classique */}
             <div className="w-full md:w-auto flex flex-col items-center md:items-start">
               <div className="grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-12 text-white w-full max-w-3xl mx-auto">
                 {footerLinks.map((col) => (

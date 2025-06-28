@@ -28,7 +28,7 @@ interface TeamMemberProps {
 const TeamMember: React.FC<TeamMemberProps> = ({ avatar, name, role, description, className = "" }) => {
   return (
     <motion.div
-      className={`bg-[#23272a] rounded-xl shadow-lg p-6 flex flex-col items-center text-center ${className}`}
+      className={`bg-[#23272a] rounded-xl shadow-lg p-6 flex flex-col items-center text-center w-80 min-h-80 max-w-xs flex-1 ${className}`}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
