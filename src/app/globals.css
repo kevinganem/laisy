@@ -58,49 +58,49 @@ body {
 /* Whitney Font Faces */
 @font-face {
   font-family: 'Whitney';
-  src: url('/fonts/whitney/Book.woff2') format('woff2');
+  src: url('/bugket/fonts/whitney/Book.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/fonts/whitney/BookItalic.woff2') format('woff2');
+  src: url('/bugket/fonts/whitney/BookItalic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/fonts/whitney/Medium.woff2') format('woff2');
+  src: url('/bugket/fonts/whitney/Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/fonts/whitney/MediumItalic.woff2') format('woff2');
+  src: url('/bugket/fonts/whitney/MediumItalic.woff2') format('woff2');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/fonts/whitney/Semibold.woff2') format('woff2');
+  src: url('/bugket/fonts/whitney/Semibold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/fonts/whitney/SemiboldItalic.woff2') format('woff2');
+  src: url('/bugket/fonts/whitney/SemiboldItalic.woff2') format('woff2');
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/fonts/whitney/BoldItalic.woff2') format('woff2');
+  src: url('/bugket/fonts/whitney/BoldItalic.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
