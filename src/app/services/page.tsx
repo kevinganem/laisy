@@ -5,6 +5,7 @@ import ServiceCard from "../components/ServiceCard";
 import { FaBug, FaGamepad, FaCheckCircle, FaRocket, FaWrench, FaShieldAlt, FaStar, FaClock, FaSmile } from "react-icons/fa";
 import { useLanguage } from "../components/LanguageProvider";
 import { getPublicAssetPath } from "../utils/getPublicAssetPath";
+import Link from "next/link";
 
 const iconMap: Record<string, React.ReactNode> = {
   FaBug: <FaBug size={40} />,
@@ -91,7 +92,7 @@ const ServicesPage: React.FC = () => {
       <AnimatedSection delay={0.2}>
         <div className="flex flex-col items-center gap-4">
           <p className="text-xl text-white font-bold drop-shadow-neon">{t('services.cta') as string}</p>
-          <a href="/contact" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg">{t('services.ctaBtn') as string}</a>
+          <Link href="/contact" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg">{t('services.ctaBtn') as string}</Link>
         </div>
       </AnimatedSection>
     </div>
