@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 /**
  * Root layout for the application.
  * Includes Header, Footer, and wraps all pages.
- * Adds a neon animated background for a retro gaming vibe, enrichi avec des particules façon Discord.
+ * Adds animated background and decorative elements.
  */
 export default function RootLayout({
   children,
@@ -36,7 +36,7 @@ export default function RootLayout({
       </head>
       <body className="relative min-h-screen flex flex-col overflow-x-hidden">
         <LanguageProvider>
-          {/* Neon animated background elements (Discord style) */}
+          {/* Animated background elements */}
           <NeonBackgroundElements />
           <BackgroundImages />
           <Header />

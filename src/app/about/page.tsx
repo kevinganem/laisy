@@ -34,7 +34,7 @@ const AboutPage: React.FC = () => {
               />
             ))}
           </div>
-          {/* Neon particles */}
+          {/* Decorative particles */}
           <div className="absolute inset-0 pointer-events-none z-0">
             <svg width="100%" height="100%" className="absolute inset-0 animate-pulse" style={{ filter: 'blur(2px)' }}>
               <circle cx="20%" cy="60%" r="14" fill="#5865f2" fillOpacity="0.18" />

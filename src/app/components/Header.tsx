@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
 
-  // Close menu on click outside
+  // Close menu when clicking outside the menu area
   useEffect(() => {
     if (!menuOpen) return;
     function handleClick(e: MouseEvent) {
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClick);
   }, [menuOpen]);
 
-  // Close menu on Escape
+  // Close menu when pressing Escape
   useEffect(() => {
     if (!menuOpen) return;
     function handleKey(e: KeyboardEvent) {
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
     return () => document.removeEventListener('keydown', handleKey);
   }, [menuOpen]);
 
-  // Scroll effect for sticky header background (Discord style)
+  // Add background effect when scrolling (sticky header)
   useEffect(() => {
     function onScroll() {
       setScrolled(window.scrollY > 4);

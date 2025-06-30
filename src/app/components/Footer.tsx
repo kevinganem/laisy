@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
         </div>
         {/* Large background text for branding */}
         <span
-          className="pointer-events-none select-none absolute bottom-0 left-1/2 -translate-x-1/2 text-[12vw] md:text-[9vw] font-extrabold text-white opacity-10 leading-none z-0 whitespace-nowrap"
+          className="pointer-events-none select-none absolute bottom-0 left-0 right-0 w-full text-[16vw] font-extrabold text-white opacity-10 leading-none z-0 text-center whitespace-nowrap"
           style={{ letterSpacing: '-0.05em' }}
           aria-hidden="true"
         >
@@ -137,7 +137,7 @@ const Footer: React.FC = () => {
   );
 };
 
-// Footer mobile façon Discord
+/* FooterMobile component for mobile view */
 function FooterMobile() {
   const { language, setLanguage, languages, t } = useLanguage();
   const [openSection, setOpenSection] = React.useState<string | null>(null);
@@ -168,11 +168,11 @@ function FooterMobile() {
   ];
   return (
     <footer className="md:hidden w-full bg-[#0a1333]/80 pt-8 pb-14 px-2 flex flex-col items-center gap-6 relative overflow-hidden">
-      {/* Logo + nom */}
+      {/* Logo and name */}
       <div className="flex flex-col items-center mb-2">
         <Image src={getPublicAssetPath('/logo.png')} alt="bugket logo" width={56} height={56} className="w-14 h-14" />
       </div>
-      {/* Sélecteur de langue */}
+      {/* Language selector */}
       <div className="w-11/12 max-w-xs mx-auto mb-2">
         <label className="text-white/70 font-medium text-base mb-1 block">{t('footer.language') as string}</label>
         <div className="relative">
@@ -189,13 +189,13 @@ function FooterMobile() {
               </option>
             ))}
           </select>
-          {/* Flèche */}
+          {/* Arrow */}
           <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/70">
             <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </span>
         </div>
       </div>
-      {/* Menu accordéon */}
+      {/* Accordion menu */}
       <div className="w-11/12 max-w-xs mx-auto flex flex-col gap-2">
         {footerLinks.map((col) => (
           <div key={col.title} className="border-b border-white/15">
@@ -219,7 +219,7 @@ function FooterMobile() {
           </div>
         ))}
       </div>
-      {/* Réseaux sociaux */}
+      {/* Social media links */}
       <div className="flex justify-center gap-6 text-2xl text-white/80 mt-4 mb-6">
         {socialLinks.map((s, i) => (
           <a
@@ -234,7 +234,7 @@ function FooterMobile() {
           </a>
         ))}
       </div>
-      {/* Gros texte bugket en bas */}
+      {/* Large bugket text at the bottom */}
       <span
         className="pointer-events-none select-none absolute bottom-0 left-1/2 -translate-x-1/2 text-[14vw] font-extrabold text-white opacity-10 leading-none z-0 whitespace-nowrap"
         style={{ letterSpacing: '-0.05em' }}

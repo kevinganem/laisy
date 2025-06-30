@@ -76,9 +76,9 @@ function createStar(id: number): Star {
 
 /**
  * NeonBackgroundElements component
- * Renders animated SVG shapes as a decorative background (Discord/gaming style).
+ * Renders animated SVG shapes as a decorative background.
  * Shapes are randomly generated and animated with fade-in/fade-out effects.
- * Shapes "respawn" at new positions after their animation completes.
+ * Shapes respawn at new positions after their animation completes.
  * Uses useEffect to handle animation and cleanup.
  * All shapes are aria-hidden for accessibility, as they are purely decorative.
  */
