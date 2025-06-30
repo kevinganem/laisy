@@ -4,6 +4,7 @@ import AnimatedSection from "../components/AnimatedSection";
 import TeamMember from "../components/TeamMember";
 import { useLanguage } from "../components/LanguageProvider";
 import Image from 'next/image';
+import { getPublicAssetPath } from "../utils/getPublicAssetPath";
 
 /**
  * About page for bugket.
@@ -24,7 +25,7 @@ const AboutPage: React.FC = () => {
             {Array.isArray(team) && team.map((m, i) => (
               <Image
                 key={i}
-                src={m.avatar}
+                src={getPublicAssetPath(m.avatar as string)}
                 alt={m.name}
                 width={128}
                 height={128}
