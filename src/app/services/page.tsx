@@ -4,7 +4,6 @@ import AnimatedSection from "../components/AnimatedSection";
 import ServiceCard from "../components/ServiceCard";
 import { FaBug, FaGamepad, FaCheckCircle, FaRocket, FaWrench, FaShieldAlt, FaStar, FaClock, FaSmile } from "react-icons/fa";
 import { useLanguage } from "../components/LanguageProvider";
-import Image from 'next/image';
 import { getPublicAssetPath } from "../utils/getPublicAssetPath";
 
 const iconMap: Record<string, React.ReactNode> = {
