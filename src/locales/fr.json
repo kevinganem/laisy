@@ -90,7 +90,7 @@
     "hero": "Rencontrez l'équipe <span class='text-[#eb459e]'>bugket</span>",
     "team": [
       {
-        "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+        "avatar": "/thibaultBugket.jpg",
         "name": "Thibault Gerdelat",
         "role": "Lead QA",
         "description": "3+ ans dans le QA jeu vidéo, expert en tracking de bugs et gestion de projet."

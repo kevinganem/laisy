@@ -82,7 +82,7 @@
     "hero": "Meet the <span class='text-[#eb459e]'>bugket team</span>",
     "team": [
       {
-        "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+        "avatar": "/thibaultBugket.jpg",
         "name": "Thibault Gerdelat",
         "role": "Lead QA",
         "description": "3+ years in game QA, expert in bug tracking and project management."
