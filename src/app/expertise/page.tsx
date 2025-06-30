@@ -66,9 +66,9 @@ const ExpertisePage: React.FC = () => {
             <Image
               src={getPublicAssetPath('/cardImage.jpg')}
               alt="QA Dashboard Illustration"
-              width={340}
-              height={340}
-              className="w-[260px] h-[260px] md:w-[340px] md:h-[340px] object-cover rounded-3xl shadow-2xl border-4 border-[#57f287] bg-[#23272a]"
+              width={420}
+              height={420}
+              className="w-[340px] h-[340px] md:w-[420px] md:h-[420px] object-cover rounded-3xl shadow-2xl border-4 border-[#57f287] bg-[#23272a]"
               draggable={false}
             />
           </div>
