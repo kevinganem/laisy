@@ -31,6 +31,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href={getPublicAssetPath('/favicon.ico')} type="image/x-icon" />
+        <meta property="og:image" content={getPublicAssetPath('/logo.png')} />
+        <meta name="twitter:image" content={getPublicAssetPath('/logo.png')} />
       </head>
       <body className="relative min-h-screen flex flex-col overflow-x-hidden">
         <LanguageProvider>
