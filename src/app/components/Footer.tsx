@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
       {/* Footer mobile façon Discord */}
       <FooterMobile />
       {/* Footer desktop (caché sur mobile) */}
-      <footer className="hidden md:block w-full bg-gradient-to-b from-[#232946] via-[#3a1c71] to-[#5865f2] pt-16 pb-8 px-4 mt-24 rounded-t-[2.5rem] shadow-inner relative overflow-hidden">
+      <footer className="hidden md:block w-full bg-[#0a1333]/80 pt-16 pb-8 px-4 mt-24 rounded-t-[2.5rem] shadow-inner relative overflow-hidden">
         <div className="max-w-4xl mx-auto w-full flex flex-col gap-10">
           {/* Main row: left = logo + language selector, right = navigation links */}
           <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 mb-4">
@@ -167,7 +167,7 @@ function FooterMobile() {
     { icon: <FaGithub />, url: '#' },
   ];
   return (
-    <footer className="md:hidden w-full bg-gradient-to-b from-[#232946] via-[#3a1c71] to-[#5865f2] pt-8 pb-14 px-2 flex flex-col items-center gap-6 relative overflow-hidden">
+    <footer className="md:hidden w-full bg-[#0a1333]/80 pt-8 pb-14 px-2 flex flex-col items-center gap-6 relative overflow-hidden">
       {/* Logo + nom */}
       <div className="flex flex-col items-center mb-2">
         <Image src={getPublicAssetPath('/logo.png')} alt="bugket logo" width={56} height={56} className="w-14 h-14" />

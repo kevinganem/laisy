@@ -5,6 +5,7 @@ import ServiceCard from "../components/ServiceCard";
 import { FaBug, FaGamepad, FaCheckCircle, FaRocket, FaWrench, FaShieldAlt, FaStar, FaClock, FaSmile } from "react-icons/fa";
 import { useLanguage } from "../components/LanguageProvider";
 import Image from 'next/image';
+import { getPublicAssetPath } from "../utils/getPublicAssetPath";
 
 const iconMap: Record<string, React.ReactNode> = {
   FaBug: <FaBug size={40} />,
@@ -39,13 +40,14 @@ const ServicesPage: React.FC = () => {
             </p>
           </div>
           <div className="flex-1 flex justify-center items-center z-10">
-            <Image
-              src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
-              alt="QA Team Illustration"
-              width={340}
-              height={340}
-              className="w-[260px] h-[260px] md:w-[340px] md:h-[340px] object-cover rounded-3xl shadow-2xl border-4 border-[#5865f2] bg-[#23272a]"
-              draggable={false}
+          <video
+              src={getPublicAssetPath('/cardVideo_keyboard.mp4')}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-[340px] h-[340px] md:w-[420px] md:h-[420px] object-cover rounded-3xl shadow-2xl border-4 border-[#5865f2] bg-[#23272a]"
+              aria-label="QA Gaming Illustration"
             />
           </div>
           {/* Neon particles */}
@@ -68,7 +70,7 @@ const ServicesPage: React.FC = () => {
               icon={iconMap[s.icon]}
               title={s.title}
               description={s.desc}
-              className="min-h-[260px] md:min-h-[320px] bg-gradient-to-br from-[#232946]/80 via-[#3a1c71]/70 to-[#5865f2]/30 bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl border border-[#5865f2]/20 hover:scale-[1.03] transition-transform duration-300"
+              className="min-h-[260px] md:min-h-[320px] bg-[#0a1333]/80 border border-[#5865f2]/20 rounded-3xl shadow-2xl hover:scale-[1.03] transition-transform duration-300"
             />
           ))}
         </div>

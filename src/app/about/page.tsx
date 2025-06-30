@@ -46,7 +46,7 @@ const AboutPage: React.FC = () => {
       </AnimatedSection>
       {/* Team section */}
       <AnimatedSection>
-        <div className="flex flex-wrap gap-8 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {Array.isArray(team) && team.map((m, i) => (
             <TeamMember key={i} {...m} className="bg-white/10 border border-white/10 hover:scale-105 transition-transform duration-300 shadow-lg backdrop-blur-md" />
           ))}

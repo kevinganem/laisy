@@ -11,7 +11,7 @@ import { getPublicAssetPath } from "./utils/getPublicAssetPath";
 
 export const metadata: Metadata = {
   title: "Bugket – Game Quality Assurance",
-  description: "Game QA, done right. Bugket helps studios deliver flawless games to players worldwide. Our QA experts test on all platforms, all regions, all genres.",
+  description: "Game QA, done right. Bugket helps studios deliver flawless games to players worldwide.",
   icons: {
     icon: "/icon.png"
   }

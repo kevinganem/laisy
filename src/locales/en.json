@@ -88,13 +88,13 @@
         "description": "3+ years in game QA, expert in bug tracking and project management."
       },
       {
-        "avatar": "https://randomuser.me/api/portraits/men/15.jpg",
+        "avatar": "/kevinBugket.jpg",
         "name": "Kevin Ganem",
         "role": "Developer - IT",
         "description": "4+ years in programming and AI tool development."
       },
       {
-        "avatar": "https://randomuser.me/api/portraits/men/26.jpg",
+        "avatar": "/vincentBugket.jpg",
         "name": "Vincent Abour",
         "role": "Marketing & Communication",
         "description": "Marketing & business model expert."
@@ -162,21 +162,21 @@
   "test": "It works!",
   "homeCards": [
     {
-      "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
+      "image": "/cardImage_2.jpg",
       "alt": "Global QA",
       "title": "A complete QA, designed for players",
       "text": "Bugket supports studios on all types of projects: solo, multi, indie or AA+. We adapt our testing methods to each game to guarantee stability, consistency, and performance.",
       "reverse": false
     },
     {
-      "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80",
+      "image": "/cardImage_1.jpg",
       "alt": "Automation tools",
       "title": "Tools made for your needs",
       "text": "Automation, reporting, bug tracking. We develop custom solutions. Our goal: speed up test cycles, detect earlier, deliver cleaner.",
       "reverse": true
     },
     {
-      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80",
+      "image": "/cardImage_3.jpg",
       "alt": "Next-gen expertise",
       "title": "A team in tune with current standards",
       "text": "Our testers are trained in the demands of modern gaming: multiplayer, crossplay, recent engines, UX/UI... Concrete expertise to meet the technical and creative realities of the market.",

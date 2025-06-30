@@ -13,7 +13,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+        sans: ['Whitney', 'Inter', 'ui-sans-serif', 'system-ui'],
       },
       borderRadius: {
         xl: '1rem',

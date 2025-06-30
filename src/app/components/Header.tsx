@@ -4,6 +4,7 @@ import { useLanguage } from './LanguageProvider';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getPublicAssetPath } from '../utils/getPublicAssetPath';
+import { FaDiscord, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 /**
  * Header component for the main navigation bar.
@@ -67,7 +68,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Sticky header bar: logo, contact, burger, all with background */}
-      <div className={`fixed top-0 left-0 w-full z-40 md:z-auto flex items-center justify-between px-4 py-2 h-16 transition-colors duration-300 ${scrolled ? 'bg-[#5865f2]/90 backdrop-blur-md shadow-lg' : ''} md:bg-transparent md:backdrop-blur-none md:shadow-none`}>
+      <div className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 py-2 h-16 transition-colors duration-300 ${scrolled ? 'bg-[#5865f2]/90 backdrop-blur-md shadow-lg' : ''} md:bg-transparent md:backdrop-blur-none md:shadow-none`}>
         {/* Logo and brand */}
         <Link href="/" className="flex items-center group focus:outline-none" aria-label="Go to home">
           <Image
@@ -133,7 +134,7 @@ const Header: React.FC = () => {
       {/* Mobile menu overlay */}
       {menuOpen && (
         <div className="fixed inset-0 z-[99] flex md:hidden animate-fade-in">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#232946] via-[#3a1c71] to-[#5865f2] opacity-95 backdrop-blur-xl" />
+          <div className="absolute inset-0 bg-[#0a1333]" />
           <div
             ref={menuRef}
             id="mobile-menu"
@@ -180,6 +181,15 @@ const Header: React.FC = () => {
                 </Link>
               ))}
             </nav>
+            <div className="mt-auto w-full flex flex-col items-center">
+              <a href="/contact" className="mb-4 w-full text-center bg-[#5865f2] text-white text-lg font-bold py-3 px-6 rounded-2xl shadow-lg hover:bg-[#4752c4] transition-colors">Contact</a>
+              <div className="mb-8 flex justify-center gap-6 text-2xl text-white/80">
+                <a href="#" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Discord"><FaDiscord /></a>
+                <a href="#" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
+                <a href="#" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+                <a href="#" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Github"><FaGithub /></a>
+              </div>
+            </div>
           </div>
         </div>
       )}

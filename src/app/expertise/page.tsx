@@ -6,6 +6,7 @@ import { useLanguage } from "../components/LanguageProvider";
 import Image from 'next/image';
 import { FaCogs, FaUsers, FaChartLine, FaVrCardboard, FaNetworkWired, FaRobot, FaWindows } from "react-icons/fa";
 import { SiEpicgames, SiSteam } from "react-icons/si";
+import { getPublicAssetPath } from "../utils/getPublicAssetPath";
 
 /**
  * ExpertisePage component
@@ -63,7 +64,7 @@ const ExpertisePage: React.FC = () => {
           </div>
           <div className="flex-1 flex justify-center items-center z-10">
             <Image
-              src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+              src={getPublicAssetPath('/cardImage.jpg')}
               alt="QA Dashboard Illustration"
               width={340}
               height={340}
@@ -106,11 +107,11 @@ const ExpertisePage: React.FC = () => {
                 <div key={i} className="relative flex flex-col items-center w-full mb-6 z-10">
                   {/* Badge année sur la ligne centrale */}
                   <div className="flex items-center justify-center w-full">
-                    <span className="bg-[#5865f2] text-white w-9 h-9 flex items-center justify-center rounded-full text-xs font-bold shadow-neon border-2 border-white/20 z-10">{h.year}</span>
+                    <span className="bg-[#5865f2] text-white font-bold px-4 py-2 rounded-xl shadow-neon border-2 border-white/20 z-10 text-base text-center">{h.year}</span>
                   </div>
                   {/* Texte événement sous le badge */}
                   <div className="mt-2 flex justify-center w-full">
-                    <span className="bg-black/40 text-white text-xs px-3 py-2 rounded-xl shadow-md max-w-[80vw] text-center">{h.event}</span>
+                    <span className="bg-black/60 text-white font-bold px-4 py-2 rounded-xl shadow-md text-base text-center">{h.event}</span>
                   </div>
                 </div>
               ))}
@@ -137,7 +138,7 @@ const ExpertisePage: React.FC = () => {
               icon={iconMap[e.icon as string]}
               title={e.title}
               description={e.desc}
-              className="bg-gradient-to-br from-[#232946]/80 via-[#3a1c71]/70 to-[#5865f2]/30 bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl border border-[#5865f2]/20 hover:scale-[1.03] transition-transform duration-300 min-h-[220px]"
+              className="bg-[#0a1333]/80 border border-[#5865f2]/20 rounded-3xl shadow-2xl hover:scale-[1.03] transition-transform duration-300 min-h-[220px]"
             />
           ))}
         </div>

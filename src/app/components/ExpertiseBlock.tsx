@@ -24,7 +24,7 @@ interface ExpertiseBlockProps {
 const ExpertiseBlock: React.FC<ExpertiseBlockProps> = ({ icon, title, description, className = "" }) => {
   return (
     <motion.div
-      className={`bg-[#23272a] rounded-xl shadow-lg p-6 flex flex-col items-center text-center ${className}`}
+      className={`bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-6 flex flex-col items-center text-center ${className}`}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
