@@ -2,6 +2,7 @@
 import React from "react";
 import AnimatedSection from "./components/AnimatedSection";
 import { useLanguage } from './components/LanguageProvider';
+import Link from 'next/link';
 import Image from 'next/image';
 import { getPublicAssetPath } from "./utils/getPublicAssetPath";
 
@@ -28,8 +29,8 @@ const HomePage: React.FC = () => {
               {t('hero.description') as string}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full justify-center">
-              <a href="/services" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg w-full sm:w-auto text-center">{t('hero.services') as string}</a>
-              <a href="/contact" className="bg-[#23272a] text-white px-8 py-3 rounded-xl font-semibold border border-[#5865f2] hover:bg-[#313338] transition-colors text-lg w-full sm:w-auto text-center">{t('hero.contact') as string}</a>
+              <Link href="/services" className="bg-[#5865f2] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-[#4752c4] transition-colors text-lg w-full sm:w-auto text-center">{t('hero.services') as string}</Link>
+              <Link href="/contact" className="bg-[#23272a] text-white px-8 py-3 rounded-xl font-semibold border border-[#5865f2] hover:bg-[#313338] transition-colors text-lg w-full sm:w-auto text-center">{t('hero.contact') as string}</Link>
             </div>
           </div>
           <div className="flex justify-center items-center flex-1">
