@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Bugket – Game Quality Assurance",
   description: "Game QA, done right. Bugket helps studios deliver flawless games to players worldwide.",
   icons: {
-    icon: "/icon.png"
+    icon: getPublicAssetPath('/logo.png')
   }
 };
 
