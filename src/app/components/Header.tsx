@@ -182,7 +182,7 @@ const Header: React.FC = () => {
               ))}
             </nav>
             <div className="mt-auto w-full flex flex-col items-center">
-              <Link href="/contact" className="mb-4 w-full text-center bg-[#5865f2] text-white text-lg font-bold py-3 px-6 rounded-2xl shadow-lg hover:bg-[#4752c4] transition-colors">Contact</Link>
+              <Link href="/contact" className="mb-4 w-full text-center bg-[#5865f2] text-white text-lg font-bold py-3 px-6 rounded-2xl shadow-lg hover:bg-[#4752c4] transition-colors" onClick={() => setMenuOpen(false)}>Contact</Link>
               <div className="mb-8 flex justify-center gap-6 text-2xl text-white/80">
                 <a href="#" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Discord"><FaDiscord /></a>
                 <a href="#" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
