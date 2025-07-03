@@ -7,6 +7,7 @@ import NeonBackgroundElements from "./components/NeonBackgroundElements";
 import BackgroundImages from "./components/BackgroundImages";
 import { LanguageProvider } from "./components/LanguageProvider";
 import { getPublicAssetPath } from "./utils/getPublicAssetPath";
+import { ToastProvider } from './components/Toast';
 // import { AnimatePresence, motion } from "framer-motion"; // Uncomment for page transitions
 
 export const metadata: Metadata = {
@@ -36,28 +37,30 @@ export default function RootLayout({
       </head>
       <body className="relative min-h-screen flex flex-col overflow-x-hidden">
         <LanguageProvider>
-          {/* Animated background elements */}
-          <NeonBackgroundElements />
-          <BackgroundImages />
-          <Header />
-          <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-8">
-            {/*
-            // For animated page transitions, wrap children with AnimatePresence and motion.div
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={router.pathname}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
-          >
-            {children}
-              </motion.div>
-            </AnimatePresence>
-            */}
-            {children}
-          </main>
-          <Footer />
+          <ToastProvider>
+            {/* Animated background elements */}
+            <NeonBackgroundElements />
+            <BackgroundImages />
+            <Header />
+            <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-8">
+              {/*
+              // For animated page transitions, wrap children with AnimatePresence and motion.div
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={router.pathname}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
+            >
+              {children}
+                </motion.div>
+              </AnimatePresence>
+              */}
+              {children}
+            </main>
+            <Footer />
+          </ToastProvider>
         </LanguageProvider>
         {/* Neon background animation keyframes */}
         <style>{`

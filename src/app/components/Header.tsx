@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getPublicAssetPath } from '../utils/getPublicAssetPath';
 import { FaDiscord, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { useToast } from './Toast';
 
 /**
  * Header component for the main navigation bar.
@@ -16,6 +17,7 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
+  const toast = useToast();
 
   // Close menu when clicking outside the menu area
   useEffect(() => {
@@ -184,10 +186,18 @@ const Header: React.FC = () => {
             <div className="mt-auto w-full flex flex-col items-center">
               <Link href="/contact" className="mb-4 w-full text-center bg-[#5865f2] text-white text-lg font-bold py-3 px-6 rounded-2xl shadow-lg hover:bg-[#4752c4] transition-colors" onClick={() => setMenuOpen(false)}>Contact</Link>
               <div className="mb-8 flex justify-center gap-6 text-2xl text-white/80">
-                <a href="#" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Discord"><FaDiscord /></a>
-                <a href="#" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
-                <a href="#" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-                <a href="#" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Github"><FaGithub /></a>
+                <button type="button" className="hover:text-white transition-colors focus:outline-none" aria-label="Discord soon" onClick={() => toast.show(t('social.soon') as string)} tabIndex={0}>
+                  <FaDiscord />
+                </button>
+                <button type="button" className="hover:text-white transition-colors focus:outline-none" aria-label="Twitter soon" onClick={() => toast.show(t('social.soon') as string)} tabIndex={0}>
+                  <FaTwitter />
+                </button>
+                <button type="button" className="hover:text-white transition-colors focus:outline-none" aria-label="LinkedIn soon" onClick={() => toast.show(t('social.soon') as string)} tabIndex={0}>
+                  <FaLinkedin />
+                </button>
+                <button type="button" className="hover:text-white transition-colors focus:outline-none" aria-label="Github soon" onClick={() => toast.show(t('social.soon') as string)} tabIndex={0}>
+                  <FaGithub />
+                </button>
               </div>
             </div>
           </div>

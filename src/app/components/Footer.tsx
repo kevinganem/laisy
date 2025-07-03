@@ -5,6 +5,7 @@ import { useLanguage } from './LanguageProvider';
 import Image from 'next/image';
 import { getPublicAssetPath } from '../utils/getPublicAssetPath';
 import Link from 'next/link';
+import { useToast } from './Toast';
 
 /**
  * Footer component for the application.
@@ -16,6 +17,7 @@ import Link from 'next/link';
  */
 const Footer: React.FC = () => {
   const { language, setLanguage, languages, t } = useLanguage();
+  const toast = useToast();
 
   const footerLinks = [
     {
@@ -108,16 +110,16 @@ const Footer: React.FC = () => {
         {/* Social media links row */}
         <div className="flex justify-center gap-6 text-2xl text-white/80 mb-8 mt-10">
           {socialLinks.map((s, i) => (
-            <a
+            <button
               key={i}
-              href={s.url}
-              className="hover:text-white transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Social link"
+              type="button"
+              className="hover:text-white transition-colors focus:outline-none"
+              aria-label="Social link soon"
+              onClick={() => toast.show(t('social.soon') as string)}
+              tabIndex={0}
             >
               {s.icon}
-            </a>
+            </button>
           ))}
         </div>
         {/* Copyright notice */}
@@ -141,6 +143,7 @@ const Footer: React.FC = () => {
 function FooterMobile() {
   const { language, setLanguage, languages, t } = useLanguage();
   const [openSection, setOpenSection] = React.useState<string | null>(null);
+  const toast = useToast();
   const footerLinks = [
     {
       title: t('footer.product') as string,
@@ -222,16 +225,16 @@ function FooterMobile() {
       {/* Social media links */}
       <div className="flex justify-center gap-6 text-2xl text-white/80 mt-4 mb-6">
         {socialLinks.map((s, i) => (
-          <a
+          <button
             key={i}
-            href={s.url}
-            className="hover:text-white transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Social link"
+            type="button"
+            className="hover:text-white transition-colors focus:outline-none"
+            aria-label="Social link soon"
+            onClick={() => toast.show(t('social.soon') as string)}
+            tabIndex={0}
           >
             {s.icon}
-          </a>
+          </button>
         ))}
       </div>
       {/* Large bugket text at the bottom */}

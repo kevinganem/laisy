@@ -17,7 +17,7 @@
   },
   "hero": {
     "home": "Le QA, conçu par ceux qui vivent le jeu vidéo.",
-    "description": "Notre savoir-faire QA s’appuie sur une véritable culture du jeu et une approche rigoureuse du test. Bugket intervient tout au long du développement pour fiabiliser votre production et garantir une expérience fluide, cohérente et aboutie.",
+    "description": "Notre savoir-faire QA s'appuie sur une véritable culture du jeu et une approche rigoureuse du test. Bugket intervient tout au long du développement pour fiabiliser votre production et garantir une expérience fluide, cohérente et aboutie.",
     "services": "Nos services",
     "expertise": "Notre expertise",
     "about": "À propos de bugket",
@@ -42,7 +42,7 @@
   },
   "services": {
     "hero": "Une <span class='text-[#5865f2]'>équipe</span> dédiée à chaque aspect du QA",
-    "description": "De l’identification des bugs à la validation finale, Bugket gère tous les aspects du QA pour garantir une qualité sans compromis. Nous nous engageons à suivre votre projet à chaque étape pour une sortie parfaite.",
+    "description": "De l'identification des bugs à la validation finale, Bugket gère tous les aspects du QA pour garantir une qualité sans compromis. Nous nous engageons à suivre votre projet à chaque étape pour une sortie parfaite.",
     "list": [
       { "icon": "FaBug", "title": "Tests fonctionnels", "desc": "Identifiez les bugs avant vos joueurs. Tests manuels et automatisés pour chaque fonctionnalité, chaque build." },
       { "icon": "FaGamepad", "title": "Compatibilité", "desc": "Testé sur toutes les configurations. Assurez-vous que votre jeu fonctionne parfaitement." },
@@ -68,7 +68,7 @@
       { "icon": "FaChartLine", "title": "Analytics & Reporting", "desc": "Suivi de bugs détaillé, analytics et rapports clairs pour guider votre équipe." },
       { "icon": "FaVrCardboard", "title": "Équipe de testeurs qualifiés", "desc": "Des professionnels formés, passionnés par le jeu vidéo, prêts à tout tester, encore et encore." },
       { "icon": "FaNetworkWired", "title": "Réseau & Latence", "desc": "Simulation de conditions réseau réelles pour un online robuste." },
-      { "icon": "FaRobot", "title": "Suivi de projet", "desc": "Communication claire, feedback rapide, outils partagés : on s’intègre comme une extension de votre team." }
+      { "icon": "FaRobot", "title": "Suivi de projet", "desc": "Communication claire, feedback rapide, outils partagés : on s'intègre comme une extension de votre team." }
     ],
     "stats": [
       { "label": "Jeux testés", "value": "30+" },
@@ -78,8 +78,8 @@
     ],
     "history": [
       { "year": "2025", "event": "Création de Bugket" },
-      { "year": "Début d’année", "event": "Premier projet testé & livré" },
-      { "year": "Milieu d’année", "event": "Agrandissement de l'équipe" },
+      { "year": "Début d'année", "event": "Premier projet testé & livré" },
+      { "year": "Milieu d'année", "event": "Agrandissement de l'équipe" },
       { "year": "Aujourd'hui", "event": "Votre projet" }
     ],
     "tools": [
@@ -182,5 +182,8 @@
       "text": "Nos testeurs sont formés aux exigences du jeu moderne : multijoueur, crossplay, moteurs récents, UX/UI… Une expertise concrète pour répondre aux réalités techniques et créatives du marché.",
       "reverse": false
     }
-  ]
+  ],
+  "social": {
+    "soon": "Bientôt disponible !"
+  }
 } 
