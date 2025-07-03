@@ -1,6 +1,5 @@
 "use client";
 import React, { createContext, useContext, useState, useCallback } from 'react';
-import { useLanguage } from './LanguageProvider';
 
 // Toast context for global access
 const ToastContext = createContext<{
@@ -16,7 +15,6 @@ export const useToast = () => {
 export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [visible, setVisible] = useState(false);
   const [message, setMessage] = useState('');
-  const { t } = useLanguage();
 
   const show = useCallback((msg: string) => {
     setMessage(msg);
