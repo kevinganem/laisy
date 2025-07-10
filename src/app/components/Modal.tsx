@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Smooth easing curve (easeOutCubic)
-const MODAL_EASING = [0.22, 1, 0.36, 1];
-
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
