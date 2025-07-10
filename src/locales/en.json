@@ -220,21 +220,21 @@
   "test": "It works!",
   "homeCards": [
     {
-      "image": "./card_1.png",
+      "image": "/card_1.png",
       "alt": "AI Automation",
       "title": "Automate your processes with AI",
       "text": "LAISY supports SMEs and startups in their digital transformation. We adapt our AI solutions to each company to ensure efficiency, scalability and measurable ROI.",
       "reverse": false
     },
     {
-      "image": "./card_2.png",
+      "image": "/card_2.png",
       "alt": "Custom solutions",
       "title": "AI solutions made for your needs",
       "text": "Automation, generative AI, chatbots, analytics. We develop personalized solutions. Our goal: optimize your processes, reduce your costs, accelerate your growth.",
       "reverse": true
     },
     {
-      "image": "./card_3.png",
+      "image": "/card_3.png",
       "alt": "AI Expertise",
       "title": "A team expert in AI and business",
       "text": "Our consultants are trained in the latest AI technologies and understand business challenges. Concrete expertise to meet the challenges of digital transformation.",

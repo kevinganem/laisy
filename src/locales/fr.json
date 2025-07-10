@@ -220,21 +220,21 @@
   "test": "Ça marche !",
   "homeCards": [
     {
-      "image": "./card_1.png",
+      "image": "/card_1.png",
       "alt": "Automatisation IA",
       "title": "Automatisez vos processus avec l'IA",
       "text": "LAISY accompagne les PME et startups dans leur transformation digitale. Nous adaptons nos solutions d'IA à chaque entreprise pour garantir efficacité, scalabilité et ROI mesurable.",
       "reverse": false
     },
     {
-      "image": "./card_2.png",
+      "image": "/card_2.png",
       "alt": "Solutions sur mesure",
       "title": "Des solutions IA faites pour vos besoins",
       "text": "Automatisation, IA générative, chatbots, analytics. Nous développons des solutions personnalisées. Notre objectif : optimiser vos processus, réduire vos coûts, accélérer votre croissance.",
       "reverse": true
     },
     {
-      "image": "./card_3.png",
+      "image": "/card_3.png",
       "alt": "Expertise IA",
       "title": "Une équipe experte en IA et business",
       "text": "Nos consultants sont formés aux dernières technologies d'IA et comprennent les enjeux business. Une expertise concrète pour répondre aux défis de la transformation digitale.",
