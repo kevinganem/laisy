@@ -5,17 +5,13 @@ declare module '*.json';
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import en from '../../locales/en.json';
 import fr from '../../locales/fr.json';
-import es from '../../locales/es.json';
-import de from '../../locales/de.json';
 
-const TRANSLATIONS: Record<string, Translations> = { en, fr, es, de };
+const TRANSLATIONS: Record<string, Translations> = { en, fr };
 
 // Supported languages and their display labels
 const LANGUAGES = [
-  { code: 'en', label: 'English' },
   { code: 'fr', label: 'Français' },
-  { code: 'es', label: 'Español' },
-  { code: 'de', label: 'Deutsch' },
+  { code: 'en', label: 'English' },
 ];
 
 // Type for translation object (recursive for nested keys)
@@ -40,9 +36,9 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
         return stored;
       }
     }
-    return 'en';
+    return 'fr';
   });
-  const [translations, setTranslations] = useState<Translations>(TRANSLATIONS['en']);
+  const [translations, setTranslations] = useState<Translations>(TRANSLATIONS['fr']);
 
   // Load language from localStorage on mount (persist user preference)
   useEffect(() => {
@@ -54,7 +50,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   // Load translations when language changes (dynamic import)
   useEffect(() => {
-    setTranslations(TRANSLATIONS[language] || TRANSLATIONS['en']);
+    setTranslations(TRANSLATIONS[language] || TRANSLATIONS['fr']);
     if (typeof window !== 'undefined') {
       localStorage.setItem('lang', language);
     }

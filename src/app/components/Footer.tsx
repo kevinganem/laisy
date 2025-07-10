@@ -2,10 +2,9 @@
 import React from 'react';
 import { FaDiscord, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { useLanguage } from './LanguageProvider';
-import Image from 'next/image';
-import { getPublicAssetPath } from '../utils/getPublicAssetPath';
 import Link from 'next/link';
 import { useToast } from './Toast';
+import Logo from './Logo';
 
 /**
  * Footer component for the application.
@@ -25,6 +24,7 @@ const Footer: React.FC = () => {
       links: [
         { label: t('nav.services') as string, href: '/services' },
         { label: t('nav.expertise') as string, href: '/expertise' },
+        { label: t('nav.pricing') as string, href: '/pricing' },
         { label: t('nav.contact') as string, href: '/contact' },
         { label: t('nav.about') as string, href: '/about' },
       ],
@@ -48,20 +48,20 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      {/* Footer mobile façon Discord */}
+      {/* Mobile footer component */}
       <FooterMobile />
-      {/* Footer desktop (caché sur mobile) */}
+      {/* Desktop footer (hidden on mobile) */}
       <footer className="hidden md:block w-full bg-[#0a1333]/80 pt-16 pb-8 px-4 mt-24 rounded-t-[2.5rem] shadow-inner relative overflow-hidden">
         <div className="max-w-4xl mx-auto w-full flex flex-col gap-10">
-          {/* Main row: left = logo + language selector, right = navigation links */}
+          {/* Main footer row: logo/language selector on left, navigation on right */}
           <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 mb-4">
-            {/* Left section: logo above language selector (desktop) */}
+            {/* Left section: logo and language selector */}
             <div className="flex flex-col items-center md:items-start gap-2 md:gap-4 justify-start">
-              {/* Company logo, decorative but with alt for accessibility */}
-              <Image src={getPublicAssetPath('/logo.png')} alt="bugket logo" width={64} height={64} className="w-16 h-16 mb-2" />
+              {/* Company logo with accessibility alt text */}
+              <Logo size={84} className="w-20 h-20" animated={false} />
               {/* Language selector label */}
               <span className="text-white/70 font-medium text-base mb-1">{t('footer.language') as string}</span>
-              {/* Language dropdown selector (style mobile) */}
+              {/* Language dropdown selector */}
               <div className="relative w-40">
                 <select
                   className="w-full bg-white/10 rounded-2xl p-3 pr-10 text-white font-semibold border border-white/20 focus:ring-2 focus:ring-[#5865f2] transition-all text-base appearance-none"
@@ -76,13 +76,13 @@ const Footer: React.FC = () => {
                     </option>
                   ))}
                 </select>
-                {/* Flèche */}
+                {/* Dropdown arrow */}
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/70">
                   <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </span>
               </div>
             </div>
-            {/* Right section: navigation links (Product, Policies) version grille classique */}
+            {/* Right section: navigation links grid */}
             <div className="w-full md:w-auto flex flex-col items-center md:items-start">
               <div className="grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-12 text-white w-full max-w-3xl mx-auto">
                 {footerLinks.map((col) => (
@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Social media links row */}
+        {/* Social media links section */}
         <div className="flex justify-center gap-6 text-2xl text-white/80 mb-8 mt-10">
           {socialLinks.map((s, i) => (
             <button
@@ -124,15 +124,15 @@ const Footer: React.FC = () => {
         </div>
         {/* Copyright notice */}
         <div className="text-center text-white/60 text-sm mt-6 relative z-10">
-          &copy; {new Date().getFullYear()} bugket. {t('footer.rights') as string }
+          &copy; {new Date().getFullYear()} LAISY {t('footer.rights') as string }
         </div>
-        {/* Large background text for branding */}
+        {/* Large background branding text */}
         <span
           className="pointer-events-none select-none absolute bottom-0 left-0 right-0 w-full text-[16vw] font-extrabold text-white opacity-10 leading-none z-0 text-center whitespace-nowrap"
           style={{ letterSpacing: '-0.05em' }}
           aria-hidden="true"
         >
-          bugket
+          LAISY.
         </span>
       </footer>
     </>
@@ -150,6 +150,7 @@ function FooterMobile() {
       links: [
         { label: t('nav.services') as string, href: '/services' },
         { label: t('nav.expertise') as string, href: '/expertise' },
+        { label: t('nav.pricing') as string, href: '/pricing' },
         { label: t('nav.contact') as string, href: '/contact' },
         { label: t('nav.about') as string, href: '/about' },
       ],
@@ -171,9 +172,9 @@ function FooterMobile() {
   ];
   return (
     <footer className="md:hidden w-full bg-[#0a1333]/80 pt-8 pb-14 px-2 flex flex-col items-center gap-6 relative overflow-hidden">
-      {/* Logo and name */}
+      {/* Company logo */}
       <div className="flex flex-col items-center mb-2">
-        <Image src={getPublicAssetPath('/logo.png')} alt="bugket logo" width={56} height={56} className="w-14 h-14" />
+        <Logo size={56} className="w-14 h-14" animated={false} />
       </div>
       {/* Language selector */}
       <div className="w-11/12 max-w-xs mx-auto mb-2">
@@ -192,13 +193,13 @@ function FooterMobile() {
               </option>
             ))}
           </select>
-          {/* Arrow */}
+          {/* Dropdown arrow */}
           <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/70">
             <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </span>
         </div>
       </div>
-      {/* Accordion menu */}
+      {/* Accordion navigation menu */}
       <div className="w-11/12 max-w-xs mx-auto flex flex-col gap-2">
         {footerLinks.map((col) => (
           <div key={col.title} className="border-b border-white/15">
@@ -237,13 +238,13 @@ function FooterMobile() {
           </button>
         ))}
       </div>
-      {/* Large bugket text at the bottom */}
+      {/* Large background branding text */}
       <span
         className="pointer-events-none select-none absolute bottom-0 left-1/2 -translate-x-1/2 text-[14vw] font-extrabold text-white opacity-10 leading-none z-0 whitespace-nowrap"
         style={{ letterSpacing: '-0.05em' }}
         aria-hidden="true"
       >
-        bugket
+        LAISY.
       </span>
     </footer>
   );

@@ -12,20 +12,31 @@ import { useLanguage } from "./LanguageProvider";
  *
  * Props:
  *   - className: Optional additional TailwindCSS classes
+ *   - selectedPlan: Optional pre-filled message
+ *   - onClose: Optional callback to call after successful submission
  */
 interface ContactFormProps {
   className?: string;
+  selectedPlan?: string;
+  onClose?: () => void;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+const ContactForm: React.FC<ContactFormProps> = ({ className = "", selectedPlan, onClose }) => {
+  const [form, setForm] = useState({ name: "", email: "", companySize: "", message: selectedPlan ? `Plan: ${selectedPlan}\n` : "" });
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const { t } = useLanguage();
 
+  // Reset message if selectedPlan changes
+  React.useEffect(() => {
+    if (selectedPlan) {
+      setForm(f => ({ ...f, message: `Plan: ${selectedPlan}\n` }));
+    }
+  }, [selectedPlan]);
+
   // Handle input changes for all fields (controlled inputs)
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -43,7 +54,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
       });
       if (res.ok) {
         setSuccess(true);
-        setForm({ name: "", email: "", message: "" });
+        setForm({ name: "", email: "", companySize: "", message: selectedPlan ? `Plan: ${selectedPlan}\n` : "" });
+        // Auto-close after 2s if onClose is provided
+        if (onClose) {
+          setTimeout(() => { onClose(); }, 2000);
+        }
       } else {
         setError(t('contact.error') as string);
       }
@@ -132,6 +147,25 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
           aria-label={t('contact.email') as string}
           disabled={sending}
         />
+      </label>
+      {/* Company size field */}
+      <label className="text-white font-medium">{t('contact.companySize') as string}
+        <select
+          name="companySize"
+          value={form.companySize}
+          onChange={handleChange}
+          required
+          className="mt-1 w-full rounded bg-[#313338] text-white p-2 border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
+          aria-label={t('contact.companySize') as string}
+          disabled={sending}
+        >
+          <option value="">{t('contact.companySizePlaceholder') as string}</option>
+          <option value="0-9">0-9 {t('contact.employees') as string}</option>
+          <option value="10-49">10-49 {t('contact.employees') as string}</option>
+          <option value="50-199">50-199 {t('contact.employees') as string}</option>
+          <option value="200+">200+ {t('contact.employees') as string}</option>
+          <option value="unknown">{t('contact.companySizeUnknown') as string}</option>
+        </select>
       </label>
       <label className="text-white font-medium">{t('contact.message') as string}
         <textarea

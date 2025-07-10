@@ -3,6 +3,7 @@
     "home": "Home",
     "services": "Services",
     "expertise": "Expertise",
+    "pricing": "Pricing",
     "about": "About",
     "contact": "Contact"
   },
@@ -16,11 +17,12 @@
     "rights": "All rights reserved."
   },
   "hero": {
-    "home": "QA, designed by those who live video games.",
-    "description": "Our QA expertise is based on a true gaming culture and a rigorous testing approach. Bugket supports you throughout development to ensure a reliable production and a smooth, coherent, and polished experience.",
-    "services": "Our Services",
-    "expertise": "Our Expertise",
-    "about": "About bugket",
+    "home": "AI at the service of your business.",
+    "description": "LAISY revolutionizes business process management through artificial intelligence. We automate your repetitive tasks to free up your teams' time and optimize your operations.",
+    "services": "Our services",
+    "expertise": "Our expertise",
+    "pricing": "Our pricing",
+    "about": "About LAISY",
     "contact": "Contact Us"
   },
   "contact": {
@@ -28,17 +30,21 @@
     "email": "Email",
     "message": "Message",
     "send": "Send",
-    "success": "Thank you for contacting bugket! We will get back to you soon.",
-    "hero": "Let's build better games <span class='text-[#57f287]'>together</span>",
+    "success": "Thank you for contacting LAISY! We will get back to you soon.",
+    "hero": "Let's transform your business <span class='text-[#57f287]'>together</span>",
     "location": "Paris, France",
     "remote": "Remote & worldwide collaboration",
     "socials": [
-      { "icon": "FaDiscord", "label": "Discord", "url": "#" },
+      { "icon": "FaLinkedin", "label": "LinkedIn", "url": "#" },
       { "icon": "FaTwitter", "label": "Twitter", "url": "#" },
-      { "icon": "FaEnvelope", "label": "Email", "url": "mailto:contact@bugket.com" }
+      { "icon": "FaDiscord", "label": "Discord", "url": "#" }
     ],
     "error": "An error occurred. Please try again.",
-    "sending": "Sending..."
+    "sending": "Sending...",
+    "companySize": "Company size",
+    "companySizePlaceholder": "Select your company size",
+    "employees": "employees",
+    "companySizeUnknown": "Not specified"
   },
   "policies": {
     "terms_title": "Terms of Service",
@@ -46,18 +52,18 @@
     "cookies_title": "Cookies Policy",
     "terms": {
       "sections": [
-        { "title": "1. Acceptance of Terms", "text": "By accessing or using bugket's services, you agree to be bound by these terms of use. If you do not agree, please do not use our services." },
-        { "title": "2. Services", "text": "bugket provides quality assurance (QA) services for video games. We reserve the right to modify or discontinue any service at any time without notice." },
+        { "title": "1. Acceptance of Terms", "text": "By accessing or using LAISY's services, you agree to be bound by these terms of use. If you do not agree, please do not use our services." },
+        { "title": "2. Services", "text": "LAISY provides artificial intelligence and automation services for businesses. We reserve the right to modify or discontinue any service at any time without notice." },
         { "title": "3. User Responsibilities", "text": "You agree to use our services legally and not to misuse, reverse engineer, or attempt to disrupt our platform or services." },
-        { "title": "4. Intellectual Property", "text": "All content, trademarks, and materials on bugket are the property of their respective owners. You may not use, copy, or distribute any content without permission." },
-        { "title": "5. Limitation of Liability", "text": "bugket is not responsible for any damages or losses resulting from the use of our services. All services are provided 'as is' without any warranty." },
+        { "title": "4. Intellectual Property", "text": "All content, trademarks, and materials on LAISY are the property of their respective owners. You may not use, copy, or distribute any content without permission." },
+        { "title": "5. Limitation of Liability", "text": "LAISY is not responsible for any damages or losses resulting from the use of our services. All services are provided 'as is' without any warranty." },
         { "title": "6. Changes to Terms", "text": "We may update these terms of use at any time. Continued use of our services constitutes acceptance of the new terms." },
         { "title": "7. Contact", "text": "For any questions regarding these terms, contact us via the Contact page." }
       ]
     },
     "privacy": {
       "sections": [
-        { "title": "1. Introduction", "text": "bugket is committed to protecting your privacy. This policy explains how we collect, use, and protect your information." },
+        { "title": "1. Introduction", "text": "LAISY is committed to protecting your privacy. This policy explains how we collect, use, and protect your information." },
         { "title": "2. Information Collected", "text": "We may collect personal information such as your name, email address, and any information provided through our contact forms. We also collect usage data via cookies and analytics tools." },
         { "title": "3. Use of Information", "text": "Your information is used to provide and improve our services, respond to requests, and ensure the security of our platform. We do not sell your data to third parties." },
         { "title": "4. Cookies", "text": "We use cookies to enhance your experience and analyze site usage. You can manage your cookie preferences in your browser. See our cookies policy for more details." },
@@ -70,7 +76,7 @@
     "cookies": {
       "sections": [
         { "title": "1. What is a cookie?", "text": "Cookies are small text files stored on your device to help sites function and collect information about your usage." },
-        { "title": "2. Use of Cookies", "text": "bugket uses cookies to improve your experience, analyze traffic, and remember your preferences. Some cookies are essential for the site to function." },
+        { "title": "2. Use of Cookies", "text": "LAISY uses cookies to improve your experience, analyze traffic, and remember your preferences. Some cookies are essential for the site to function." },
         { "title": "3. Types of Cookies Used", "text": "Essential cookies: necessary for the site to function. Analytics cookies: help us understand site usage. Preference cookies: remember your language and other settings." },
         { "title": "4. Managing Cookies", "text": "You can control and delete cookies via your browser settings. Disabling cookies may affect your experience on our site." },
         { "title": "5. Policy Changes", "text": "We may update this cookies policy. Please review it regularly." },
@@ -79,107 +85,159 @@
     }
   },
   "about": {
-    "hero": "Meet the <span class='text-[#eb459e]'>bugket team</span>",
+    "hero": "The LAISY team",
     "team": [
       {
-        "avatar": "/thibaultBugket.jpg",
-        "name": "Thibault Gerdelat",
-        "role": "Lead QA",
-        "description": "3+ years in game QA, expert in bug tracking and project management."
+        "avatar": "/alexandreClide.jpg",
+        "name": "Noam Bouaziz",
+        "role": "CEO & Founder",
+        "description": "3+ years experience in AI and automation."
       },
       {
-        "avatar": "/kevinBugket.jpg",
+        "avatar": "/sarahClide.jpg",
         "name": "Kevin Ganem",
-        "role": "Developer - IT",
-        "description": "4+ years in programming and AI tool development."
+        "role": "CEO & Founder",
+        "description": "3+ years experience in AI and automation"
       },
       {
-        "avatar": "/vincentBugket.jpg",
-        "name": "Vincent Abour",
-        "role": "Marketing & Communication",
-        "description": "Marketing & business model expert."
+        "avatar": "/thomasClide.jpg",
+        "name": "Eliott Deper",
+        "role": "CTO & AI Lead",
+        "description": "3+ years experience in AI and automation."
       }
     ],
     "values": [
-      "Passion for testing",
-      "Clarity and trust",
-      "Constant evolution",
-      "Diverse team",
-      "Fun atmosphere"
+      "Continuous innovation",
+      "Technical excellence",
+      "Client support",
+      "Multidisciplinary team",
+      "Measurable impact"
     ],
     "funFacts": [
-      "We play Among Us on Fridays!",
-      "Our team is a mix of various talents.",
-      "We spend our time tracking bugs, not creating them."
+      "We use AI to optimize our own processes!",
+      "Our team represents 5 different nationalities.",
+      "We train our clients in AI for sustainable adoption."
     ]
   },
   "services": {
-    "hero": "A <span class='text-[#5865f2]'>dedicated</span> team for every aspect of QA",
-    "description": "From bug identification to final validation, Bugket manages all aspects of QA to guarantee uncompromising quality. We are committed to following your project at every stage for a perfect release.",
+    "hero": "AI solutions for every aspect of your business",
+    "description": "From task automation to predictive analytics, LAISY covers all aspects of AI in business to ensure successful and measurable digital transformation.",
     "list": [
-      { "icon": "FaBug", "title": "Functional Testing", "desc": "Identify bugs before your players do. Manual and automated tests for every feature, every build." },
-      { "icon": "FaGamepad", "title": "Compatibility", "desc": "Tested on all configurations. Ensure your game works perfectly." },
-      { "icon": "FaCheckCircle", "title": "Certification QA", "desc": "Meet the requirements of major platforms. Full support for fast validation." },
-      { "icon": "FaRocket", "title": "Performance QA", "desc": "FPS, memory, load times optimization. Guarantee a smooth and responsive experience." },
-      { "icon": "FaWrench", "title": "Stability Testing", "desc": "We analyze long-term stability. Detect issues that impact performance over time." },
-      { "icon": "FaShieldAlt", "title": "Security & Anti-Cheat", "desc": "Protect your game from cheating. Advanced testing for enhanced security." }
+      { "icon": "FaRobot", "title": "AI Automation", "desc": "Automate your repetitive tasks. Document writing, email management, automated data processing." },
+      { "icon": "FaBrain", "title": "Generative AI", "desc": "Create personalized content. Commercial offers, emails, AI-generated summaries." },
+      { "icon": "FaComments", "title": "Intelligent Chatbots", "desc": "Automatically answer questions. Customer support, FAQ, 24/7 employee assistance." },
+      { "icon": "FaChartLine", "title": "Data Analytics", "desc": "Optimize your processes. Predictive analytics, business insights, automated recommendations." },
+      { "icon": "FaCogs", "title": "System Integration", "desc": "Connect your existing tools. APIs, webhooks, automatic data synchronization." },
+      { "icon": "FaShieldAlt", "title": "Security & Compliance", "desc": "Protect your data. Secure AI, GDPR compliance, complete audit trails." }
     ],
     "why": [
-      "Expert QA team passionate about games",
-      "Fast turnaround & clear reports",
-      "Player spirit, fun and user-oriented"
+      "Team of AI and automation experts",
+      "Custom solutions for SMEs and startups",
+      "Measurable ROI and fast implementation times"
     ],
-    "cta": "Ready to boost your QA?",
-    "ctaBtn": "Contact bugket"
+    "cta": "Ready to transform your business?",
+    "ctaBtn": "Contact LAISY"
   },
   "expertise": {
-    "hero": "Improve your game's <span class='text-[#57f287]'>quality</span>",
-    "description": "We cover all aspects of QA to guarantee flawless games from start to finish. Our goal: help you deliver better quality games, faster.",
+    "hero": "AI expertise at the service of your growth",
+    "description": "We master all AI technologies to offer you solutions adapted to your specific needs. Our goal: help you optimize your processes and accelerate your growth.",
     "list": [
-      { "icon": "FaCogs", "title": "Automation & Tools", "desc": "Custom scripts and tools to speed up QA and catch more bugs." },
-      { "icon": "FaUsers", "title": "Multiplayer Testing", "desc": "Stress tests, matchmaking, crossplay for seamless online experiences." },
-      { "icon": "FaChartLine", "title": "Analytics & Reporting", "desc": "Detailed bug tracking, analytics, and clear reports to guide your team." },
-      { "icon": "FaVrCardboard", "title": "Qualified Testers Team", "desc": "Professionals trained and passionate about video games, ready to test everything, again and again." },
-      { "icon": "FaNetworkWired", "title": "Network & Latency", "desc": "Simulation of real network conditions for robust online play." },
-      { "icon": "FaRobot", "title": "Project Management", "desc": "Clear communication, fast feedback, shared tools: we integrate as an extension of your team." }
+      { "icon": "FaCogs", "title": "Automation & Workflows", "desc": "Automate your business processes with intelligent workflows and custom integrations." },
+      { "icon": "FaUsers", "title": "Conversational AI", "desc": "Chatbots and virtual assistants to improve customer experience and internal efficiency." },
+      { "icon": "FaChartLine", "title": "Analytics & Business Intelligence", "desc": "Analyze your data to make better decisions with predictive insights." },
+      { "icon": "FaVrCardboard", "title": "AI Expert Team", "desc": "AI-specialized engineers and consultants, ready to adapt solutions to your needs." },
+      { "icon": "FaNetworkWired", "title": "Integration & APIs", "desc": "Connect your existing tools with our AI solutions via robust and secure APIs." },
+      { "icon": "FaRocket", "title": "Project Support", "desc": "From design to production, we support you at every step of your transformation." }
     ],
     "stats": [
-      { "label": "Games tested", "value": "30+" },
-      { "label": "Platforms", "value": "10+" },
-      { "label": "Bugs found", "value": "10K+" },
-      { "label": "QA Experts", "value": "5" }
+      { "label": "Companies supported", "value": "50+" },
+      { "label": "Automated processes", "value": "200+" },
+      { "label": "Time saved", "value": "80%" },
+      { "label": "AI Experts", "value": "8" }
     ],
     "history": [
-      { "year": "2025", "event": "Bugket founded" },
-      { "year": "Early year", "event": "First project tested & delivered" },
-      { "year": "Mid-year", "event": "Team expansion" },
-      { "year": "Today", "event": "Your project" }
+      { "year": "2024", "event": "LAISY founded" },
+      { "year": "Early year", "event": "First clients and projects delivered" },
+      { "year": "Mid-year", "event": "Team and services expansion" },
+      { "year": "Today", "event": "Your AI transformation" }
     ],
     "tools": [
-      "Steam", "Epic Games", "WinGDK"
+      "OpenAI", "N8N", "LangChain"
     ]
+  },
+  "pricing": {
+    "hero": "Tailored pricing for your needs",
+    "description": "Choose the plan that fits your goals and budget. All our packages include personalized support and dedicated assistance.",
+    "setup": "Setup fee",
+    "month": "/month",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "390€ - / 90€/month",
+        "period": "",
+        "description": "Ideal for discovering the power of automation without risk. We start with a small, high-impact process.",
+        "features": [
+          "1 targeted automation to save you time from the first week",
+          "Connection to your tools (form, email, spreadsheet, etc.)",
+          "Onboarding support",
+          "Simple monthly activity report"
+        ],
+        "cta": "Choose",
+        "popular": false
+      },
+      {
+        "name": "Growth",
+        "price": "990€ - / 290€/month",
+        "period": "",
+        "description": "Perfect for structuring your internal efficiency, saving hours of repetitive work, and streamlining information management.",
+        "features": [
+          "Automate your repetitive tasks (HR, admin, reporting, onboarding...)",
+          "Integrate multiple tools (Notion, Slack, Google, Airtable, CRM...)",
+          "Monthly follow-up and adjustments",
+          "Shared dashboard to track automations and gains"
+        ],
+        "cta": "Choose",
+        "popular": true
+      },
+      {
+        "name": "Autonomy",
+        "price": "1,990€ - / 590€/month",
+        "period": "",
+        "description": "For companies seeking smooth, intelligent, almost invisible processes — and real productivity gains at scale.",
+        "features": [
+          "Deploy intelligent AI agents (chatbots, CV summaries, scoring, automatic extraction, etc.)",
+          "Custom architecture (API, business rules, complex automation)",
+          "Monitoring + alerts + priority support",
+          "Continuous optimization based on your feedback"
+        ],
+        "cta": "Choose",
+        "popular": false
+      }
+    ],
+    "customSolution": "Need a custom solution?",
+    "cta": "Contact LAISY"
   },
   "test": "It works!",
   "homeCards": [
     {
-      "image": "/cardImage_2.jpg",
-      "alt": "Global QA",
-      "title": "A complete QA, designed for players",
-      "text": "Bugket supports studios on all types of projects: solo, multi, indie or AA+. We adapt our testing methods to each game to guarantee stability, consistency, and performance.",
+      "image": "./card_1.png",
+      "alt": "AI Automation",
+      "title": "Automate your processes with AI",
+      "text": "LAISY supports SMEs and startups in their digital transformation. We adapt our AI solutions to each company to ensure efficiency, scalability and measurable ROI.",
       "reverse": false
     },
     {
-      "image": "/cardImage_1.jpg",
-      "alt": "Automation tools",
-      "title": "Tools made for your needs",
-      "text": "Automation, reporting, bug tracking. We develop custom solutions. Our goal: speed up test cycles, detect earlier, deliver cleaner.",
+      "image": "./card_2.png",
+      "alt": "Custom solutions",
+      "title": "AI solutions made for your needs",
+      "text": "Automation, generative AI, chatbots, analytics. We develop personalized solutions. Our goal: optimize your processes, reduce your costs, accelerate your growth.",
       "reverse": true
     },
     {
-      "image": "/cardImage_3.jpg",
-      "alt": "Next-gen expertise",
-      "title": "A team in tune with current standards",
-      "text": "Our testers are trained in the demands of modern gaming: multiplayer, crossplay, recent engines, UX/UI... Concrete expertise to meet the technical and creative realities of the market.",
+      "image": "./card_3.png",
+      "alt": "AI Expertise",
+      "title": "A team expert in AI and business",
+      "text": "Our consultants are trained in the latest AI technologies and understand business challenges. Concrete expertise to meet the challenges of digital transformation.",
       "reverse": false
     }
   ],

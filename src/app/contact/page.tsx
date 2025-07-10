@@ -2,22 +2,24 @@
 import React from "react";
 import AnimatedSection from "../components/AnimatedSection";
 import ContactForm from "../components/ContactForm";
-import { FaDiscord, FaTwitter, FaEnvelope, FaMapMarkerAlt, FaCommentDots } from "react-icons/fa";
+import { FaDiscord, FaTwitter, FaLinkedin, FaMapMarkerAlt, FaCommentDots } from "react-icons/fa";
+import { useToast } from "../components/Toast";
 import { useLanguage } from "../components/LanguageProvider";
 
 const iconMap: Record<string, React.ReactNode> = {
   FaDiscord: <FaDiscord className="text-2xl" />,
   FaTwitter: <FaTwitter className="text-2xl" />,
-  FaEnvelope: <FaEnvelope className="text-2xl" />,
+  FaLinkedin: <FaLinkedin className="text-2xl" />,
 };
 
 /**
- * Contact page for bugket.
+ * Contact page for LAISY.
  * Contains a contact form and company contact information.
  */
 const ContactPage: React.FC = () => {
   const { t } = useLanguage();
   const socials = t('contact.socials');
+  const { show } = useToast();
 
   return (
     <div className="flex flex-col gap-8 pt-16 sm:pt-24">
@@ -51,15 +53,15 @@ const ContactPage: React.FC = () => {
       <AnimatedSection delay={0.1}>
         <div className="flex flex-wrap gap-6 justify-center items-center">
           {Array.isArray(socials) && socials.map((s, i) => (
-            <a
+            <button
               key={i}
-              href={s.url}
-              className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#5865f2] via-[#57f287] to-[#eb459e] text-white font-semibold text-lg shadow-neon hover:scale-105 transition-transform duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
+              type="button"
+              onClick={() => show(t('social.soon') as string)}
+              className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#5865f2] via-[#57f287] to-[#eb459e] text-white font-semibold text-lg shadow-neon hover:scale-105 transition-transform duration-300 focus:outline-none"
+              aria-label={s.label}
             >
               {iconMap[s.icon] || null} {s.label}
-            </a>
+            </button>
           ))}
         </div>
       </AnimatedSection>

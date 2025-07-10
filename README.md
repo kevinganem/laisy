@@ -1,4 +1,4 @@
-# 🕹️ bugket — Game QA Testing Studio Website
+# 🤖 LAISY — Intelligence Artificielle pour l'Automatisation d'Entreprise
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.3.4-blue?logo=nextdotjs)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.10-38bdf8?logo=tailwindcss)
@@ -6,30 +6,25 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript)
 ![Status](https://img.shields.io/badge/status-in%20progress-blueviolet)
 
-> **bugket** is a modern, immersive website for a video game QA testing company. Inspired by Discord's design language, it showcases services, expertise, team, and contact in a playful, professional, and animated way.
+> **LAISY** est une entreprise spécialisée dans l'Intelligence Artificielle appliquée à l'automatisation des processus en entreprise. Nous aidons les PME et startups à optimiser leurs opérations internes grâce à des solutions IA sur mesure.
 
 ---
 
-## 🎮 Product Vision
+## 🎯 Vision Produit
 
-**bugket** helps game studios deliver flawless games. This site is a digital showcase for bugket's QA expertise, services, and team, designed to:
-- Attract and reassure potential clients
-- Present a clear, engaging value proposition
-- Make contact easy and appealing
+**LAISY** révolutionne la façon dont les entreprises gèrent leurs processus internes. Notre site présente nos solutions d'IA pour automatiser et optimiser les tâches répétitives, libérant ainsi le temps de vos équipes pour des missions à plus forte valeur ajoutée.
+
+**Notre mission :** Transformer les entreprises grâce à l'IA, en proposant des solutions accessibles et efficaces pour l'automatisation des processus.
 
 ---
 
-## ✨ Features
+## ✨ Services
 
-- **Immersive UI/UX** inspired by Discord and gaming culture
-- **Animated backgrounds** (neon particles, floating SVGs, glassmorphism)
-- **Sticky navigation** and modern layout
-- **Multi-language support** (EN, FR, ES, DE)
-- **Animated sections and cards** (Framer Motion)
-- **Modular, reusable components**
-- **Accessible & responsive** (WCAG AA, mobile/tablet ready)
-- **Contact form** with email delivery (Formspree integration)
-- **SEO & performance optimized**
+- **Automatisation de tâches répétitives** (rédaction de documents, gestion des communications internes)
+- **IA générative** pour créer des contenus personnalisés (offres, mails, synthèses)
+- **Chatbots intelligents** pour répondre aux questions courantes des employés et candidats
+- **Analyse automatisée de données** pour optimiser les processus internes
+- **Solutions sur mesure** adaptées aux besoins spécifiques de chaque entreprise
 
 ---
 
@@ -39,64 +34,64 @@
 - **React 19**
 - **TailwindCSS 4** (utility-first, custom theme)
 - **Framer Motion 12** (animations, transitions)
-- **next-intl** (i18n)
+- **next-intl** (i18n FR/EN)
 - **Formspree** (contact form backend)
 - **ESLint, Prettier** (code quality)
 
 ---
 
-## 🗂️ Project Structure
+## 🗂️ Structure du Projet
 
 ```
-/bugket
+/laisy
   ├─ src/
   │   ├─ app/
-  │   │   ├─ [section]/page.tsx   # Main pages (home, services, expertise, about, contact)
-  │   │   └─ components/          # Reusable UI components
-  │   ├─ locales/                 # i18n translation files (en, fr, es, de)
-  │   └─ types/                   # TypeScript types
-  ├─ public/                      # Static assets (images, icons, logo)
-  ├─ memory-bank/                 # Project context & documentation (Cursor methodology)
-  ├─ tailwind.config.js           # TailwindCSS config
-  ├─ next.config.ts               # Next.js config
+  │   │   ├─ [section]/page.tsx   # Pages principales (home, services, expertise, about, contact, pricing)
+  │   │   └─ components/          # Composants UI réutilisables
+  │   ├─ locales/                 # Fichiers de traduction (fr, en)
+  │   └─ types/                   # Types TypeScript
+  ├─ public/                      # Assets statiques (images, icônes, logo)
+  ├─ memory-bank/                 # Contexte projet & documentation (méthodologie Cursor)
+  ├─ tailwind.config.js           # Configuration TailwindCSS
+  ├─ next.config.ts               # Configuration Next.js
   └─ ...
 ```
 
 ---
 
+## 🌍 Support Multilingue
 
-## 🌍 Multi-language Support
-
-- All content is translatable (EN, FR, ES, DE)
-- Easily add new languages in `/src/locales/`
-- Language selector in the footer
-
----
-
-## 📬 Contact Form
-
-- Integrated with [Formspree](https://formspree.io/) for email delivery
-- Animated success/error feedback
-- Fully accessible and translatable
+- Contenu traduit en français et anglais
+- Sélecteur de langue dans le footer
+- Facilement extensible pour d'autres langues
 
 ---
 
-## 🧩 Main Components
+## 📬 Formulaire de Contact
 
-- `Header` — Sticky logo, navigation, and contact button
-- `Footer` — Navigation, language selector, social links
-- `AnimatedSection` — Fade/slide-in animation for any block
-- `ServiceCard`, `ExpertiseBlock`, `TeamMember` — Modular, animated cards
-- `NeonBackgroundElements` — Animated SVG neon particles
-- `BackgroundImages` — Floating decorative images
-- `ContactForm` — Accessible, animated, Formspree-powered
+- Intégré avec [Formspree](https://formspree.io/) pour la livraison d'emails
+- Feedback animé de succès/erreur
+- Entièrement accessible et traduit
 
 ---
 
-## 📄 License
+## 🧩 Composants Principaux
 
-This project is [MIT](LICENSE) licensed.
+- `Header` — Logo sticky, navigation et bouton contact
+- `Footer` — Navigation, sélecteur de langue, liens sociaux
+- `AnimatedSection` — Animation fade/slide-in pour n'importe quel bloc
+- `ServiceCard`, `ExpertiseBlock`, `TeamMember` — Cartes modulaires animées
+- `NeonBackgroundElements` — Particules SVG néon animées
+- `BackgroundImages` — Images décoratives flottantes
+- `ContactForm` — Accessible, animé, alimenté par Formspree
+- `PricingCard` — Cartes de tarification pour les services
 
 ---
 
-> _Made with passion for games and quality._
+## 📄 Licence
+
+Ce projet est sous licence [MIT](LICENSE).
+
+---
+
+> _Créé avec passion pour l'innovation et l'efficacité d'entreprise._

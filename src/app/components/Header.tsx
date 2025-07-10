@@ -2,10 +2,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from './LanguageProvider';
 import Link from 'next/link';
-import Image from 'next/image';
-import { getPublicAssetPath } from '../utils/getPublicAssetPath';
 import { FaDiscord, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { useToast } from './Toast';
+import Logo from './Logo';
 
 /**
  * Header component for the main navigation bar.
@@ -51,7 +50,7 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Fermer le menu mobile si on passe en desktop
+  // Close mobile menu when switching to desktop view
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth >= 768) setMenuOpen(false);
@@ -64,6 +63,7 @@ const Header: React.FC = () => {
     { href: '/', key: 'home' },
     { href: '/services', key: 'services' },
     { href: '/expertise', key: 'expertise' },
+    { href: '/pricing', key: 'pricing' },
     { href: '/about', key: 'about' },
   ];
 
@@ -73,16 +73,13 @@ const Header: React.FC = () => {
       <div className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 py-2 h-16 transition-colors duration-300 ${scrolled ? 'bg-[#5865f2]/90 backdrop-blur-md shadow-lg' : ''} md:bg-transparent md:backdrop-blur-none md:shadow-none`}>
         {/* Logo and brand */}
         <Link href="/" className="flex items-center group focus:outline-none" aria-label="Go to home">
-          <Image
-            src={getPublicAssetPath('/logo.png')}
-            alt="bugket logo"
-            width={40}
-            height={40}
-            className="w-9 h-9 md:w-10 md:h-10 object-contain mr-2 transition-transform duration-200 group-hover:scale-105"
-            style={{ minWidth: 32, minHeight: 32 }}
+          <Logo 
+            size={36} 
+            className="md:w-20 md:h-20 mr-2 transition-transform duration-200 group-hover:scale-105"
+            animated={false}
           />
           <span className="text-2xl md:text-2xl font-extrabold text-white tracking-wide drop-shadow-neon ml-1 group-hover:text-[#232946] transition-colors duration-200 select-none">
-            bugket
+            LAISY
           </span>
         </Link>
         {/* Contact button and burger */}
@@ -148,16 +145,13 @@ const Header: React.FC = () => {
             {/* Top row: logo left, close right */}
             <div className="w-full flex items-center justify-between mb-8">
               <Link href="/" className="flex items-center group focus:outline-none" aria-label="Go to home" onClick={() => setMenuOpen(false)}>
-                <Image
-                  src={getPublicAssetPath('/logo.png')}
-                  alt="bugket logo"
-                  width={36}
-                  height={36}
-                  className="w-9 h-9 object-contain mr-2"
-                  style={{ minWidth: 32, minHeight: 32 }}
+                <Logo 
+                  size={36} 
+                  className="mr-2"
+                  animated={false}
                 />
                 <span className="text-2xl font-extrabold text-white tracking-wide drop-shadow-neon ml-1 group-hover:text-[#5865f2] transition-colors select-none">
-                  bugket
+                  LAISY
                 </span>
               </Link>
               <button

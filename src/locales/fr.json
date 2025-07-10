@@ -3,6 +3,7 @@
     "home": "Accueil",
     "services": "Services",
     "expertise": "Expertise",
+    "pricing": "Tarifs",
     "about": "À propos",
     "contact": "Contact"
   },
@@ -16,11 +17,12 @@
     "rights": "Tous droits réservés."
   },
   "hero": {
-    "home": "Le QA, conçu par ceux qui vivent le jeu vidéo.",
-    "description": "Notre savoir-faire QA s'appuie sur une véritable culture du jeu et une approche rigoureuse du test. Bugket intervient tout au long du développement pour fiabiliser votre production et garantir une expérience fluide, cohérente et aboutie.",
+    "home": "L'IA au service de votre entreprise.",
+    "description": "LAISY révolutionne la gestion des processus en entreprise grâce à l'intelligence artificielle. Nous automatisons vos tâches répétitives pour libérer le temps de vos équipes et optimiser vos opérations.",
     "services": "Nos services",
     "expertise": "Notre expertise",
-    "about": "À propos de bugket",
+    "pricing": "Nos tarifs",
+    "about": "À propos de LAISY",
     "contact": "Nous contacter"
   },
   "contact": {
@@ -28,97 +30,153 @@
     "email": "E-mail",
     "message": "Message",
     "send": "Envoyer",
-    "success": "Merci d'avoir contacté bugket ! Nous reviendrons vers vous rapidement.",
-    "hero": "Construisons de meilleurs jeux <span class='text-[#57f287]'>ensemble</span>",
+    "success": "Merci d'avoir contacté LAISY ! Nous reviendrons vers vous rapidement.",
+    "hero": "Transformons votre entreprise <span class='text-[#57f287]'>ensemble</span>",
     "location": "Paris, France",
     "remote": "Télétravail & collaboration mondiale",
     "socials": [
-      { "icon": "FaDiscord", "label": "Discord", "url": "#" },
+      { "icon": "FaLinkedin", "label": "LinkedIn", "url": "#" },
       { "icon": "FaTwitter", "label": "Twitter", "url": "#" },
-      { "icon": "FaEnvelope", "label": "E-mail", "url": "mailto:contact@bugket.com" }
+      { "icon": "FaDiscord", "label": "Discord", "url": "#" }
     ],
     "error": "Une erreur est survenue. Veuillez réessayer.",
-    "sending": "Envoi..."
+    "sending": "Envoi...",
+    "companySize": "Taille de l'entreprise",
+    "companySizePlaceholder": "Sélectionnez la taille de votre entreprise",
+    "employees": "salariés",
+    "companySizeUnknown": "Non précisé"
   },
   "services": {
-    "hero": "Une <span class='text-[#5865f2]'>équipe</span> dédiée à chaque aspect du QA",
-    "description": "De l'identification des bugs à la validation finale, Bugket gère tous les aspects du QA pour garantir une qualité sans compromis. Nous nous engageons à suivre votre projet à chaque étape pour une sortie parfaite.",
+    "hero": "Des solutions <span class='text-[#5865f2]'>IA</span> pour chaque aspect de votre entreprise",
+    "description": "De l'automatisation des tâches répétitives à l'analyse prédictive, LAISY couvre tous les aspects de l'IA en entreprise pour garantir une transformation digitale réussie et mesurable.",
     "list": [
-      { "icon": "FaBug", "title": "Tests fonctionnels", "desc": "Identifiez les bugs avant vos joueurs. Tests manuels et automatisés pour chaque fonctionnalité, chaque build." },
-      { "icon": "FaGamepad", "title": "Compatibilité", "desc": "Testé sur toutes les configurations. Assurez-vous que votre jeu fonctionne parfaitement." },
-      { "icon": "FaCheckCircle", "title": "QA de certification", "desc": "Répondez aux exigences des principales plateformes. Accompagnement complet pour une validation rapide." },
-      { "icon": "FaRocket", "title": "Performance QA", "desc": "Optimisation FPS, mémoire, temps de chargement. Garantissez une expérience fluide et réactive." },
-      { "icon": "FaWrench", "title": "Tests de stabilité", "desc": "Nous analysons la stabilité à long terme. Détectez les failles qui impactent les performances sur la durée." },
-      { "icon": "FaShieldAlt", "title": "Sécurité & Anti-Cheat", "desc": "Protégez votre jeu contre la triche. Tests avancés pour une sécurité renforcée." }
+      { "icon": "FaRobot", "title": "Automatisation IA", "desc": "Automatisez vos tâches répétitives. Rédaction de documents, gestion des emails, traitement de données automatisé." },
+      { "icon": "FaBrain", "title": "IA Générative", "desc": "Créez du contenu personnalisé. Offres commerciales, emails, synthèses générées par IA." },
+      { "icon": "FaComments", "title": "Chatbots Intelligents", "desc": "Répondez automatiquement aux questions. Support client, FAQ, assistance employés 24/7." },
+      { "icon": "FaChartLine", "title": "Analyse de Données", "desc": "Optimisez vos processus. Analytics prédictifs, insights business, recommandations automatisées." },
+      { "icon": "FaCogs", "title": "Intégration Systèmes", "desc": "Connectez vos outils existants. API, webhooks, synchronisation automatique des données." },
+      { "icon": "FaShieldAlt", "title": "Sécurité & Conformité", "desc": "Protégez vos données. IA sécurisée, conformité RGPD, audit trails complets." }
     ],
     "why": [
-      "Équipe QA experte et passionnée de jeux",
-      "Délais rapides & rapports clairs",
-      "Esprit joueur, fun et orienté utilisateur"
+      "Équipe d'experts en IA et automatisation",
+      "Solutions sur mesure pour PME et startups",
+      "ROI mesurable et délais de mise en œuvre rapides"
     ],
-    "cta": "Prêt à booster votre QA ?",
-    "ctaBtn": "Contactez bugket"
+    "cta": "Prêt à transformer votre entreprise ?",
+    "ctaBtn": "Contactez LAISY"
   },
   "expertise": {
-    "hero": "Améliorez la <span class='text-[#57f287]'>qualité</span> de votre jeu",
-    "description": "Nous couvrons tous les aspects du QA pour garantir des jeux sans défauts, du début à la fin. Notre objectif : vous aider à livrer des jeux de meilleure qualité, plus rapidement.",
+    "hero": "L'expertise <span class='text-[#57f287]'>IA</span> au service de votre croissance",
+    "description": "Nous maîtrisons toutes les technologies d'IA pour vous proposer des solutions adaptées à vos besoins spécifiques. Notre objectif : vous aider à optimiser vos processus et accélérer votre croissance.",
     "list": [
-      { "icon": "FaCogs", "title": "Automatisation & Outils", "desc": "Scripts et outils sur-mesure pour accélérer le QA et détecter plus de bugs." },
-      { "icon": "FaUsers", "title": "Tests multijoueur", "desc": "Stress tests, matchmaking, crossplay pour des expériences en ligne sans faille." },
-      { "icon": "FaChartLine", "title": "Analytics & Reporting", "desc": "Suivi de bugs détaillé, analytics et rapports clairs pour guider votre équipe." },
-      { "icon": "FaVrCardboard", "title": "Équipe de testeurs qualifiés", "desc": "Des professionnels formés, passionnés par le jeu vidéo, prêts à tout tester, encore et encore." },
-      { "icon": "FaNetworkWired", "title": "Réseau & Latence", "desc": "Simulation de conditions réseau réelles pour un online robuste." },
-      { "icon": "FaRobot", "title": "Suivi de projet", "desc": "Communication claire, feedback rapide, outils partagés : on s'intègre comme une extension de votre team." }
+      { "icon": "FaCogs", "title": "Automatisation & Workflows", "desc": "Automatisez vos processus métier avec des workflows intelligents et des intégrations personnalisées." },
+      { "icon": "FaUsers", "title": "IA Conversationnelle", "desc": "Chatbots et assistants virtuels pour améliorer l'expérience client et l'efficacité interne." },
+      { "icon": "FaChartLine", "title": "Analytics & Business Intelligence", "desc": "Analysez vos données pour prendre de meilleures décisions avec des insights prédictifs." },
+      { "icon": "FaVrCardboard", "title": "Équipe d'Experts IA", "desc": "Ingénieurs et consultants spécialisés en IA, prêts à adapter les solutions à vos besoins." },
+      { "icon": "FaNetworkWired", "title": "Intégration & API", "desc": "Connectez vos outils existants avec nos solutions IA via des API robustes et sécurisées." },
+      { "icon": "FaRocket", "title": "Accompagnement Projet", "desc": "De la conception à la mise en production, nous vous accompagnons à chaque étape de votre transformation." }
     ],
     "stats": [
-      { "label": "Jeux testés", "value": "30+" },
-      { "label": "Plateformes", "value": "10+" },
-      { "label": "Bugs trouvés", "value": "10K+" },
-      { "label": "Experts QA", "value": "5" }
+      { "label": "Entreprises accompagnées", "value": "50+" },
+      { "label": "Processus automatisés", "value": "200+" },
+      { "label": "Temps économisé", "value": "80%" },
+      { "label": "Experts IA", "value": "8" }
     ],
     "history": [
-      { "year": "2025", "event": "Création de Bugket" },
-      { "year": "Début d'année", "event": "Premier projet testé & livré" },
-      { "year": "Milieu d'année", "event": "Agrandissement de l'équipe" },
-      { "year": "Aujourd'hui", "event": "Votre projet" }
+      { "year": "2024", "event": "Création de LAISY" },
+      { "year": "Début d'année", "event": "Premiers clients et projets livrés" },
+      { "year": "Milieu d'année", "event": "Expansion de l'équipe et des services" },
+      { "year": "Aujourd'hui", "event": "Votre transformation IA" }
     ],
     "tools": [
-      "Steam", "Epic Games", "WinGDK"
+      "OpenAI", "N8N", "LangChain"
     ]
   },
+  "pricing": {
+    "hero": "Des tarifs <span class='text-[#eb459e]'>adaptés</span> à vos besoins",
+    "description": "Choisissez le plan qui correspond à vos objectifs et à votre budget. Tous nos forfaits incluent un accompagnement personnalisé et un support dédié.",
+    "setup": "Frais d'installation",
+    "month": "/mois",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "390€ - / 90€/mois",
+        "period": "",
+        "description": "Idéal pour découvrir la puissance de l’automatisation sans prise de risque. On commence par un petit processus simple mais à fort impact.",
+        "features": [
+          "1 automatisation ciblée pour vous faire gagner du temps dès la première semaine",
+          "Connexion à vos outils (formulaire, email, tableur, etc.)",
+          "Accompagnement à la prise en main",
+          "Rapport d'activité simple mensuel"
+        ],
+        "cta": "Choisir",
+        "popular": false
+      },
+      {
+        "name": "Croissance",
+        "price": "990€ - / 290€/mois",
+        "period": "",
+        "description": "Parfait pour structurer son efficacité en interne, économiser des heures de travail répétitif, et fluidifier la gestion de l'information.",
+        "features": [
+          "Automatisation de vos tâches répétitives (RH, gestion, reporting, onboarding...)",
+          "Intégration entre plusieurs outils (Notion, Slack, Google, Airtable, CRM...)",
+          "Suivi et ajustements mensuels",
+          "Tableau de bord partagé pour voir ce qui tourne et ce que ça vous fait gagner"
+        ],
+        "cta": "Choisir",
+        "popular": true
+      },
+      {
+        "name": "Autonomie",
+        "price": "1 990€ - / 590€/mois",
+        "period": "",
+        "description": "Pour les entreprises qui veulent des processus fluides, intelligents, presque invisibles — et un vrai gain de productivité à l’échelle.",
+        "features": [
+          "Mise en place d’agents IA intelligents (chatbots, résumés de CV, scoring, extraction automatique, etc.)",
+          "Architecture personnalisée (API, règles métiers, automatisation complexe)",
+          "Monitoring + alertes + support prioritaire",
+          "Optimisation continue selon vos retours d’usage"
+        ],
+        "cta": "Choisir",
+        "popular": false
+      }
+    ],
+    "customSolution": "Besoin d'une solution personnalisée ?",
+    "cta": "Contactez LAISY"
+  },
   "about": {
-    "hero": "Rencontrez l'équipe <span class='text-[#eb459e]'>bugket</span>",
+    "hero": "L'équipe <span class='text-[#eb459e]'>LAISY</span>",
     "team": [
       {
-        "avatar": "/thibaultBugket.jpg",
-        "name": "Thibault Gerdelat",
-        "role": "Lead QA",
-        "description": "3+ ans dans le QA jeu vidéo, expert en tracking de bugs et gestion de projet."
+        "avatar": "/alexandreClide.jpg",
+        "name": "Noam Bouaziz",
+        "role": "CEO & Fondateur",
+        "description": "3+ ans d'expérience en IA et automatisation."
       },
       {
-        "avatar": "/kevinBugket.jpg",
+        "avatar": "/sarahClide.jpg",
         "name": "Kevin Ganem",
-        "role": "Développeur - IT",
-        "description": "4+ ans dans la programmation, et le développement d'outils IA"
+        "role": "CEO & Fondateur",
+        "description": "3+ ans d'expérience en IA et automatisation."
       },
       {
-        "avatar": "/vincentBugket.jpg",
-        "name": "Vincent Abour",
-        "role": "Marketing & communication",
-        "description": "Expert marketing & business model"
+        "avatar": "/thomasClide.jpg",
+        "name": "Eliott Deper",
+        "role": "CTO & Lead IA",
+        "description": "3+ ans d'expérience en IA et automatisation."
       }
     ],
     "values": [
-    "Passion du test",
-    "Clarté et confiance",
-    "Évolution constante",
-    "Équipe diverse",
-    "Ambiance fun"
+      "Innovation continue",
+      "Excellence technique",
+      "Accompagnement client",
+      "Équipe pluridisciplinaire",
+      "Impact mesurable"
     ],
     "funFacts": [
-      "On fait des Among Us le vendredi !",
-      "Notre équipe est un mélange de talents variés.",
-      "On passe notre temps à traquer des bugs, pas à en créer."
+      "Nous utilisons l'IA pour optimiser nos propres processus !",
+      "Notre équipe représente 5 nationalités différentes.",
+      "Nous formons nos clients à l'IA pour une adoption durable."
     ]
   },
   "policies": {
@@ -127,18 +185,18 @@
     "cookies_title": "Politique de cookies",
     "terms": {
       "sections": [
-        { "title": "1. Acceptation des conditions", "text": "En accédant ou en utilisant les services de bugket, vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos services." },
-        { "title": "2. Services", "text": "bugket fournit des services d'assurance qualité (QA) pour les jeux vidéo. Nous nous réservons le droit de modifier ou d'interrompre tout service à tout moment sans préavis." },
+        { "title": "1. Acceptation des conditions", "text": "En accédant ou en utilisant les services de LAISY, vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos services." },
+        { "title": "2. Services", "text": "LAISY fournit des services d'automatisation et d'intelligence artificielle pour les entreprises. Nous nous réservons le droit de modifier ou d'interrompre tout service à tout moment sans préavis." },
         { "title": "3. Responsabilités de l'utilisateur", "text": "Vous vous engagez à utiliser nos services légalement et à ne pas les détourner, les rétroconcevoir ou tenter de perturber notre plateforme ou nos services." },
-        { "title": "4. Propriété intellectuelle", "text": "Tous les contenus, marques et matériaux sur bugket sont la propriété de leurs détenteurs respectifs. Vous ne pouvez pas utiliser, copier ou distribuer un contenu sans autorisation." },
-        { "title": "5. Limitation de responsabilité", "text": "bugket n'est pas responsable des dommages ou pertes résultant de l'utilisation de nos services. Tous les services sont fournis 'en l'état' sans aucune garantie." },
+        { "title": "4. Propriété intellectuelle", "text": "Tous les contenus, marques et matériaux sur LAISY sont la propriété de leurs détenteurs respectifs. Vous ne pouvez pas utiliser, copier ou distribuer un contenu sans autorisation." },
+        { "title": "5. Limitation de responsabilité", "text": "LAISY n'est pas responsable des dommages ou pertes résultant de l'utilisation de nos services. Tous les services sont fournis 'en l'état' sans aucune garantie." },
         { "title": "6. Modifications des conditions", "text": "Nous pouvons mettre à jour ces conditions d'utilisation à tout moment. L'utilisation continue de nos services vaut acceptation des nouvelles conditions." },
         { "title": "7. Contact", "text": "Pour toute question concernant ces conditions, contactez-nous via la page Contact." }
       ]
     },
     "privacy": {
       "sections": [
-        { "title": "1. Introduction", "text": "bugket s'engage à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos informations." },
+        { "title": "1. Introduction", "text": "LAISY s'engage à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos informations." },
         { "title": "2. Informations collectées", "text": "Nous pouvons collecter des informations personnelles telles que votre nom, adresse e-mail et toute information fournie via nos formulaires de contact. Nous collectons aussi des données d'utilisation via cookies et outils d'analyse." },
         { "title": "3. Utilisation des informations", "text": "Vos informations servent à fournir et améliorer nos services, répondre aux demandes et assurer la sécurité de notre plateforme. Nous ne vendons pas vos données à des tiers." },
         { "title": "4. Cookies", "text": "Nous utilisons des cookies pour améliorer votre expérience et analyser l'utilisation du site. Vous pouvez gérer vos préférences cookies dans votre navigateur. Voir notre politique de cookies pour plus de détails." },
@@ -151,7 +209,7 @@
     "cookies": {
       "sections": [
         { "title": "1. Qu'est-ce qu'un cookie ?", "text": "Les cookies sont de petits fichiers texte stockés sur votre appareil pour aider les sites à fonctionner et à collecter des informations sur votre utilisation." },
-        { "title": "2. Utilisation des cookies", "text": "bugket utilise des cookies pour améliorer votre expérience, analyser le trafic et mémoriser vos préférences. Certains cookies sont essentiels au fonctionnement du site." },
+        { "title": "2. Utilisation des cookies", "text": "LAISY utilise des cookies pour améliorer votre expérience, analyser le trafic et mémoriser vos préférences. Certains cookies sont essentiels au fonctionnement du site." },
         { "title": "3. Types de cookies utilisés", "text": "Cookies essentiels : nécessaires au bon fonctionnement du site. Cookies analytiques : nous aident à comprendre l'utilisation du site. Cookies de préférence : mémorisent votre langue et autres réglages." },
         { "title": "4. Gestion des cookies", "text": "Vous pouvez contrôler et supprimer les cookies via les réglages de votre navigateur. Désactiver les cookies peut affecter votre expérience sur notre site." },
         { "title": "5. Modifications de la politique", "text": "Nous pouvons mettre à jour cette politique de cookies. Merci de la consulter régulièrement." },
@@ -162,24 +220,24 @@
   "test": "Ça marche !",
   "homeCards": [
     {
-      "image": "/cardImage_2.jpg",
-      "alt": "QA global",
-      "title": "Un QA complet, pensé pour les joueurs",
-      "text": "Bugket accompagne les studios sur tous les types de projets : solo, multi, indé ou AA+. Nous adaptons nos méthodes de test à chaque jeu pour garantir stabilité, cohérence et performance.",
+      "image": "./card_1.png",
+      "alt": "Automatisation IA",
+      "title": "Automatisez vos processus avec l'IA",
+      "text": "LAISY accompagne les PME et startups dans leur transformation digitale. Nous adaptons nos solutions d'IA à chaque entreprise pour garantir efficacité, scalabilité et ROI mesurable.",
       "reverse": false
     },
     {
-      "image": "/cardImage_1.jpg",
-      "alt": "Outils d'automatisation",
-      "title": "Des outils faits pour vos besoins",
-      "text": "Automatisation, reporting, suivi de bugs. Nous développons des solutions sur-mesure. Notre objectif : accélérer les cycles de test, détecter plus tôt, livrer plus propre.",
+      "image": "./card_2.png",
+      "alt": "Solutions sur mesure",
+      "title": "Des solutions IA faites pour vos besoins",
+      "text": "Automatisation, IA générative, chatbots, analytics. Nous développons des solutions personnalisées. Notre objectif : optimiser vos processus, réduire vos coûts, accélérer votre croissance.",
       "reverse": true
     },
     {
-      "image": "/cardImage_3.jpg",
-      "alt": "Expertise next-gen",
-      "title": "Une équipe en phase avec les standards actuels",
-      "text": "Nos testeurs sont formés aux exigences du jeu moderne : multijoueur, crossplay, moteurs récents, UX/UI… Une expertise concrète pour répondre aux réalités techniques et créatives du marché.",
+      "image": "./card_3.png",
+      "alt": "Expertise IA",
+      "title": "Une équipe experte en IA et business",
+      "text": "Nos consultants sont formés aux dernières technologies d'IA et comprennent les enjeux business. Une expertise concrète pour répondre aux défis de la transformation digitale.",
       "reverse": false
     }
   ],

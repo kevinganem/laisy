@@ -2,7 +2,7 @@
 import React from "react";
 import AnimatedSection from "../components/AnimatedSection";
 import ServiceCard from "../components/ServiceCard";
-import { FaBug, FaGamepad, FaCheckCircle, FaRocket, FaWrench, FaShieldAlt, FaStar, FaClock, FaSmile } from "react-icons/fa";
+import { FaBug, FaGamepad, FaCheckCircle, FaRocket, FaWrench, FaShieldAlt, FaStar, FaClock, FaSmile, FaRobot, FaBrain, FaComments, FaChartLine, FaCogs } from "react-icons/fa";
 import { useLanguage } from "../components/LanguageProvider";
 import { getPublicAssetPath } from "../utils/getPublicAssetPath";
 import Link from "next/link";
@@ -13,24 +13,29 @@ const iconMap: Record<string, React.ReactNode> = {
   FaCheckCircle: <FaCheckCircle size={40} />,
   FaRocket: <FaRocket size={40} />,
   FaWrench: <FaWrench size={40} />,
-  FaShieldAlt: <FaShieldAlt size={40} />,
+  FaShieldAlt: <FaShieldAlt size={40} className="text-[#1F2937]" />,
   FaStar: <FaStar size={28} className="text-[#57f287]" />,
   FaClock: <FaClock size={28} className="text-[#5865f2]" />,
   FaSmile: <FaSmile size={28} className="text-[#eb459e]" />,
+  FaRobot: <FaRobot size={40} className="text-[#3B82F6]" />,
+  FaBrain: <FaBrain size={40} className="text-[#8B5CF6]" />,
+  FaComments: <FaComments size={40} className="text-[#06B6D4]" />,
+  FaChartLine: <FaChartLine size={40} className="text-[#10B981]" />,
+  FaCogs: <FaCogs size={40} className="text-[#F59E0B]" />,
 };
 
 /**
  * ServicesPage component
- * Lists all QA testing services with animated appearance and call-to-action.
+ * Lists all AI automation services with animated appearance and call-to-action.
  * Uses AnimatedSection for scroll-based reveal animations.
  */
 const ServicesPage: React.FC = () => {
   const { t } = useLanguage();
   const services = t('services.list');
-  const whyBugket = t('services.why');
+  const whyLaisy = t('services.why');
   return (
     <div className="flex flex-col gap-24 pt-16 sm:pt-24">
-      {/* Hero section: service pitch and illustration */}
+      {/* Hero section with service overview and demo video */}
       <AnimatedSection>
         <div className="relative max-w-5xl w-full mx-auto flex flex-col-reverse md:flex-row items-center gap-10 md:gap-20 min-h-[320px] mb-4">
           <div className="flex-1 flex flex-col gap-4 items-center justify-center z-10">
@@ -47,10 +52,10 @@ const ServicesPage: React.FC = () => {
               muted
               playsInline
               className="w-[340px] h-[340px] md:w-[420px] md:h-[420px] object-cover rounded-3xl shadow-2xl border-4 border-[#5865f2] bg-[#23272a]"
-              aria-label="QA Gaming Illustration"
+              aria-label="AI Automation Demo"
             />
           </div>
-          {/* Neon particles */}
+          {/* Animated background particles */}
           <div className="absolute inset-0 pointer-events-none z-0">
             <svg width="100%" height="100%" className="absolute inset-0 animate-pulse" style={{ filter: 'blur(2px)' }}>
               <circle cx="20%" cy="30%" r="18" fill="#5865f2" fillOpacity="0.18" />
@@ -61,7 +66,8 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </AnimatedSection>
-      {/* Services grid: displays all service cards */}
+      
+      {/* Services grid displaying all AI automation services */}
       <AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {Array.isArray(services) && services.map((s, i) => (
@@ -75,11 +81,12 @@ const ServicesPage: React.FC = () => {
           ))}
         </div>
       </AnimatedSection>
-      {/* Why bugket: highlights unique selling points */}
+      
+      {/* Why choose LAISY: highlights unique selling points */}
       <AnimatedSection delay={0.1}>
         <div className="flex flex-col items-center gap-8">
           <div className="flex flex-wrap gap-8 justify-center">
-            {Array.isArray(whyBugket) && whyBugket.map((w, i) => (
+            {Array.isArray(whyLaisy) && whyLaisy.map((w, i) => (
               <div key={i} className="flex items-center gap-3 bg-[#23272a]/80 px-6 py-4 rounded-2xl shadow-lg border border-[#5865f2]/20">
                 {iconMap[Object.keys(iconMap)[i+6]]}
                 <span className="text-white text-lg font-semibold">{w}</span>
@@ -88,7 +95,8 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </AnimatedSection>
-      {/* CTA: call-to-action to contact bugket */}
+      
+      {/* Call-to-action section */}
       <AnimatedSection delay={0.2}>
         <div className="flex flex-col items-center gap-4">
           <p className="text-xl text-white font-bold drop-shadow-neon">{t('services.cta') as string}</p>

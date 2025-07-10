@@ -3,14 +3,13 @@ import React from "react";
 import AnimatedSection from "../components/AnimatedSection";
 import ExpertiseBlock from "../components/ExpertiseBlock";
 import { useLanguage } from "../components/LanguageProvider";
-import Image from 'next/image';
-import { FaCogs, FaUsers, FaChartLine, FaVrCardboard, FaNetworkWired, FaRobot, FaWindows } from "react-icons/fa";
+import { FaCogs, FaUsers, FaChartLine, FaVrCardboard, FaNetworkWired, FaRobot, FaWindows, FaShieldAlt, FaRocket } from "react-icons/fa";
 import { SiEpicgames, SiSteam } from "react-icons/si";
 import { getPublicAssetPath } from "../utils/getPublicAssetPath";
 
 /**
  * ExpertisePage component
- * Highlights the team's skills, experience, and tools in game QA testing.
+ * Highlights the team's skills, experience, and tools in AI automation and business transformation.
  * Uses AnimatedSection for scroll-based reveal animations.
  */
 const ExpertisePage: React.FC = () => {
@@ -40,12 +39,14 @@ const ExpertisePage: React.FC = () => {
   const tools = t('expertise.tools') as (ToolItem | string)[];
 
   const iconMap: Record<string, React.ReactNode> = {
-    FaCogs: <FaCogs size={40} />,
-    FaUsers: <FaUsers size={40} />,
-    FaChartLine: <FaChartLine size={40} />,
-    FaVrCardboard: <FaVrCardboard size={40} />,
-    FaNetworkWired: <FaNetworkWired size={40} />,
-    FaRobot: <FaRobot size={40} />,
+    FaCogs: <FaCogs size={40} className="text-[#F59E0B]" />,
+    FaUsers: <FaUsers size={40} className="text-[#06B6D4]" />,
+    FaChartLine: <FaChartLine size={40} className="text-[#10B981]" />,
+    FaVrCardboard: <FaVrCardboard size={40} className="text-[#8B5CF6]" />,
+    FaNetworkWired: <FaNetworkWired size={40} className="text-[#3B82F6]" />,
+    FaRobot: <FaRobot size={40} className="text-[#3B82F6]" />,
+    FaShieldAlt: <FaShieldAlt size={40} className="text-[#1F2937]" />,
+    FaRocket: <FaRocket size={40} className="text-[#eb459e]" />,
     WinGDK: <FaWindows size={36} className="text-[#fff]" />,
     'Epic Games': <SiEpicgames size={36} />,
     Steam: <SiSteam size={36} />,
@@ -53,7 +54,7 @@ const ExpertisePage: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-24 pt-16 sm:pt-24">
-      {/* Hero section: expertise pitch and illustration */}
+      {/* Hero section with expertise overview and demo video */}
       <AnimatedSection>
         <div className="relative max-w-5xl w-full mx-auto flex flex-col-reverse md:flex-row items-center gap-10 md:gap-20 min-h-[320px] mb-4">
           <div className="flex-1 flex flex-col gap-4 items-center justify-center z-10">
@@ -63,16 +64,17 @@ const ExpertisePage: React.FC = () => {
             </p>
           </div>
           <div className="flex-1 flex justify-center items-center z-10">
-            <Image
-              src={getPublicAssetPath('/cardImage.jpg')}
-              alt="QA Dashboard Illustration"
-              width={420}
-              height={420}
-              className="w-[340px] h-[340px] md:w-[420px] md:h-[420px] object-cover rounded-3xl shadow-2xl border-4 border-[#57f287] bg-[#23272a]"
-              draggable={false}
+          <video
+              src={getPublicAssetPath('/hero_expertise.mp4')}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-[340px] h-[340px] md:w-[420px] md:h-[420px] object-cover rounded-3xl shadow-2xl border-4 border-[#5865f2] bg-[#23272a]"
+              aria-label="AI Expertise Demo"
             />
           </div>
-          {/* Neon particles */}
+          {/* Animated background particles */}
           <div className="absolute inset-0 pointer-events-none z-0">
             <svg width="100%" height="100%" className="absolute inset-0 animate-pulse" style={{ filter: 'blur(2px)' }}>
               <circle cx="25%" cy="40%" r="18" fill="#5865f2" fillOpacity="0.18" />
@@ -83,7 +85,8 @@ const ExpertisePage: React.FC = () => {
           </div>
         </div>
       </AnimatedSection>
-      {/* Stats: key numbers about bugket's QA experience */}
+      
+      {/* Key statistics about LAISY's AI experience */}
       <AnimatedSection>
         <div className="flex flex-wrap gap-8 justify-center">
           {Array.isArray(stats) && stats.map((s: StatItem, i) => (
@@ -94,29 +97,30 @@ const ExpertisePage: React.FC = () => {
           ))}
         </div>
       </AnimatedSection>
-      {/* Timeline: bugket's company history */}
+      
+      {/* Company timeline: LAISY.'s history and milestones */}
       <AnimatedSection delay={0.1}>
         <div className="flex flex-col items-center gap-8">
-          {/* Timeline responsive : verticale sur mobile, horizontale sur desktop */}
+          {/* Responsive timeline: vertical on mobile, horizontal on desktop */}
           <div className="flex flex-col md:flex-row gap-0 md:gap-8 items-center justify-center w-full md:overflow-x-auto pb-2">
-            {/* Mobile : timeline verticale compacte sans alternance */}
+            {/* Mobile: compact vertical timeline */}
             <div className="relative flex flex-col items-center w-full md:hidden py-4">
-              {/* Ligne verticale centrale */}
+              {/* Central vertical line */}
               <span className="absolute left-1/2 top-0 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#5865f2] via-[#57f287] to-[#eb459e] rounded-full z-0" />
               {Array.isArray(history) && history.map((h: HistoryItem, i) => (
                 <div key={i} className="relative flex flex-col items-center w-full mb-6 z-10">
-                  {/* Badge année sur la ligne centrale */}
+                  {/* Year badge on central line */}
                   <div className="flex items-center justify-center w-full">
                     <span className="bg-[#5865f2] text-white font-bold px-4 py-2 rounded-xl shadow-neon border-2 border-white/20 z-10 text-base text-center">{h.year}</span>
                   </div>
-                  {/* Texte événement sous le badge */}
+                  {/* Event text below badge */}
                   <div className="mt-2 flex justify-center w-full">
                     <span className="bg-black/60 text-white font-bold px-4 py-2 rounded-xl shadow-md text-base text-center">{h.event}</span>
                   </div>
                 </div>
               ))}
             </div>
-            {/* Desktop : timeline horizontale (inchangée) */}
+            {/* Desktop: horizontal timeline */}
             <div className="hidden md:flex flex-row gap-8 items-center justify-center w-full overflow-x-auto pb-2">
               {Array.isArray(history) && history.map((h: HistoryItem, i) => (
                 <div key={i} className="flex flex-col items-center min-w-[160px]">
@@ -129,7 +133,8 @@ const ExpertisePage: React.FC = () => {
           </div>
         </div>
       </AnimatedSection>
-      {/* Expertise blocks: grid of QA specialties */}
+      
+      {/* Expertise blocks: grid of AI specialties */}
       <AnimatedSection delay={0.2}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {Array.isArray(expertise) && expertise.map((e: ExpertiseItem, i) => (
@@ -143,7 +148,8 @@ const ExpertisePage: React.FC = () => {
           ))}
         </div>
       </AnimatedSection>
-      {/* Tools & technologies: icons of platforms and tools */}
+      
+      {/* Tools & technologies: AI platforms and development tools */}
       <AnimatedSection delay={0.3}>
         <div className="flex flex-wrap gap-8 justify-center items-center">
           {Array.isArray(tools) && tools.map((t: ToolItem | string, i) => (

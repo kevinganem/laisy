@@ -3,16 +3,15 @@ import "./globals.css";
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import NeonBackgroundElements from "./components/NeonBackgroundElements";
-import BackgroundImages from "./components/BackgroundImages";
+import ConstellationBackground from "./components/ConstellationBackground";
 import { LanguageProvider } from "./components/LanguageProvider";
 import { getPublicAssetPath } from "./utils/getPublicAssetPath";
 import { ToastProvider } from './components/Toast';
-// import { AnimatePresence, motion } from "framer-motion"; // Uncomment for page transitions
+
 
 export const metadata: Metadata = {
-  title: "Bugket – Game Quality Assurance",
-  description: "Game QA, done right. Bugket helps studios deliver flawless games to players worldwide.",
+  title: "LAISY – Intelligence Artificielle pour l'Automatisation d'Entreprise",
+  description: "Solutions d'IA pour automatiser vos processus en entreprise. LAISY aide les PME et startups à optimiser leurs opérations internes grâce à l'intelligence artificielle.",
   icons: {
     icon: getPublicAssetPath('/logo.png')
   }
@@ -38,25 +37,10 @@ export default function RootLayout({
       <body className="relative min-h-screen flex flex-col overflow-x-hidden">
         <LanguageProvider>
           <ToastProvider>
-            {/* Animated background elements */}
-            <NeonBackgroundElements />
-            <BackgroundImages />
+            {/* Animated constellation background */}
+            <ConstellationBackground />
             <Header />
             <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-8">
-              {/*
-              // For animated page transitions, wrap children with AnimatePresence and motion.div
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={router.pathname}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.4 }}
-            >
-              {children}
-                </motion.div>
-              </AnimatePresence>
-              */}
               {children}
             </main>
             <Footer />

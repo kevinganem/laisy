@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { getPublicAssetPath } from "../utils/getPublicAssetPath";
 
 /**
- * About page for bugket.
+ * About page for LAISY.
  * Presents the company's story, mission, and team.
  */
 const AboutPage: React.FC = () => {
