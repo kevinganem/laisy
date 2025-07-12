@@ -77,19 +77,19 @@
       { "icon": "FaRocket", "title": "Accompagnement Projet", "desc": "De la conception à la mise en production, nous vous accompagnons à chaque étape de votre transformation." }
     ],
     "stats": [
-      { "label": "Entreprises accompagnées", "value": "50+" },
-      { "label": "Processus automatisés", "value": "200+" },
+      { "label": "Entreprises accompagnées", "value": "20+" },
+      { "label": "Processus automatisés", "value": "120+" },
       { "label": "Temps économisé", "value": "80%" },
-      { "label": "Experts IA", "value": "8" }
+      { "label": "Experts IA", "value": "5" }
     ],
     "history": [
-      { "year": "2024", "event": "Création de LAISY" },
+      { "year": "2025", "event": "Création de LAISY" },
       { "year": "Début d'année", "event": "Premiers clients et projets livrés" },
       { "year": "Milieu d'année", "event": "Expansion de l'équipe et des services" },
       { "year": "Aujourd'hui", "event": "Votre transformation IA" }
     ],
     "tools": [
-      "OpenAI", "N8N", "LangChain"
+      "OpenAI", "N8N", "Chatbot"
     ]
   },
   "pricing": {
@@ -106,8 +106,7 @@
         "features": [
           "1 automatisation ciblée pour vous faire gagner du temps dès la première semaine",
           "Connexion à vos outils (formulaire, email, tableur, etc.)",
-          "Accompagnement à la prise en main",
-          "Rapport d'activité simple mensuel"
+          "Accompagnement à la prise en main"
         ],
         "cta": "Choisir",
         "popular": false
@@ -120,8 +119,8 @@
         "features": [
           "Automatisation de vos tâches répétitives (RH, gestion, reporting, onboarding...)",
           "Intégration entre plusieurs outils (Notion, Slack, Google, Airtable, CRM...)",
-          "Suivi et ajustements mensuels",
-          "Tableau de bord partagé pour voir ce qui tourne et ce que ça vous fait gagner"
+          "Suivi mensuel avec ajustements",
+          "Règles personnalisées pour adapter les automatisations à votre fonctionnement"
         ],
         "cta": "Choisir",
         "popular": true
@@ -130,12 +129,13 @@
         "name": "Autonomie",
         "price": "1 990€ - / 590€/mois",
         "period": "",
-        "description": "Pour les entreprises qui veulent des processus fluides, intelligents, presque invisibles — et un vrai gain de productivité à l’échelle.",
+        "description": "Pour les entreprises qui veulent des processus fluides, intelligents, presque invisibles.",
         "features": [
-          "Mise en place d’agents IA intelligents (chatbots, résumés de CV, scoring, extraction automatique, etc.)",
-          "Architecture personnalisée (API, règles métiers, automatisation complexe)",
-          "Monitoring + alertes + support prioritaire",
-          "Optimisation continue selon vos retours d’usage"
+          "Mise en place d’agents IA avancés (assistants internes, automatisations évolutives, etc.)",
+          "Architecture personnalisée (APIs, logique métier, scénarios complexes)",
+          "Ajustements stratégiques en continu",
+          "Support prioritaire (réponse rapide + accompagnement personnalisé)",
+          "Documentation simplifiée pour tout suivre facilement"
         ],
         "cta": "Choisir",
         "popular": false
@@ -148,35 +148,31 @@
     "hero": "L'équipe <span class='text-[#eb459e]'>LAISY</span>",
     "team": [
       {
-        "avatar": "/alexandreClide.jpg",
         "name": "Noam Bouaziz",
         "role": "CEO & Fondateur",
-        "description": "3+ ans d'expérience en IA et automatisation."
+        "description": "Marketing & adoption IA"
       },
       {
-        "avatar": "/sarahClide.jpg",
         "name": "Kevin Ganem",
         "role": "CEO & Fondateur",
-        "description": "3+ ans d'expérience en IA et automatisation."
+        "description": "Développeur fullstack & automatisation"
       },
       {
-        "avatar": "/thomasClide.jpg",
         "name": "Eliott Deper",
         "role": "CTO & Lead IA",
-        "description": "3+ ans d'expérience en IA et automatisation."
+        "description": "Architecture IA & scalabilité"
       }
     ],
     "values": [
       "Innovation continue",
       "Excellence technique",
       "Accompagnement client",
-      "Équipe pluridisciplinaire",
       "Impact mesurable"
     ],
     "funFacts": [
       "Nous utilisons l'IA pour optimiser nos propres processus !",
-      "Notre équipe représente 5 nationalités différentes.",
-      "Nous formons nos clients à l'IA pour une adoption durable."
+      "Nos automatisations sont construites pour être simples à comprendre, même sans être dev.",
+      "80% de nos automatisations font gagner au moins 5h par semaine à nos clients. "
     ]
   },
   "policies": {

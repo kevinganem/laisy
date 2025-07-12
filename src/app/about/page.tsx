@@ -3,8 +3,7 @@ import React from "react";
 import AnimatedSection from "../components/AnimatedSection";
 import TeamMember from "../components/TeamMember";
 import { useLanguage } from "../components/LanguageProvider";
-import Image from 'next/image';
-import { getPublicAssetPath } from "../utils/getPublicAssetPath";
+import { FaChartLine, FaCode, FaBrain } from 'react-icons/fa';
 
 /**
  * About page for LAISY.
@@ -15,6 +14,17 @@ const AboutPage: React.FC = () => {
   const team = t('about.team');
   const values = t('about.values');
   const funFacts = t('about.funFacts');
+
+  // Icon mapping for hero section
+  const getHeroIcon = (index: number) => {
+    switch (index) {
+      case 0: return <FaChartLine className="w-8 h-8 text-[#57f287]" />;
+      case 1: return <FaCode className="w-8 h-8 text-[#5865f2]" />;
+      case 2: return <FaBrain className="w-8 h-8 text-[#eb459e]" />;
+      default: return <FaCode className="w-8 h-8 text-[#5865f2]" />;
+    }
+  };
+
   return (
     <div className="flex flex-col gap-24 pt-16 sm:pt-24">
       {/* Hero section */}
@@ -23,15 +33,12 @@ const AboutPage: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-neon leading-tight text-center" dangerouslySetInnerHTML={{ __html: t('about.hero') as string }} />
           <div className="flex gap-4 md:gap-8 justify-center items-center z-10">
             {Array.isArray(team) && team.map((m, i) => (
-              <Image
+              <div
                 key={i}
-                src={getPublicAssetPath(m.avatar as string)}
-                alt={m.name}
-                width={128}
-                height={128}
-                className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[#5865f2] object-cover shadow-lg bg-[#232946]/80"
-                draggable={false}
-              />
+                className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[#5865f2] bg-[#232946] flex items-center justify-center shadow-lg"
+              >
+                {getHeroIcon(i)}
+              </div>
             ))}
           </div>
           {/* Decorative particles */}
@@ -49,7 +56,12 @@ const AboutPage: React.FC = () => {
       <AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {Array.isArray(team) && team.map((m, i) => (
-            <TeamMember key={i} {...m} className="bg-white/10 border border-white/10 hover:scale-105 transition-transform duration-300 shadow-lg backdrop-blur-md" />
+            <TeamMember 
+              key={i} 
+              {...m} 
+              iconName={i === 0 ? 'marketing' : i === 1 ? 'development' : 'ai'}
+              className="bg-white/10 border border-white/10 hover:scale-105 transition-transform duration-300 shadow-lg backdrop-blur-md" 
+            />
           ))}
         </div>
       </AnimatedSection>

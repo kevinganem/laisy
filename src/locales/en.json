@@ -88,35 +88,31 @@
     "hero": "The LAISY team",
     "team": [
       {
-        "avatar": "/alexandreClide.jpg",
         "name": "Noam Bouaziz",
         "role": "CEO & Founder",
-        "description": "3+ years experience in AI and automation."
+        "description": "Marketing & AI adoption"
       },
       {
-        "avatar": "/sarahClide.jpg",
         "name": "Kevin Ganem",
         "role": "CEO & Founder",
-        "description": "3+ years experience in AI and automation"
+        "description": "Fullstack developer & automation"
       },
       {
-        "avatar": "/thomasClide.jpg",
         "name": "Eliott Deper",
         "role": "CTO & AI Lead",
-        "description": "3+ years experience in AI and automation."
+        "description": "AI architecture & scalability"
       }
     ],
     "values": [
       "Continuous innovation",
       "Technical excellence",
       "Client support",
-      "Multidisciplinary team",
       "Measurable impact"
     ],
     "funFacts": [
       "We use AI to optimize our own processes!",
-      "Our team represents 5 different nationalities.",
-      "We train our clients in AI for sustainable adoption."
+      "Our automations are built to be simple to understand, even without being a developer.",
+      "80% of our automations save our clients at least 5 hours per week."
     ]
   },
   "services": {
@@ -150,19 +146,19 @@
       { "icon": "FaRocket", "title": "Project Support", "desc": "From design to production, we support you at every step of your transformation." }
     ],
     "stats": [
-      { "label": "Companies supported", "value": "50+" },
-      { "label": "Automated processes", "value": "200+" },
+      { "label": "Companies supported", "value": "20+" },
+      { "label": "Automated processes", "value": "120+" },
       { "label": "Time saved", "value": "80%" },
-      { "label": "AI Experts", "value": "8" }
+      { "label": "AI Experts", "value": "5" }
     ],
     "history": [
-      { "year": "2024", "event": "LAISY founded" },
+      { "year": "2025", "event": "LAISY founded" },
       { "year": "Early year", "event": "First clients and projects delivered" },
       { "year": "Mid-year", "event": "Team and services expansion" },
       { "year": "Today", "event": "Your AI transformation" }
     ],
     "tools": [
-      "OpenAI", "N8N", "LangChain"
+      "OpenAI", "N8N", "Chatbot"
     ]
   },
   "pricing": {
@@ -179,8 +175,7 @@
         "features": [
           "1 targeted automation to save you time from the first week",
           "Connection to your tools (form, email, spreadsheet, etc.)",
-          "Onboarding support",
-          "Simple monthly activity report"
+          "Onboarding support"
         ],
         "cta": "Choose",
         "popular": false
@@ -194,7 +189,7 @@
           "Automate your repetitive tasks (HR, admin, reporting, onboarding...)",
           "Integrate multiple tools (Notion, Slack, Google, Airtable, CRM...)",
           "Monthly follow-up and adjustments",
-          "Shared dashboard to track automations and gains"
+          "Custom rules to adapt automations to your workflow"
         ],
         "cta": "Choose",
         "popular": true
@@ -203,12 +198,13 @@
         "name": "Autonomy",
         "price": "1,990€ - / 590€/month",
         "period": "",
-        "description": "For companies seeking smooth, intelligent, almost invisible processes — and real productivity gains at scale.",
+        "description": "For companies that want smooth, intelligent, almost invisible processes.",
         "features": [
-          "Deploy intelligent AI agents (chatbots, CV summaries, scoring, automatic extraction, etc.)",
-          "Custom architecture (API, business rules, complex automation)",
-          "Monitoring + alerts + priority support",
-          "Continuous optimization based on your feedback"
+          "Deployment of advanced AI agents (internal assistants, scalable automations, etc.)",
+          "Custom architecture (APIs, business logic, complex scenarios)",
+          "Continuous strategic adjustments",
+          "Priority support (fast response + personalized assistance)",
+          "Simplified documentation to easily track everything"
         ],
         "cta": "Choose",
         "popular": false

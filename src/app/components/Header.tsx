@@ -78,8 +78,8 @@ const Header: React.FC = () => {
             className="md:w-20 md:h-20 mr-2 transition-transform duration-200 group-hover:scale-105"
             animated={false}
           />
-          <span className="text-2xl md:text-2xl font-extrabold text-white tracking-wide drop-shadow-neon ml-1 group-hover:text-[#232946] transition-colors duration-200 select-none">
-            LAISY
+          <span className="text-xl md:text-xl font-extrabold text-white tracking-wide drop-shadow-neon ml-1 group-hover:text-[#232946] transition-colors duration-200 select-none">
+            LAISY.
           </span>
         </Link>
         {/* Contact button and burger */}
