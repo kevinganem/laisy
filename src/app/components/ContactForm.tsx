@@ -47,7 +47,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "", selectedPlan,
     setError("");
     setSuccess(false);
     try {
-      const res = await fetch("https://formspree.io/f/xovwkwrj", {
+      const res = await fetch("https://formspree.io/f/mjkobybw", {
         method: "POST",
         headers: { 'Accept': 'application/json' },
         body: new FormData(e.target as HTMLFormElement)
