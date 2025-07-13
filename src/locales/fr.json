@@ -18,11 +18,11 @@
   },
   "hero": {
     "home": "L'IA au service de votre entreprise.",
-    "description": "LAISY révolutionne la gestion des processus en entreprise grâce à l'intelligence artificielle. Nous automatisons vos tâches répétitives pour libérer le temps de vos équipes et optimiser vos opérations.",
+    "description": "KEEPIA révolutionne la gestion des processus en entreprise grâce à l'intelligence artificielle. Nous automatisons vos tâches répétitives pour libérer le temps de vos équipes et optimiser vos opérations.",
     "services": "Nos services",
     "expertise": "Notre expertise",
     "pricing": "Nos tarifs",
-    "about": "À propos de LAISY",
+    "about": "À propos de KEEPIA",
     "contact": "Nous contacter"
   },
   "contact": {
@@ -30,7 +30,7 @@
     "email": "E-mail",
     "message": "Message",
     "send": "Envoyer",
-    "success": "Merci d'avoir contacté LAISY ! Nous reviendrons vers vous rapidement.",
+    "success": "Merci d'avoir contacté KEEPIA ! Nous reviendrons vers vous rapidement.",
     "hero": "Transformons votre entreprise <span class='text-[#57f287]'>ensemble</span>",
     "location": "Paris, France",
     "remote": "Télétravail & collaboration mondiale",
@@ -48,7 +48,7 @@
   },
   "services": {
     "hero": "Des solutions <span class='text-[#5865f2]'>IA</span> pour chaque aspect de votre entreprise",
-    "description": "De l'automatisation des tâches répétitives à l'analyse prédictive, LAISY couvre tous les aspects de l'IA en entreprise pour garantir une transformation digitale réussie et mesurable.",
+    "description": "De l'automatisation des tâches répétitives à l'analyse prédictive, KEEPIA couvre tous les aspects de l'IA en entreprise pour garantir une transformation digitale réussie et mesurable.",
     "list": [
       { "icon": "FaRobot", "title": "Automatisation IA", "desc": "Automatisez vos tâches répétitives. Rédaction de documents, gestion des emails, traitement de données automatisé." },
       { "icon": "FaBrain", "title": "IA Générative", "desc": "Créez du contenu personnalisé. Offres commerciales, emails, synthèses générées par IA." },
@@ -63,7 +63,7 @@
       "ROI mesurable et délais de mise en œuvre rapides"
     ],
     "cta": "Prêt à transformer votre entreprise ?",
-    "ctaBtn": "Contactez LAISY"
+    "ctaBtn": "Contactez KEEPIA"
   },
   "expertise": {
     "hero": "L'expertise <span class='text-[#57f287]'>IA</span> au service de votre croissance",
@@ -83,7 +83,7 @@
       { "label": "Experts IA", "value": "5" }
     ],
     "history": [
-      { "year": "2025", "event": "Création de LAISY" },
+      { "year": "2025", "event": "Création de KEEPIA" },
       { "year": "Début d'année", "event": "Premiers clients et projets livrés" },
       { "year": "Milieu d'année", "event": "Expansion de l'équipe et des services" },
       { "year": "Aujourd'hui", "event": "Votre transformation IA" }
@@ -142,10 +142,10 @@
       }
     ],
     "customSolution": "Besoin d'une solution personnalisée ?",
-    "cta": "Contactez LAISY"
+    "cta": "Contactez KEEPIA"
   },
   "about": {
-    "hero": "L'équipe <span class='text-[#eb459e]'>LAISY</span>",
+    "hero": "L'équipe <span class='text-[#eb459e]'>KEEPIA</span>",
     "team": [
       {
         "name": "Noam Bouaziz",
@@ -181,18 +181,18 @@
     "cookies_title": "Politique de cookies",
     "terms": {
       "sections": [
-        { "title": "1. Acceptation des conditions", "text": "En accédant ou en utilisant les services de LAISY, vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos services." },
-        { "title": "2. Services", "text": "LAISY fournit des services d'automatisation et d'intelligence artificielle pour les entreprises. Nous nous réservons le droit de modifier ou d'interrompre tout service à tout moment sans préavis." },
+        { "title": "1. Acceptation des conditions", "text": "En accédant ou en utilisant les services de KEEPIA, vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos services." },
+        { "title": "2. Services", "text": "KEEPIA fournit des services d'automatisation et d'intelligence artificielle pour les entreprises. Nous nous réservons le droit de modifier ou d'interrompre tout service à tout moment sans préavis." },
         { "title": "3. Responsabilités de l'utilisateur", "text": "Vous vous engagez à utiliser nos services légalement et à ne pas les détourner, les rétroconcevoir ou tenter de perturber notre plateforme ou nos services." },
-        { "title": "4. Propriété intellectuelle", "text": "Tous les contenus, marques et matériaux sur LAISY sont la propriété de leurs détenteurs respectifs. Vous ne pouvez pas utiliser, copier ou distribuer un contenu sans autorisation." },
-        { "title": "5. Limitation de responsabilité", "text": "LAISY n'est pas responsable des dommages ou pertes résultant de l'utilisation de nos services. Tous les services sont fournis 'en l'état' sans aucune garantie." },
+        { "title": "4. Propriété intellectuelle", "text": "Tous les contenus, marques et matériaux sur KEEPIA sont la propriété de leurs détenteurs respectifs. Vous ne pouvez pas utiliser, copier ou distribuer un contenu sans autorisation." },
+        { "title": "5. Limitation de responsabilité", "text": "KEEPIA n'est pas responsable des dommages ou pertes résultant de l'utilisation de nos services. Tous les services sont fournis 'en l'état' sans aucune garantie." },
         { "title": "6. Modifications des conditions", "text": "Nous pouvons mettre à jour ces conditions d'utilisation à tout moment. L'utilisation continue de nos services vaut acceptation des nouvelles conditions." },
         { "title": "7. Contact", "text": "Pour toute question concernant ces conditions, contactez-nous via la page Contact." }
       ]
     },
     "privacy": {
       "sections": [
-        { "title": "1. Introduction", "text": "LAISY s'engage à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos informations." },
+        { "title": "1. Introduction", "text": "KEEPIA s'engage à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos informations." },
         { "title": "2. Informations collectées", "text": "Nous pouvons collecter des informations personnelles telles que votre nom, adresse e-mail et toute information fournie via nos formulaires de contact. Nous collectons aussi des données d'utilisation via cookies et outils d'analyse." },
         { "title": "3. Utilisation des informations", "text": "Vos informations servent à fournir et améliorer nos services, répondre aux demandes et assurer la sécurité de notre plateforme. Nous ne vendons pas vos données à des tiers." },
         { "title": "4. Cookies", "text": "Nous utilisons des cookies pour améliorer votre expérience et analyser l'utilisation du site. Vous pouvez gérer vos préférences cookies dans votre navigateur. Voir notre politique de cookies pour plus de détails." },
@@ -205,7 +205,7 @@
     "cookies": {
       "sections": [
         { "title": "1. Qu'est-ce qu'un cookie ?", "text": "Les cookies sont de petits fichiers texte stockés sur votre appareil pour aider les sites à fonctionner et à collecter des informations sur votre utilisation." },
-        { "title": "2. Utilisation des cookies", "text": "LAISY utilise des cookies pour améliorer votre expérience, analyser le trafic et mémoriser vos préférences. Certains cookies sont essentiels au fonctionnement du site." },
+        { "title": "2. Utilisation des cookies", "text": "KEEPIA utilise des cookies pour améliorer votre expérience, analyser le trafic et mémoriser vos préférences. Certains cookies sont essentiels au fonctionnement du site." },
         { "title": "3. Types de cookies utilisés", "text": "Cookies essentiels : nécessaires au bon fonctionnement du site. Cookies analytiques : nous aident à comprendre l'utilisation du site. Cookies de préférence : mémorisent votre langue et autres réglages." },
         { "title": "4. Gestion des cookies", "text": "Vous pouvez contrôler et supprimer les cookies via les réglages de votre navigateur. Désactiver les cookies peut affecter votre expérience sur notre site." },
         { "title": "5. Modifications de la politique", "text": "Nous pouvons mettre à jour cette politique de cookies. Merci de la consulter régulièrement." },
@@ -219,7 +219,7 @@
       "image": "/card_1.png",
       "alt": "Automatisation IA",
       "title": "Automatisez vos processus avec l'IA",
-      "text": "LAISY accompagne les PME et startups dans leur transformation digitale. Nous adaptons nos solutions d'IA à chaque entreprise pour garantir efficacité, scalabilité et ROI mesurable.",
+      "text": "KEEPIA accompagne les PME et startups dans leur transformation digitale. Nous adaptons nos solutions d'IA à chaque entreprise pour garantir efficacité, scalabilité et ROI mesurable.",
       "reverse": false
     },
     {

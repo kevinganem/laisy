@@ -10,8 +10,8 @@ import { ToastProvider } from './components/Toast';
 
 
 export const metadata: Metadata = {
-  title: "LAISY – Intelligence Artificielle pour l'Automatisation d'Entreprise",
-  description: "Solutions d'IA pour automatiser vos processus en entreprise. LAISY aide les PME et startups à optimiser leurs opérations internes grâce à l'intelligence artificielle.",
+  title: "KEEPIA – Intelligence Artificielle pour l'Automatisation d'Entreprise",
+  description: "Solutions d'IA pour automatiser vos processus en entreprise. KEEPIA aide les PME et startups à optimiser leurs opérations internes grâce à l'intelligence artificielle.",
   icons: {
     icon: getPublicAssetPath('/logo.png')
   }

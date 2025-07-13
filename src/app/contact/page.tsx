@@ -13,7 +13,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 /**
- * Contact page for LAISY.
+ * Contact page for KEEPIA.
  * Contains a contact form and company contact information.
  */
 const ContactPage: React.FC = () => {

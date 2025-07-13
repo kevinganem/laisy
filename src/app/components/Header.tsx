@@ -79,7 +79,7 @@ const Header: React.FC = () => {
             animated={false}
           />
           <span className="text-xl md:text-xl font-extrabold text-white tracking-wide drop-shadow-neon ml-1 group-hover:text-[#232946] transition-colors duration-200 select-none">
-            LAISY.
+            KEEPIA.
           </span>
         </Link>
         {/* Contact button and burger */}
@@ -151,7 +151,7 @@ const Header: React.FC = () => {
                   animated={false}
                 />
                 <span className="text-2xl font-extrabold text-white tracking-wide drop-shadow-neon ml-1 group-hover:text-[#5865f2] transition-colors select-none">
-                  LAISY
+                  KEEPIA.
                 </span>
               </Link>
               <button

@@ -6,7 +6,7 @@ import { useLanguage } from "../components/LanguageProvider";
 import { FaChartLine, FaCode, FaBrain } from 'react-icons/fa';
 
 /**
- * About page for LAISY.
+ * About page for KEEPIA.
  * Presents the company's story, mission, and team.
  */
 const AboutPage: React.FC = () => {

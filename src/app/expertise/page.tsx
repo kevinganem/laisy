@@ -86,7 +86,7 @@ const ExpertisePage: React.FC = () => {
         </div>
       </AnimatedSection>
       
-      {/* Key statistics about LAISY's AI experience */}
+      {/* Key statistics about KEEPIA's AI experience */}
       <AnimatedSection>
         <div className="flex flex-wrap gap-8 justify-center">
           {Array.isArray(stats) && stats.map((s: StatItem, i) => (
@@ -98,7 +98,7 @@ const ExpertisePage: React.FC = () => {
         </div>
       </AnimatedSection>
       
-      {/* Company timeline: LAISY.'s history and milestones */}
+      {/* Company timeline: KEEPIA's history and milestones */}
       <AnimatedSection delay={0.1}>
         <div className="flex flex-col items-center gap-8">
           {/* Responsive timeline: vertical on mobile, horizontal on desktop */}

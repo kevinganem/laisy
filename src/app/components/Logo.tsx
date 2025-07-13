@@ -9,7 +9,7 @@ interface LogoProps {
 }
 
 /**
- * Logo component for LAISY.
+ * Logo component for KEEPIA.
  * Uses the original logo.png file
  * 
  * @param size - Logo size in pixels (default: 100)
@@ -24,7 +24,7 @@ const Logo: React.FC<LogoProps> = ({
   return (
     <Image
       src={getPublicAssetPath('/logo.png')}
-      alt="LAISY Logo"
+      alt="KEEPIA Logo"
       width={size}
       height={size}
       className={`${animated ? 'animate-pulse' : ''} ${className}`}

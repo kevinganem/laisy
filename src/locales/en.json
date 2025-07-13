@@ -18,11 +18,11 @@
   },
   "hero": {
     "home": "AI at the service of your business.",
-    "description": "LAISY revolutionizes business process management through artificial intelligence. We automate your repetitive tasks to free up your teams' time and optimize your operations.",
+    "description": "KEEPIA revolutionizes business process management through artificial intelligence. We automate your repetitive tasks to free up your teams' time and optimize your operations.",
     "services": "Our services",
     "expertise": "Our expertise",
     "pricing": "Our pricing",
-    "about": "About LAISY",
+    "about": "About KEEPIA",
     "contact": "Contact Us"
   },
   "contact": {
@@ -30,7 +30,7 @@
     "email": "Email",
     "message": "Message",
     "send": "Send",
-    "success": "Thank you for contacting LAISY! We will get back to you soon.",
+    "success": "Thank you for contacting KEEPIA! We will get back to you soon.",
     "hero": "Let's transform your business <span class='text-[#57f287]'>together</span>",
     "location": "Paris, France",
     "remote": "Remote & worldwide collaboration",
@@ -52,18 +52,18 @@
     "cookies_title": "Cookies Policy",
     "terms": {
       "sections": [
-        { "title": "1. Acceptance of Terms", "text": "By accessing or using LAISY's services, you agree to be bound by these terms of use. If you do not agree, please do not use our services." },
-        { "title": "2. Services", "text": "LAISY provides artificial intelligence and automation services for businesses. We reserve the right to modify or discontinue any service at any time without notice." },
+        { "title": "1. Acceptance of Terms", "text": "By accessing or using KEEPIA's services, you agree to be bound by these terms of use. If you do not agree, please do not use our services." },
+        { "title": "2. Services", "text": "KEEPIA provides artificial intelligence and automation services for businesses. We reserve the right to modify or discontinue any service at any time without notice." },
         { "title": "3. User Responsibilities", "text": "You agree to use our services legally and not to misuse, reverse engineer, or attempt to disrupt our platform or services." },
-        { "title": "4. Intellectual Property", "text": "All content, trademarks, and materials on LAISY are the property of their respective owners. You may not use, copy, or distribute any content without permission." },
-        { "title": "5. Limitation of Liability", "text": "LAISY is not responsible for any damages or losses resulting from the use of our services. All services are provided 'as is' without any warranty." },
+        { "title": "4. Intellectual Property", "text": "All content, trademarks, and materials on KEEPIA are the property of their respective owners. You may not use, copy, or distribute any content without permission." },
+        { "title": "5. Limitation of Liability", "text": "KEEPIA is not responsible for any damages or losses resulting from the use of our services. All services are provided 'as is' without any warranty." },
         { "title": "6. Changes to Terms", "text": "We may update these terms of use at any time. Continued use of our services constitutes acceptance of the new terms." },
         { "title": "7. Contact", "text": "For any questions regarding these terms, contact us via the Contact page." }
       ]
     },
     "privacy": {
       "sections": [
-        { "title": "1. Introduction", "text": "LAISY is committed to protecting your privacy. This policy explains how we collect, use, and protect your information." },
+        { "title": "1. Introduction", "text": "KEEPIA is committed to protecting your privacy. This policy explains how we collect, use, and protect your information." },
         { "title": "2. Information Collected", "text": "We may collect personal information such as your name, email address, and any information provided through our contact forms. We also collect usage data via cookies and analytics tools." },
         { "title": "3. Use of Information", "text": "Your information is used to provide and improve our services, respond to requests, and ensure the security of our platform. We do not sell your data to third parties." },
         { "title": "4. Cookies", "text": "We use cookies to enhance your experience and analyze site usage. You can manage your cookie preferences in your browser. See our cookies policy for more details." },
@@ -76,7 +76,7 @@
     "cookies": {
       "sections": [
         { "title": "1. What is a cookie?", "text": "Cookies are small text files stored on your device to help sites function and collect information about your usage." },
-        { "title": "2. Use of Cookies", "text": "LAISY uses cookies to improve your experience, analyze traffic, and remember your preferences. Some cookies are essential for the site to function." },
+        { "title": "2. Use of Cookies", "text": "KEEPIA uses cookies to improve your experience, analyze traffic, and remember your preferences. Some cookies are essential for the site to function." },
         { "title": "3. Types of Cookies Used", "text": "Essential cookies: necessary for the site to function. Analytics cookies: help us understand site usage. Preference cookies: remember your language and other settings." },
         { "title": "4. Managing Cookies", "text": "You can control and delete cookies via your browser settings. Disabling cookies may affect your experience on our site." },
         { "title": "5. Policy Changes", "text": "We may update this cookies policy. Please review it regularly." },
@@ -85,7 +85,7 @@
     }
   },
   "about": {
-    "hero": "The LAISY team",
+    "hero": "The KEEPIA team",
     "team": [
       {
         "name": "Noam Bouaziz",
@@ -117,7 +117,7 @@
   },
   "services": {
     "hero": "AI solutions for every aspect of your business",
-    "description": "From task automation to predictive analytics, LAISY covers all aspects of AI in business to ensure successful and measurable digital transformation.",
+    "description": "From task automation to predictive analytics, KEEPIA covers all aspects of AI in business to ensure successful and measurable digital transformation.",
     "list": [
       { "icon": "FaRobot", "title": "AI Automation", "desc": "Automate your repetitive tasks. Document writing, email management, automated data processing." },
       { "icon": "FaBrain", "title": "Generative AI", "desc": "Create personalized content. Commercial offers, emails, AI-generated summaries." },
@@ -132,7 +132,7 @@
       "Measurable ROI and fast implementation times"
     ],
     "cta": "Ready to transform your business?",
-    "ctaBtn": "Contact LAISY"
+    "ctaBtn": "Contact KEEPIA"
   },
   "expertise": {
     "hero": "AI expertise at the service of your growth",
@@ -152,7 +152,7 @@
       { "label": "AI Experts", "value": "5" }
     ],
     "history": [
-      { "year": "2025", "event": "LAISY founded" },
+      { "year": "2025", "event": "KEEPIA founded" },
       { "year": "Early year", "event": "First clients and projects delivered" },
       { "year": "Mid-year", "event": "Team and services expansion" },
       { "year": "Today", "event": "Your AI transformation" }
@@ -211,7 +211,7 @@
       }
     ],
     "customSolution": "Need a custom solution?",
-    "cta": "Contact LAISY"
+    "cta": "Contact KEEPIA"
   },
   "test": "It works!",
   "homeCards": [
@@ -219,7 +219,7 @@
       "image": "/card_1.png",
       "alt": "AI Automation",
       "title": "Automate your processes with AI",
-      "text": "LAISY supports SMEs and startups in their digital transformation. We adapt our AI solutions to each company to ensure efficiency, scalability and measurable ROI.",
+      "text": "KEEPIA supports SMEs and startups in their digital transformation. We adapt our AI solutions to each company to ensure efficiency, scalability and measurable ROI.",
       "reverse": false
     },
     {

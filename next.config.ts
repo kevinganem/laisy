@@ -1,4 +1,4 @@
-// Next.js config for www.laisy.io domain
+// Next.js config for www.keepia.io domain
 // No basePath or assetPrefix needed for custom domain
 import type { NextConfig } from "next";
 

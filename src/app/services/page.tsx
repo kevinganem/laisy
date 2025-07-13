@@ -32,7 +32,7 @@ const iconMap: Record<string, React.ReactNode> = {
 const ServicesPage: React.FC = () => {
   const { t } = useLanguage();
   const services = t('services.list');
-  const whyLaisy = t('services.why');
+  const whyKeepia = t('services.why');
   return (
     <div className="flex flex-col gap-24 pt-16 sm:pt-24">
       {/* Hero section with service overview and demo video */}
@@ -82,11 +82,11 @@ const ServicesPage: React.FC = () => {
         </div>
       </AnimatedSection>
       
-      {/* Why choose LAISY: highlights unique selling points */}
+      {/* Why choose KEEPIA: highlights unique selling points */}
       <AnimatedSection delay={0.1}>
         <div className="flex flex-col items-center gap-8">
           <div className="flex flex-wrap gap-8 justify-center">
-            {Array.isArray(whyLaisy) && whyLaisy.map((w, i) => (
+            {Array.isArray(whyKeepia) && whyKeepia.map((w, i) => (
               <div key={i} className="flex items-center gap-3 bg-[#23272a]/80 px-6 py-4 rounded-2xl shadow-lg border border-[#5865f2]/20">
                 {iconMap[Object.keys(iconMap)[i+6]]}
                 <span className="text-white text-lg font-semibold">{w}</span>

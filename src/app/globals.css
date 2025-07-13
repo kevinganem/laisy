@@ -58,49 +58,49 @@ body {
 /* Whitney Font Faces */
 @font-face {
   font-family: 'Whitney';
-  src: url('/laisy/fonts/whitney/Book.woff2') format('woff2');
+  src: url('/keepia/fonts/whitney/Book.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/laisy/fonts/whitney/BookItalic.woff2') format('woff2');
+  src: url('/keepia/fonts/whitney/BookItalic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/laisy/fonts/whitney/Medium.woff2') format('woff2');
+  src: url('/keepia/fonts/whitney/Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/laisy/fonts/whitney/MediumItalic.woff2') format('woff2');
+  src: url('/keepia/fonts/whitney/MediumItalic.woff2') format('woff2');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/laisy/fonts/whitney/Semibold.woff2') format('woff2');
+  src: url('/keepia/fonts/whitney/Semibold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/laisy/fonts/whitney/SemiboldItalic.woff2') format('woff2');
+  src: url('/keepia/fonts/whitney/SemiboldItalic.woff2') format('woff2');
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Whitney';
-  src: url('/laisy/fonts/whitney/BoldItalic.woff2') format('woff2');
+  src: url('/keepia/fonts/whitney/BoldItalic.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;

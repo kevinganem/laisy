@@ -1,4 +1,4 @@
-# 🤖 LAISY — Intelligence Artificielle pour l'Automatisation d'Entreprise
+# 🤖 KEEPIA — Intelligence Artificielle pour l'Automatisation d'Entreprise
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.3.4-blue?logo=nextdotjs)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.10-38bdf8?logo=tailwindcss)
@@ -6,13 +6,13 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript)
 ![Status](https://img.shields.io/badge/status-in%20progress-blueviolet)
 
-> **LAISY** est une entreprise spécialisée dans l'Intelligence Artificielle appliquée à l'automatisation des processus en entreprise. Nous aidons les PME et startups à optimiser leurs opérations internes grâce à des solutions IA sur mesure.
+> **KEEPIA** est une entreprise spécialisée dans l'Intelligence Artificielle appliquée à l'automatisation des processus en entreprise. Nous aidons les PME et startups à optimiser leurs opérations internes grâce à des solutions IA sur mesure.
 
 ---
 
 ## 🎯 Vision Produit
 
-**LAISY** révolutionne la façon dont les entreprises gèrent leurs processus internes. Notre site présente nos solutions d'IA pour automatiser et optimiser les tâches répétitives, libérant ainsi le temps de vos équipes pour des missions à plus forte valeur ajoutée.
+**KEEPIA** révolutionne la façon dont les entreprises gèrent leurs processus internes. Notre site présente nos solutions d'IA pour automatiser et optimiser les tâches répétitives, libérant ainsi le temps de vos équipes pour des missions à plus forte valeur ajoutée.
 
 **Notre mission :** Transformer les entreprises grâce à l'IA, en proposant des solutions accessibles et efficaces pour l'automatisation des processus.
 
@@ -43,7 +43,7 @@
 ## 🗂️ Structure du Projet
 
 ```
-/laisy
+/keepia
   ├─ src/
   │   ├─ app/
   │   │   ├─ [section]/page.tsx   # Pages principales (home, services, expertise, about, contact, pricing)

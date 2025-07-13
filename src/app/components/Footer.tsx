@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
         </div>
         {/* Copyright notice */}
         <div className="text-center text-white/60 text-sm mt-6 relative z-10">
-          &copy; {new Date().getFullYear()} LAISY {t('footer.rights') as string }
+          &copy; {new Date().getFullYear()} KEEPIA {t('footer.rights') as string }
         </div>
         {/* Large background branding text */}
         <span
@@ -132,7 +132,7 @@ const Footer: React.FC = () => {
           style={{ letterSpacing: '-0.05em' }}
           aria-hidden="true"
         >
-          LAISY.
+          KEEPIA
         </span>
       </footer>
     </>
@@ -244,7 +244,7 @@ function FooterMobile() {
         style={{ letterSpacing: '-0.05em' }}
         aria-hidden="true"
       >
-        LAISY.
+        KEEPIA.
       </span>
     </footer>
   );
