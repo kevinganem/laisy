@@ -71,7 +71,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "", selectedPlan,
 
   return (
     <motion.form
-      className={`bg-[#23272a] rounded-xl shadow-lg p-8 flex flex-col gap-4 max-w-md mx-auto ${className}`}
+      className={`bg-[#23272a] rounded-xl w-full max-w-md mx-auto p-4 md:p-8 flex flex-col gap-3 md:gap-4 ${className}`}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -124,38 +124,38 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "", selectedPlan,
           {error}
         </motion.div>
       )}
-      <label className="text-white font-medium">{t('contact.name') as string}
+      <label className="text-white font-medium text-sm md:text-base">{t('contact.name') as string}
         <input
           type="text"
           name="name"
           value={form.name}
           onChange={handleChange}
           required
-          className="mt-1 w-full rounded bg-[#313338] text-white p-2 border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
+          className="mt-1 w-full text-sm px-3 py-2 rounded bg-[#313338] text-white border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
           aria-label={t('contact.name') as string}
           disabled={sending}
         />
       </label>
-      <label className="text-white font-medium">{t('contact.email') as string}
+      <label className="text-white font-medium text-sm md:text-base">{t('contact.email') as string}
         <input
           type="email"
           name="email"
           value={form.email}
           onChange={handleChange}
           required
-          className="mt-1 w-full rounded bg-[#313338] text-white p-2 border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
+          className="mt-1 w-full text-sm px-3 py-2 rounded bg-[#313338] text-white border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
           aria-label={t('contact.email') as string}
           disabled={sending}
         />
       </label>
       {/* Company size field */}
-      <label className="text-white font-medium">{t('contact.companySize') as string}
+      <label className="text-white font-medium text-sm md:text-base">{t('contact.companySize') as string}
         <select
           name="companySize"
           value={form.companySize}
           onChange={handleChange}
           required
-          className="mt-1 w-full rounded bg-[#313338] text-white p-2 border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
+          className="mt-1 w-full text-sm px-3 py-2 rounded bg-[#313338] text-white border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
           aria-label={t('contact.companySize') as string}
           disabled={sending}
         >
@@ -167,21 +167,21 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "", selectedPlan,
           <option value="unknown">{t('contact.companySizeUnknown') as string}</option>
         </select>
       </label>
-      <label className="text-white font-medium">{t('contact.message') as string}
+      <label className="text-white font-medium text-sm md:text-base">{t('contact.message') as string}
         <textarea
           name="message"
           value={form.message}
           onChange={handleChange}
           required
           rows={4}
-          className="mt-1 w-full rounded bg-[#313338] text-white p-2 border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
+          className="mt-1 w-full text-sm px-3 py-2 rounded bg-[#313338] text-white border border-[#5865f2] focus:outline-none focus:ring-2 focus:ring-[#5865f2]"
           aria-label={t('contact.message') as string}
           disabled={sending}
         />
       </label>
       <button
         type="submit"
-        className="mt-2 bg-[#5865f2] text-white font-semibold py-2 rounded hover:bg-[#4752c4] transition-colors disabled:opacity-60"
+        className="mt-2 w-full bg-[#5865f2] text-white font-semibold py-2 rounded hover:bg-[#4752c4] transition-colors disabled:opacity-60 text-sm md:text-base"
         disabled={sending}
       >
         {sending ? t('contact.sending') as string : t('contact.send') as string}
