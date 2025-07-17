@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../components/LanguageProvider';
 import AnimatedSection from '../components/AnimatedSection';
-import Modal from '../components/Modal';
 import ContactForm from '../components/ContactForm';
 import { FaArrowLeft } from 'react-icons/fa';
 import { FaBrain, FaCalendarCheck, FaRocket, FaChartBar, FaComments, FaFileInvoice, FaCalendarAlt } from 'react-icons/fa';
@@ -26,24 +25,18 @@ export default function PricingPage() {
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1); // 1: formule, 2: packs, 3: recap, 4: contact
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const [selectedPacks, setSelectedPacks] = useState<string[]>([]);
-  const [modalOpen, setModalOpen] = useState(false);
 
   // Handler for choosing a plan
   const handleChoose = (planName: string) => {
     setSelectedPlan(planName);
     setStep(2); // Go to pack selection
     setSelectedPacks([]); // Reset packs
-    setModalOpen(true);
   };
   const handleCloseModal = () => {
-    setModalOpen(false);
     setSelectedPlan(null);
     setSelectedPacks([]);
     setStep(1);
   };
-
-  // Handler for step navigation (to be used later)
-  const goToStep = (s: 1 | 2 | 3 | 4) => setStep(s);
 
   // Packs data (multilingue)
   const allPacks = [
