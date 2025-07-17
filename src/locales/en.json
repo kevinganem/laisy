@@ -169,41 +169,42 @@
     "plans": [
       {
         "name": "Starter",
-        "price": "390€ - / 90€/month",
+        "price": "390€ - / 120€/month",
         "period": "",
-        "description": "Ideal for discovering the power of automation without risk. We start with a small, high-impact process.",
+        "description": "Ideal for getting started risk-free, with a targeted automation for quick impact.",
         "features": [
-          "1 targeted automation to save you time from the first week",
-          "Connection to your tools (form, email, spreadsheet, etc.)",
-          "Onboarding support"
+          "1 automation pack included",
+          "Connect to your existing tools (forms, spreadsheets, emails, etc.)",
+          "Onboarding support",
+          "Choose from our packs: HR management, reporting, reminders, etc."
         ],
         "cta": "Choose",
         "popular": false
       },
       {
         "name": "Growth",
-        "price": "990€ - / 290€/month",
+        "price": "990€ - / 330€/month",
         "period": "",
-        "description": "Perfect for structuring your internal efficiency, saving hours of repetitive work, and streamlining information management.",
+        "description": "Designed for teams who want to level up with several efficient automations.",
         "features": [
-          "Automate your repetitive tasks (HR, admin, reporting, onboarding...)",
+          "3 automation packs included",
           "Integrate multiple tools (Notion, Slack, Google, Airtable, CRM...)",
-          "Monthly follow-up and adjustments",
-          "Custom rules to adapt automations to your workflow"
+          "Monthly follow-up + continuous adjustments",
+          "Custom rules tailored to your workflow"
         ],
         "cta": "Choose",
         "popular": true
       },
       {
         "name": "Autonomy",
-        "price": "1,990€ - / 590€/month",
+        "price": "1,990€ - / 600€/month",
         "period": "",
-        "description": "For companies that want smooth, intelligent, almost invisible processes.",
+        "description": "For organizations that want smooth, scalable, and almost invisible processes.",
         "features": [
-          "Deployment of advanced AI agents (internal assistants, scalable automations, etc.)",
-          "Custom architecture (APIs, business logic, complex scenarios)",
-          "Continuous strategic adjustments",
-          "Priority support (fast response + personalized assistance)",
+          "6 automation packs included",
+          "Deployment of advanced AI agents",
+          "Custom architecture (APIs, complex scenarios)",
+          "Strategic adjustments + priority support",
           "Simplified documentation to easily track everything"
         ],
         "cta": "Choose",
@@ -212,6 +213,23 @@
     ],
     "customSolution": "Need a custom solution?",
     "cta": "Contact KEEPIA"
+  },
+  "packs": {
+    "cv": { "title": "Automated CV Analysis (AI)", "desc": "Let AI analyze and score CVs for you." },
+    "leaves": { "title": "Automated Leave Management", "desc": "Approve, track, and manage leaves automatically." },
+    "onboarding": { "title": "Automated HR Onboarding", "desc": "Smooth onboarding for new hires, fully automated." },
+    "reporting": { "title": "Automated Monthly Reporting", "desc": "Get monthly reports generated and sent automatically." },
+    "reminders": { "title": "Auto Email & SMS Reminders", "desc": "Never forget a follow-up with automated reminders." },
+    "docs": { "title": "Automated HR Document Generation", "desc": "Generate contracts, letters, and more in one click." },
+    "booking": { "title": "Smart Appointment Scheduling", "desc": "Let users book meetings with AI-powered scheduling." },
+    "chooseTitle": "Choose your packs",
+    "recapTitle": "Recap",
+    "selectedPlan": "Selected plan",
+    "selected": "Selected",
+    "back": "Back",
+    "next": "Next",
+    "nextContact": "Next",
+    "counter": "pack(s) selected"
   },
   "test": "It works!",
   "homeCards": [

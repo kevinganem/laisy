@@ -19,21 +19,20 @@ interface ContactFormProps {
   className?: string;
   selectedPlan?: string;
   onClose?: () => void;
+  selectedPacks?: string[];
+  prefillPlan?: string | null;
+  prefillPacks?: string[];
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ className = "", selectedPlan, onClose }) => {
-  const [form, setForm] = useState({ name: "", email: "", companySize: "", message: selectedPlan ? `Plan: ${selectedPlan}\n` : "" });
+const ContactForm: React.FC<ContactFormProps> = ({ className = "", selectedPlan, onClose, selectedPacks, prefillPlan, prefillPacks }) => {
+  // Use prefillPlan/prefillPacks if provided, otherwise fallback to selectedPlan/selectedPacks
+  const effectivePlan = prefillPlan !== undefined ? prefillPlan : selectedPlan;
+  const effectivePacks = prefillPacks !== undefined ? prefillPacks : selectedPacks;
+  const [form, setForm] = useState({ name: "", email: "", companySize: "", message: "" });
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const { t } = useLanguage();
-
-  // Reset message if selectedPlan changes
-  React.useEffect(() => {
-    if (selectedPlan) {
-      setForm(f => ({ ...f, message: `Plan: ${selectedPlan}\n` }));
-    }
-  }, [selectedPlan]);
 
   // Handle input changes for all fields (controlled inputs)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -54,7 +53,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "", selectedPlan,
       });
       if (res.ok) {
         setSuccess(true);
-        setForm({ name: "", email: "", companySize: "", message: selectedPlan ? `Plan: ${selectedPlan}\n` : "" });
+        setForm({ name: "", email: "", companySize: "", message: "" });
         // Auto-close after 2s if onClose is provided
         if (onClose) {
           setTimeout(() => { onClose(); }, 2000);
@@ -79,6 +78,21 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "", selectedPlan,
       onSubmit={handleSubmit}
       aria-label="Contact form"
     >
+      {/* Hidden fields for plan and packs */}
+      {effectivePlan && (
+        <input type="hidden" name="plan" value={effectivePlan} />
+      )}
+      {effectivePacks && effectivePacks.length > 0 && (
+        <input type="hidden" name="packs" value={effectivePacks.join(', ')} />
+      )}
+      {/* Recap selected packs (if any) */}
+      {effectivePacks && effectivePacks.length > 0 && (
+        <div className="mb-2 w-full flex flex-wrap gap-2 items-center justify-center">
+          {effectivePacks.map((pack, i) => (
+            <span key={pack} className="bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-xs font-semibold">{pack}</span>
+          ))}
+        </div>
+      )}
       <AnimatePresence>
         {success && (
           <motion.div

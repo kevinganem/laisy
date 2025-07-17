@@ -100,41 +100,42 @@
     "plans": [
       {
         "name": "Starter",
-        "price": "390€ - / 90€/mois",
+        "price": "390€ - / 120€/mois",
         "period": "",
-        "description": "Idéal pour découvrir la puissance de l’automatisation sans prise de risque. On commence par un petit processus simple mais à fort impact.",
+        "description": "Idéal pour commencer sans prise de risque, avec une automatisation ciblée pour un impact rapide.",
         "features": [
-          "1 automatisation ciblée pour vous faire gagner du temps dès la première semaine",
-          "Connexion à vos outils (formulaire, email, tableur, etc.)",
-          "Accompagnement à la prise en main"
+          "1 pack d’automatisation inclus",
+          "Connexion à vos outils existants (formulaires, tableurs, e-mails, etc.)",
+          "Accompagnement à la prise en main",
+          "Choix parmi nos packs : gestion RH, reporting, relances, etc."
         ],
         "cta": "Choisir",
         "popular": false
       },
       {
         "name": "Croissance",
-        "price": "990€ - / 290€/mois",
+        "price": "990€ - / 330€/mois",
         "period": "",
-        "description": "Parfait pour structurer son efficacité en interne, économiser des heures de travail répétitif, et fluidifier la gestion de l'information.",
+        "description": "Pensée pour les équipes qui veulent passer à la vitesse supérieure avec plusieurs automatisations efficaces.",
         "features": [
-          "Automatisation de vos tâches répétitives (RH, gestion, reporting, onboarding...)",
+          "3 packs d’automatisation inclus",
           "Intégration entre plusieurs outils (Notion, Slack, Google, Airtable, CRM...)",
-          "Suivi mensuel avec ajustements",
-          "Règles personnalisées pour adapter les automatisations à votre fonctionnement"
+          "Suivi mensuel + ajustements continus",
+          "Règles personnalisées selon votre fonctionnement"
         ],
         "cta": "Choisir",
         "popular": true
       },
       {
         "name": "Autonomie",
-        "price": "1 990€ - / 590€/mois",
+        "price": "1 990€ - / 600€/mois",
         "period": "",
-        "description": "Pour les entreprises qui veulent des processus fluides, intelligents, presque invisibles.",
+        "description": "Pour les structures qui veulent des processus fluides, évolutifs et presque invisibles.",
         "features": [
-          "Mise en place d’agents IA avancés (assistants internes, automatisations évolutives, etc.)",
-          "Architecture personnalisée (APIs, logique métier, scénarios complexes)",
-          "Ajustements stratégiques en continu",
-          "Support prioritaire (réponse rapide + accompagnement personnalisé)",
+          "6 packs d’automatisation inclus",
+          "Mise en place d’agents IA avancés",
+          "Architecture sur mesure (APIs, scénarios complexes)",
+          "Ajustements stratégiques + support prioritaire",
           "Documentation simplifiée pour tout suivre facilement"
         ],
         "cta": "Choisir",
@@ -239,5 +240,22 @@
   ],
   "social": {
     "soon": "Bientôt disponible !"
+  },
+  "packs": {
+    "cv": { "title": "Analyse de CV automatisée (IA)", "desc": "Laissez l'IA analyser et scorer les CV pour vous." },
+    "leaves": { "title": "Gestion des congés automatisée", "desc": "Validez, suivez et gérez les congés automatiquement." },
+    "onboarding": { "title": "Onboarding RH automatisé", "desc": "Intégration fluide des nouveaux collaborateurs, 100% automatisée." },
+    "reporting": { "title": "Reporting mensuel automatique", "desc": "Recevez des rapports mensuels générés et envoyés automatiquement." },
+    "reminders": { "title": "Relances mails + SMS auto", "desc": "Ne ratez plus jamais un suivi grâce aux relances automatiques." },
+    "docs": { "title": "Génération de documents RH", "desc": "Créez contrats, attestations, etc. en un clic." },
+    "booking": { "title": "Prise de rendez-vous intelligente", "desc": "Laissez vos clients prendre rendez-vous avec une IA." },
+    "chooseTitle": "Choisissez vos packs",
+    "recapTitle": "Récapitulatif",
+    "selectedPlan": "Formule choisie",
+    "selected": "Sélectionné",
+    "back": "Précédent",
+    "next": "Suivant",
+    "nextContact": "Suivant",
+    "counter": "pack(s) sélectionné(s)"
   }
 } 
