@@ -88,7 +88,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "", selectedPlan,
       {/* Recap selected packs (if any) */}
       {effectivePacks && effectivePacks.length > 0 && (
         <div className="mb-2 w-full flex flex-wrap gap-2 items-center justify-center">
-          {effectivePacks.map((pack, i) => (
+          {effectivePacks.map((pack) => (
             <span key={pack} className="bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-xs font-semibold">{pack}</span>
           ))}
         </div>
