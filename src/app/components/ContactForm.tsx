@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "./LanguageProvider";
-import { FaLinkedin, FaInstagram, FaTiktok } from 'react-icons/fa';
 
 /**
  * ContactForm component
