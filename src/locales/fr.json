@@ -257,5 +257,25 @@
     "next": "Suivant",
     "nextContact": "Suivant",
     "counter": "pack(s) sélectionné(s)"
+  },
+  "faq": {
+    "title": "Questions fréquentes sur l'IA et KEEPIA",
+    "1": {
+      "q": "Est-ce que mes données sont sécurisées ?",
+      "a": "Oui, la sécurité de vos données est notre priorité absolue. Toutes vos informations sont hébergées sur des serveurs situés en France, protégées par des protocoles de sécurité avancés. Nous ne partageons jamais vos données avec des tiers et elles ne sont jamais utilisées pour entraîner des modèles externes. Vous gardez le contrôle total sur vos informations, en conformité avec le RGPD."
+    },
+    "2": {
+      "q": "Comment l’IA peut-elle aider mon entreprise ?",
+      "a": "L’intelligence artificielle permet d’automatiser de nombreuses tâches répétitives, d’optimiser vos processus internes et d’améliorer la prise de décision grâce à l’analyse de données. Par exemple, elle peut générer des rapports personnalisés, automatiser la gestion des emails, ou encore analyser vos données pour détecter des opportunités de croissance. Nos solutions sont conçues pour s’adapter à vos besoins spécifiques et générer un retour sur investissement rapide."
+    },
+    "3": {
+      "q": "L’accompagnement est-il personnalisé ?",
+      "a": "Absolument ! Chaque projet bénéficie d’un accompagnement sur-mesure, de l’analyse de vos besoins à la mise en production et au suivi. Nos experts vous conseillent à chaque étape, assurent la formation de vos équipes et adaptent les solutions en continu pour garantir leur efficacité et leur adoption par vos collaborateurs."
+    }
+  },
+  "ctaFinal": {
+    "title": "Prêt à utiliser KEEPIA pour votre entreprise ?",
+    "contact": "Échanger avec un expert",
+    "services": "Découvrir nos solutions"
   }
 } 

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import AnimatedSection from "./components/AnimatedSection";
 import { useLanguage } from './components/LanguageProvider';
 import Link from 'next/link';
@@ -15,6 +15,35 @@ import { getPublicAssetPath } from "./utils/getPublicAssetPath";
 const HomePage: React.FC = () => {
   const { t } = useLanguage();
   const homeCards = t('homeCards');
+
+  const faqList = [
+    {
+      q: t('faq.1.q') as string,
+      a: t('faq.1.a') as string,
+    },
+    {
+      q: t('faq.2.q') as string,
+      a: t('faq.2.a') as string,
+    },
+    {
+      q: t('faq.3.q') as string,
+      a: t('faq.3.a') as string,
+    },
+  ];
+
+  const [faqOpen, setFaqOpen] = useState<number | null>(null);
+
+  const renderFaqAnswer = (answer: string) => {
+    // Découpe en paragraphes sur double saut de ligne ou balise <br>
+    const parts = answer.split(/\n\n|<br\s*\/?>(?![\s\S]*<br)/gi);
+    return (
+      <>
+        {parts.map((part, idx) => (
+          <p key={idx} className="mb-2 text-gray-200 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: part }} />
+        ))}
+      </>
+    );
+  };
 
   return (
     <div className="flex flex-col gap-30 pt-16 sm:pt-24">
@@ -81,6 +110,50 @@ const HomePage: React.FC = () => {
           );
         })}
       </div>
+
+      {/* FAQ */}
+      <AnimatedSection>
+        <section className="max-w-4xl w-full mx-auto flex flex-col gap-6 mt-24">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white text-center uppercase mb-8 tracking-wide">{t('faq.title') as string}</h2>
+          <div className="flex flex-col gap-4">
+            {faqList.map((item, idx) => (
+              <div key={idx} className="bg-white/10 rounded-xl p-5 flex flex-col shadow-md border border-white/20">
+                <button
+                  className="flex items-center gap-3 focus:outline-none"
+                  aria-expanded={faqOpen === idx}
+                  onClick={() => setFaqOpen(faqOpen === idx ? null : idx)}
+                >
+                  <span className="text-primary-cyan text-2xl">?</span>
+                  <span className="font-semibold text-white text-left text-base">{String(item.q)}</span>
+                  <span className={`ml-auto transition-transform ${faqOpen === idx ? 'rotate-90' : ''}`}>{'▶'}</span>
+                </button>
+                <div
+                  className={`transition-all overflow-hidden mt-2 ${faqOpen === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                  style={{ transitionDuration: '350ms' }}
+                >
+                  {faqOpen === idx && (
+                    <div className="pt-2">
+                      {renderFaqAnswer(item.a)}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Final CTA */}
+      <AnimatedSection>
+        <section className="w-full flex flex-col items-center gap-8 py-16 mt-16 relative">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] rounded-full bg-primary-purple/20 blur-3xl opacity-40 pointer-events-none z-0" />
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white text-center drop-shadow-neon">{t('ctaFinal.title') as string}</h2>
+          <div className="flex flex-col sm:flex-row gap-4 z-10">
+            <Link href="/contact" className="bg-[#5865f2] text-white px-10 py-4 rounded-2xl font-bold shadow-lg hover:bg-[#4752c4] transition-colors text-lg w-full sm:w-auto text-center focus:outline-none focus:ring-2 focus:ring-[#5865f2]">{t('ctaFinal.contact') as string}</Link>
+            <Link href="/pricing" className="bg-[#23272a]/90 text-white px-10 py-4 rounded-2xl font-bold border border-primary-cyan hover:bg-[#313338] hover:scale-105 hover:shadow-2xl transition-all text-lg w-full sm:w-auto text-center focus:outline-none focus:ring-2 focus:ring-primary-cyan">{t('ctaFinal.services') as string}</Link>
+          </div>
+        </section>
+      </AnimatedSection>
     </div>
   );
 };

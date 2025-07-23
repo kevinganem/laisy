@@ -2,13 +2,13 @@
 import React from "react";
 import AnimatedSection from "../components/AnimatedSection";
 import ContactForm from "../components/ContactForm";
-import { FaDiscord, FaTwitter, FaLinkedin, FaMapMarkerAlt, FaCommentDots } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaTiktok, FaMapMarkerAlt, FaCommentDots } from "react-icons/fa";
 import { useToast } from "../components/Toast";
 import { useLanguage } from "../components/LanguageProvider";
 
 const iconMap: Record<string, React.ReactNode> = {
-  FaDiscord: <FaDiscord className="text-2xl" />,
-  FaTwitter: <FaTwitter className="text-2xl" />,
+  FaInstagram: <FaInstagram className="text-2xl" />,
+  FaTiktok: <FaTiktok className="text-2xl" />,
   FaLinkedin: <FaLinkedin className="text-2xl" />,
 };
 
@@ -52,17 +52,32 @@ const ContactPage: React.FC = () => {
       {/* Socials */}
       <AnimatedSection delay={0.1}>
         <div className="flex flex-wrap gap-6 justify-center items-center">
-          {Array.isArray(socials) && socials.map((s, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => show(t('social.soon') as string)}
-              className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#5865f2] via-[#57f287] to-[#eb459e] text-white font-semibold text-lg shadow-neon hover:scale-105 transition-transform duration-300 focus:outline-none"
-              aria-label={s.label}
-            >
-              {iconMap[s.icon] || null} {s.label}
-            </button>
-          ))}
+          <a
+            href="https://www.linkedin.com/company/keepiaio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#5865f2] via-[#57f287] to-[#eb459e] text-white font-semibold text-lg shadow-neon hover:scale-105 transition-transform duration-300 focus:outline-none"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin className="text-2xl" /> LinkedIn
+          </a>
+          <a
+            href="https://www.instagram.com/keepia/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#eb459e] via-[#57f287] to-[#5865f2] text-white font-semibold text-lg shadow-neon hover:scale-105 transition-transform duration-300 focus:outline-none"
+            aria-label="Instagram"
+          >
+            <FaInstagram className="text-2xl" /> Instagram
+          </a>
+          <button
+            type="button"
+            onClick={() => show(t('social.soon') as string)}
+            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#23272a] via-[#57f287] to-[#eb459e] text-white font-semibold text-lg shadow-neon hover:scale-105 transition-transform duration-300 focus:outline-none"
+            aria-label="TikTok bientôt disponible"
+          >
+            <FaTiktok className="text-2xl" /> TikTok
+          </button>
         </div>
       </AnimatedSection>
       {/* Location card */}

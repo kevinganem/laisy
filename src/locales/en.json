@@ -257,5 +257,25 @@
   ],
   "social": {
     "soon": "Coming soon!"
+  },
+  "faq": {
+    "title": "Your questions about AI & KEEPIA",
+    "1": {
+      "q": "Are my data secure?",
+      "a": "Yes, the security of your data is our top priority. All your information is hosted on servers located in France, protected by advanced security protocols. We never share your data with third parties and it is never used to train external models. You retain full control over your information, in compliance with GDPR."
+    },
+    "2": {
+      "q": "How can AI help my business?",
+      "a": "Artificial intelligence can automate many repetitive tasks, optimize your internal processes, and improve decision-making through data analysis. For example, it can generate personalized reports, automate email management, or analyze your data to detect growth opportunities. Our solutions are designed to fit your specific needs and deliver a fast return on investment."
+    },
+    "3": {
+      "q": "Is the support personalized?",
+      "a": "Absolutely! Every project benefits from tailored support, from needs analysis to deployment and follow-up. Our experts advise you at every step, train your teams, and continuously adapt the solutions to ensure their effectiveness and adoption by your staff."
+    }
+  },
+  "ctaFinal": {
+    "title": "Ready to use KEEPIA for your business?",
+    "contact": "Talk to an expert",
+    "services": "Discover our solutions"
   }
 } 

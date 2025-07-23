@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from './LanguageProvider';
 import Link from 'next/link';
-import { FaDiscord, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaDiscord, FaLinkedin, FaInstagram, FaTiktok } from 'react-icons/fa';
 import { useToast } from './Toast';
 import Logo from './Logo';
 
@@ -183,14 +183,14 @@ const Header: React.FC = () => {
                 <button type="button" className="hover:text-white transition-colors focus:outline-none" aria-label="Discord soon" onClick={() => toast.show(t('social.soon') as string)} tabIndex={0}>
                   <FaDiscord />
                 </button>
-                <button type="button" className="hover:text-white transition-colors focus:outline-none" aria-label="Twitter soon" onClick={() => toast.show(t('social.soon') as string)} tabIndex={0}>
-                  <FaTwitter />
-                </button>
-                <button type="button" className="hover:text-white transition-colors focus:outline-none" aria-label="LinkedIn soon" onClick={() => toast.show(t('social.soon') as string)} tabIndex={0}>
+                <a href="https://www.linkedin.com/company/keepiaio" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors focus:outline-none" aria-label="LinkedIn" tabIndex={0}>
                   <FaLinkedin />
-                </button>
-                <button type="button" className="hover:text-white transition-colors focus:outline-none" aria-label="Github soon" onClick={() => toast.show(t('social.soon') as string)} tabIndex={0}>
-                  <FaGithub />
+                </a>
+                <a href="https://www.instagram.com/keepia/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors focus:outline-none" aria-label="Instagram" tabIndex={0}>
+                  <FaInstagram />
+                </a>
+                <button type="button" className="hover:text-white transition-colors focus:outline-none" aria-label="TikTok soon" onClick={() => toast.show(t('social.soon') as string)} tabIndex={0}>
+                  <FaTiktok />
                 </button>
               </div>
             </div>

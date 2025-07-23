@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { FaDiscord, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaDiscord, FaLinkedin, FaInstagram, FaTiktok } from 'react-icons/fa';
 import { useLanguage } from './LanguageProvider';
 import Link from 'next/link';
 import { useToast } from './Toast';
@@ -40,10 +40,10 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaDiscord />, url: '#' },
-    { icon: <FaTwitter />, url: '#' },
-    { icon: <FaLinkedin />, url: '#' },
-    { icon: <FaGithub />, url: '#' },
+    { icon: <FaDiscord />, url: '#', toast: true },
+    { icon: <FaLinkedin />, url: 'https://www.linkedin.com/company/keepiaio', toast: false },
+    { icon: <FaInstagram />, url: 'https://www.instagram.com/keepia/', toast: false },
+    { icon: <FaTiktok />, url: '#', toast: true },
   ];
 
   return (
@@ -110,16 +110,30 @@ const Footer: React.FC = () => {
         {/* Social media links section */}
         <div className="flex justify-center gap-6 text-2xl text-white/80 mb-8 mt-10">
           {socialLinks.map((s, i) => (
-            <button
-              key={i}
-              type="button"
-              className="hover:text-white transition-colors focus:outline-none"
-              aria-label="Social link soon"
-              onClick={() => toast.show(t('social.soon') as string)}
-              tabIndex={0}
-            >
-              {s.icon}
-            </button>
+            s.toast ? (
+              <button
+                key={i}
+                type="button"
+                className="hover:text-white transition-colors focus:outline-none"
+                aria-label="Social link soon"
+                onClick={() => toast.show(t('social.soon') as string)}
+                tabIndex={0}
+              >
+                {s.icon}
+              </button>
+            ) : (
+              <a
+                key={i}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors focus:outline-none"
+                aria-label="Social link"
+                tabIndex={0}
+              >
+                {s.icon}
+              </a>
+            )
           ))}
         </div>
         {/* Copyright notice */}
@@ -165,10 +179,10 @@ function FooterMobile() {
     },
   ];
   const socialLinks = [
-    { icon: <FaDiscord />, url: '#' },
-    { icon: <FaTwitter />, url: '#' },
-    { icon: <FaLinkedin />, url: '#' },
-    { icon: <FaGithub />, url: '#' },
+    { icon: <FaDiscord />, url: '#', toast: true },
+    { icon: <FaLinkedin />, url: 'https://www.linkedin.com/company/keepiaio', toast: false },
+    { icon: <FaInstagram />, url: 'https://www.instagram.com/keepia/', toast: false },
+    { icon: <FaTiktok />, url: '#', toast: true },
   ];
   return (
     <footer className="md:hidden w-full bg-[#0a1333]/80 pt-8 pb-14 px-2 flex flex-col items-center gap-6 relative overflow-hidden">
@@ -226,16 +240,30 @@ function FooterMobile() {
       {/* Social media links */}
       <div className="flex justify-center gap-6 text-2xl text-white/80 mt-4 mb-6">
         {socialLinks.map((s, i) => (
-          <button
-            key={i}
-            type="button"
-            className="hover:text-white transition-colors focus:outline-none"
-            aria-label="Social link soon"
-            onClick={() => toast.show(t('social.soon') as string)}
-            tabIndex={0}
-          >
-            {s.icon}
-          </button>
+          s.toast ? (
+            <button
+              key={i}
+              type="button"
+              className="hover:text-white transition-colors focus:outline-none"
+              aria-label="Social link soon"
+              onClick={() => toast.show(t('social.soon') as string)}
+              tabIndex={0}
+            >
+              {s.icon}
+            </button>
+          ) : (
+            <a
+              key={i}
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors focus:outline-none"
+              aria-label="Social link"
+              tabIndex={0}
+            >
+              {s.icon}
+            </a>
+          )
         ))}
       </div>
       {/* Large background branding text */}
