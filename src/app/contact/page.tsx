@@ -6,19 +6,12 @@ import { FaLinkedin, FaInstagram, FaTiktok, FaMapMarkerAlt, FaCommentDots } from
 import { useToast } from "../components/Toast";
 import { useLanguage } from "../components/LanguageProvider";
 
-const iconMap: Record<string, React.ReactNode> = {
-  FaInstagram: <FaInstagram className="text-2xl" />,
-  FaTiktok: <FaTiktok className="text-2xl" />,
-  FaLinkedin: <FaLinkedin className="text-2xl" />,
-};
-
 /**
  * Contact page for KEEPIA.
  * Contains a contact form and company contact information.
  */
 const ContactPage: React.FC = () => {
   const { t } = useLanguage();
-  const socials = t('contact.socials');
   const { show } = useToast();
 
   return (
