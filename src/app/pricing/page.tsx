@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../components/LanguageProvider';
 import AnimatedSection from '../components/AnimatedSection';
 import ContactForm from '../components/ContactForm';
