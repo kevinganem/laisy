@@ -93,6 +93,14 @@ export default function PricingPage() {
     return 1;
   };
 
+  // Stepper steps data (factorized)
+  const stepsData = [
+    { label: 'Plan', icon: '💡' },
+    { label: 'Services', icon: '🧩' },
+    { label: 'Recap', icon: '📋' },
+    { label: 'Contact', icon: '✉️' },
+  ];
+
   return (
     <div className="min-h-screen bg-transparent relative overflow-hidden">
       {/* Background Elements */}
@@ -211,12 +219,7 @@ export default function PricingPage() {
             {/* Stepper visual: only show during step 2, above packs */}
             <nav aria-label="Progress" className="mb-8 flex justify-center w-full">
               <ol className="flex gap-4 md:gap-8 w-full max-w-2xl">
-                {[
-                  { label: 'Plan', icon: '💡' },
-                  { label: 'Packs', icon: '🧩' },
-                  { label: 'Recap', icon: '📋' },
-                  { label: 'Contact', icon: '✉️' },
-                ].map((stepObj, idx) => {
+                {stepsData.map((stepObj, idx) => {
                   const stepNum = idx + 1;
                   const isActive = step === stepNum;
                   const isCompleted = step > stepNum;
@@ -311,12 +314,7 @@ export default function PricingPage() {
             {/* Stepper visual: show in step 3 above recap */}
             <nav aria-label="Progress" className="mb-8 flex justify-center w-full">
               <ol className="flex gap-4 md:gap-8 w-full max-w-2xl">
-                {[
-                  { label: 'Plan', icon: '💡' },
-                  { label: 'Packs', icon: '🧩' },
-                  { label: 'Recap', icon: '📋' },
-                  { label: 'Contact', icon: '✉️' },
-                ].map((stepObj, idx) => {
+                {stepsData.map((stepObj, idx) => {
                   const stepNum = idx + 1;
                   const isActive = step === stepNum;
                   const isCompleted = step > stepNum;
@@ -389,12 +387,7 @@ export default function PricingPage() {
             {/* Stepper visual: show in step 4 above contact form */}
             <nav aria-label="Progress" className="mb-8 flex justify-center w-full">
               <ol className="flex gap-4 md:gap-8 w-full max-w-2xl">
-                {[
-                  { label: 'Plan', icon: '💡' },
-                  { label: 'Packs', icon: '🧩' },
-                  { label: 'Recap', icon: '📋' },
-                  { label: 'Contact', icon: '✉️' },
-                ].map((stepObj, idx) => {
+                {stepsData.map((stepObj, idx) => {
                   const stepNum = idx + 1;
                   const isActive = step === stepNum;
                   const isCompleted = step > stepNum;
