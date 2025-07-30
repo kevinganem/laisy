@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../components/LanguageProvider';
 import AnimatedSection from '../components/AnimatedSection';
 import ContactForm from '../components/ContactForm';
 import { FaArrowLeft } from 'react-icons/fa';
-import { FaBrain, FaCalendarCheck, FaRocket, FaChartBar, FaComments, FaFileInvoice, FaCalendarAlt } from 'react-icons/fa';
+import { FaBrain, FaCalendarCheck, FaRocket, FaChartBar, FaComments, FaFileInvoice, FaCalendarAlt, FaCommentDots, FaUserTie, FaChartLine, FaChevronDown } from 'react-icons/fa';
+import Modal from '../components/Modal';
 
 interface PricingPlan {
   name: string;
@@ -17,6 +18,63 @@ interface PricingPlan {
   popular: boolean;
 }
 
+// --- PackCard component to avoid hook order issues ---
+type PackCardProps = {
+  pack: {
+    key: string;
+    icon: React.ReactNode;
+    title: string;
+    desc: string;
+  };
+  isSelected: boolean;
+  disabled: boolean;
+  onClick: () => void;
+  onOpenModal: (pack: { title: string; desc: string; icon: React.ReactNode }) => void;
+};
+
+function PackCard({ pack, isSelected, disabled, onClick, onOpenModal }: PackCardProps) {
+  const descRef = useRef<HTMLDivElement>(null);
+  const [isClamped, setIsClamped] = useState(false);
+
+  useEffect(() => {
+    const el = descRef.current;
+    if (el) {
+      setIsClamped(el.scrollHeight > el.clientHeight + 1);
+    }
+  }, [pack.desc]);
+
+  return (
+    <button
+      className={`
+        relative flex flex-col h-full items-center bg-[#0a1333]/80 rounded-2xl border-2 transition-all duration-200 shadow-lg
+        p-6 min-h-[220px] sm:min-h-[220px] md:min-h-[220px] lg:min-h-[220px]
+        w-full max-w-[340px] justify-start group focus:outline-none
+        ${isSelected ? 'border-[#8B5CF6] scale-105 shadow-2xl shadow-[#8B5CF6]/20' : 'border-[#23272a] hover:border-[#8B5CF6] hover:scale-105'}
+        ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
+      `}
+      onClick={onClick}
+      disabled={disabled}
+      type="button"
+    >
+      <div className="mb-3 flex items-center justify-center w-full relative">
+        {pack.icon}
+      </div>
+      <div className="font-bold text-lg text-white mb-1 text-center">{pack.title}</div>
+      <div
+        className="text-gray-300 text-sm text-center mb-2"
+        style={{ minHeight: '3.5em' }}
+      >
+        {pack.desc}
+      </div>
+      {isSelected && (
+        <span className="absolute top-3 right-3 bg-[#8B5CF6] text-white text-xs px-3 py-1 rounded-full shadow-lg animate-fade-in">
+          Sélectionné
+        </span>
+      )}
+    </button>
+  );
+}
+
 export default function PricingPage() {
   const { t } = useLanguage();
   const plans = t('pricing.plans') as PricingPlan[];
@@ -25,6 +83,9 @@ export default function PricingPage() {
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1); // 1: formule, 2: packs, 3: recap, 4: contact
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const [selectedPacks, setSelectedPacks] = useState<string[]>([]);
+
+  // State for pack detail modal
+  const [openPack, setOpenPack] = useState<null | { title: string; desc: string; icon: React.ReactNode }>(null);
 
   // Handler for choosing a plan
   const handleChoose = (planName: string) => {
@@ -82,6 +143,24 @@ export default function PricingPage() {
       title: t('packs.booking.title') as string,
       desc: t('packs.booking.desc') as string,
     },
+    {
+      key: 'interviews',
+      icon: <FaCommentDots className="w-7 h-7 text-[#F59E42]" />,
+      title: t('packs.interviews.title') as string,
+      desc: t('packs.interviews.desc') as string,
+    },
+    {
+      key: 'assistant',
+      icon: <FaUserTie className="w-7 h-7 text-[#5865f2]" />,
+      title: t('packs.assistant.title') as string,
+      desc: t('packs.assistant.desc') as string,
+    },
+    {
+      key: 'dashboard',
+      icon: <FaChartLine className="w-7 h-7 text-[#3B82F6]" />,
+      title: t('packs.dashboard.title') as string,
+      desc: t('packs.dashboard.desc') as string,
+    },
   ];
 
   // Helper: get max packs by plan
@@ -95,10 +174,10 @@ export default function PricingPage() {
 
   // Stepper steps data (factorized)
   const stepsData = [
-    { label: 'Plan', icon: '💡' },
-    { label: 'Services', icon: '🧩' },
-    { label: 'Recap', icon: '📋' },
-    { label: 'Contact', icon: '✉️' },
+    { label: t('stepTitles.plan'), icon: '💡' },
+    { label: t('stepTitles.services'), icon: '🧩' },
+    { label: t('stepTitles.recap'), icon: '📋' },
+    { label: t('stepTitles.contact'), icon: '✉️' },
   ];
 
   return (
@@ -224,7 +303,7 @@ export default function PricingPage() {
                   const isActive = step === stepNum;
                   const isCompleted = step > stepNum;
                   return (
-                    <li key={stepObj.label} className="flex-1 flex flex-col items-center relative">
+                    <li key={stepObj.label ? String(stepObj.label) : `step-${idx}`} className="flex-1 flex flex-col items-center relative">
                       <div
                         className={`flex items-center justify-center w-10 h-10 rounded-full border-2 transition-all duration-200
                           ${isActive ? 'bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] text-white border-[#8B5CF6] scale-110 shadow-lg' :
@@ -233,10 +312,10 @@ export default function PricingPage() {
                         `}
                         aria-current={isActive ? 'step' : undefined}
                       >
-                        <span className="text-2xl">{stepObj.icon}</span>
+                        <span className="text-2xl">{String(stepObj.icon)}</span>
                       </div>
                       <span className={`mt-2 text-xs font-semibold tracking-wide
-                        ${isActive ? 'text-[#8B5CF6]' : isCompleted ? 'text-[#8B5CF6]' : 'text-gray-400'}`}>{stepObj.label}</span>
+                        ${isActive ? 'text-[#8B5CF6]' : isCompleted ? 'text-[#8B5CF6]' : 'text-gray-400'}`}>{String(stepObj.label)}</span>
                       {/* Connector line */}
                       {idx < 3 && (
                         <span className={`absolute top-5 left-full w-8 h-1 md:w-16 md:h-1 rounded bg-gradient-to-r
@@ -256,39 +335,23 @@ export default function PricingPage() {
               </span>
             </div>
             <div className="flex flex-col items-center w-full">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl mb-8 justify-items-center">
-                {allPacks.map((pack) => {
-                  const isSelected = selectedPacks.includes(pack.key);
-                  const disabled = !isSelected && selectedPacks.length >= getMaxPacks(selectedPlan);
-                  return (
-                    <button
-                      key={pack.key}
-                      className={`relative flex flex-col items-center bg-[#0a1333]/80 rounded-2xl border-2 transition-all duration-200 shadow-lg p-6
-                        min-h-[200px] h-[200px] w-full max-w-[340px] justify-start
-                        group focus:outline-none
-                        ${isSelected ? 'border-[#8B5CF6] scale-105 shadow-2xl shadow-[#8B5CF6]/20' : 'border-[#23272a] hover:border-[#8B5CF6] hover:scale-105'}
-                        ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-                      `}
-                      onClick={() => {
-                        if (disabled) return;
-                        setSelectedPacks((prev) =>
-                          isSelected ? prev.filter((k) => k !== pack.key) : [...prev, pack.key]
-                        );
-                      }}
-                      aria-pressed={isSelected}
-                      disabled={disabled}
-                    >
-                      <div className="mb-3">{pack.icon}</div>
-                      <div className="font-bold text-lg text-white mb-1 text-center">{pack.title}</div>
-                      <div className="text-gray-300 text-sm text-center mb-2">{pack.desc}</div>
-                      {isSelected && (
-                        <span className="absolute top-3 right-3 bg-[#8B5CF6] text-white text-xs px-3 py-1 rounded-full shadow-lg animate-fade-in">
-                          {t('packs.selected') as string}
-                        </span>
-                      )}
-                    </button>
-                  );
-                })}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl mb-8 justify-items-center items-stretch">
+                {allPacks.map((pack) => (
+                  <PackCard
+                    key={pack.key}
+                    pack={pack}
+                    isSelected={selectedPacks.includes(pack.key)}
+                    disabled={!selectedPacks.includes(pack.key) && selectedPacks.length >= getMaxPacks(selectedPlan)}
+                    onClick={() => {
+                      if (!selectedPacks.includes(pack.key) && selectedPacks.length < getMaxPacks(selectedPlan)) {
+                        setSelectedPacks([...selectedPacks, pack.key]);
+                      } else if (selectedPacks.includes(pack.key)) {
+                        setSelectedPacks(selectedPacks.filter((k) => k !== pack.key));
+                      }
+                    }}
+                    onOpenModal={setOpenPack}
+                  />
+                ))}
               </div>
               <div className="flex w-full max-w-5xl justify-between items-center mt-4">
                 <button
@@ -319,7 +382,7 @@ export default function PricingPage() {
                   const isActive = step === stepNum;
                   const isCompleted = step > stepNum;
                   return (
-                    <li key={stepObj.label} className="flex-1 flex flex-col items-center relative">
+                    <li key={stepObj.label ? String(stepObj.label) : `step-${idx}`} className="flex-1 flex flex-col items-center relative">
                       <div
                         className={`flex items-center justify-center w-10 h-10 rounded-full border-2 transition-all duration-200
                           ${isActive ? 'bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] text-white border-[#8B5CF6] scale-110 shadow-lg' :
@@ -328,10 +391,10 @@ export default function PricingPage() {
                       `}
                         aria-current={isActive ? 'step' : undefined}
                       >
-                        <span className="text-2xl">{stepObj.icon}</span>
+                        <span className="text-2xl">{String(stepObj.icon)}</span>
                       </div>
                       <span className={`mt-2 text-xs font-semibold tracking-wide
-                        ${isActive ? 'text-[#8B5CF6]' : isCompleted ? 'text-[#8B5CF6]' : 'text-gray-400'}`}>{stepObj.label}</span>
+                        ${isActive ? 'text-[#8B5CF6]' : isCompleted ? 'text-[#8B5CF6]' : 'text-gray-400'}`}>{String(stepObj.label)}</span>
                       {/* Connector line */}
                       {idx < 3 && (
                         <span className={`absolute top-5 left-full w-8 h-1 md:w-16 md:h-1 rounded bg-gradient-to-r
@@ -392,7 +455,7 @@ export default function PricingPage() {
                   const isActive = step === stepNum;
                   const isCompleted = step > stepNum;
                   return (
-                    <li key={stepObj.label} className="flex-1 flex flex-col items-center relative">
+                    <li key={stepObj.label ? String(stepObj.label) : `step-${idx}`} className="flex-1 flex flex-col items-center relative">
                       <div
                         className={`flex items-center justify-center w-10 h-10 rounded-full border-2 transition-all duration-200
                           ${isActive ? 'bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] text-white border-[#8B5CF6] scale-110 shadow-lg' :
@@ -401,10 +464,10 @@ export default function PricingPage() {
                       `}
                         aria-current={isActive ? 'step' : undefined}
                       >
-                        <span className="text-2xl">{stepObj.icon}</span>
+                        <span className="text-2xl">{String(stepObj.icon)}</span>
                       </div>
                       <span className={`mt-2 text-xs font-semibold tracking-wide
-                        ${isActive ? 'text-[#8B5CF6]' : isCompleted ? 'text-[#8B5CF6]' : 'text-gray-400'}`}>{stepObj.label}</span>
+                        ${isActive ? 'text-[#8B5CF6]' : isCompleted ? 'text-[#8B5CF6]' : 'text-gray-400'}`}>{String(stepObj.label)}</span>
                       {/* Connector line */}
                       {idx < 3 && (
                         <span className={`absolute top-5 left-full w-8 h-1 md:w-16 md:h-1 rounded bg-gradient-to-r
@@ -441,6 +504,17 @@ export default function PricingPage() {
         {/* Additional Info */}
         {/* The old 'Contact Us' button below all steps is removed */}
       </div>
+
+      {/* Modal for full pack description */}
+      <Modal isOpen={!!openPack} onClose={() => setOpenPack(null)}>
+        {openPack && (
+          <div className="flex flex-col items-center text-center gap-4">
+            <div className="text-4xl mb-2">{openPack.icon}</div>
+            <div className="font-bold text-xl text-white">{openPack.title}</div>
+            <div className="text-gray-300 text-base whitespace-pre-line">{openPack.desc}</div>
+          </div>
+        )}
+      </Modal>
     </div>
   );
 } 

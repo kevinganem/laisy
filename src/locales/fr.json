@@ -242,13 +242,46 @@
     "soon": "Bientôt disponible !"
   },
   "packs": {
-    "cv": { "title": "Analyse de CV automatisée (IA)", "desc": "Laissez l'IA analyser et scorer les CV pour vous." },
-    "leaves": { "title": "Gestion des congés automatisée", "desc": "Validez, suivez et gérez les congés automatiquement." },
-    "onboarding": { "title": "Onboarding RH automatisé", "desc": "Intégration fluide des nouveaux collaborateurs, 100% automatisée." },
-    "reporting": { "title": "Reporting mensuel automatique", "desc": "Recevez des rapports mensuels générés et envoyés automatiquement." },
-    "reminders": { "title": "Relances mails + SMS auto", "desc": "Ne ratez plus jamais un suivi grâce aux relances automatiques." },
-    "docs": { "title": "Génération de documents RH", "desc": "Créez contrats, attestations, etc. en un clic." },
-    "booking": { "title": "Prise de rendez-vous intelligente", "desc": "Laissez vos clients prendre rendez-vous avec une IA." },
+    "cv": {
+      "title": "Analyse de CV automatisée (IA)",
+      "desc": "Laissez l’IA analyser et scorer automatiquement les CV reçus, en s’adaptant à vos canaux de réception habituels."
+    },
+    "leaves": {
+      "title": "Gestion automatisée des congés et absences",
+      "desc": "Recevez, validez et suivez les demandes de congé/absence automatiquement, directement dans les outils que vous utilisez déjà au quotidien."
+    },
+    "onboarding": {
+      "title": "Onboarding automatisé",
+      "desc": "Intégrez vos nouveaux collaborateurs sans friction : envois, accès, suivis... tout se déclenche automatiquement dans votre environnement actuel."
+    },
+    "reporting": {
+      "title": "Reporting mensuel automatique",
+      "desc": "Recevez chaque mois un rapport RH complet, livré directement dans vos outils internes, sans aucune action manuelle."
+    },
+    "reminders": {
+      "title": "Relances automatiques (paie, documents, signatures)",
+      "desc": "Ne courez plus après personne : rappels automatiques envoyés sur vos canaux."
+    },
+    "docs": {
+      "title": "Génération de documents",
+      "desc": "Générez et envoyez contrats, avenants ou attestations en un clic, sans quitter votre cadre de travail habituel."
+    },
+    "booking": {
+      "title": "Prise de rendez-vous intelligente",
+      "desc": "Permettez à vos collaborateurs ou clients de réserver un créneau automatiquement, en parfaite intégration avec vos outils actuels."
+    },
+    "interviews": {
+      "title": "Analyse IA des entretiens (départ / satisfaction)",
+      "desc": "Comprenez les vraies raisons des départs et améliorez la rétention grâce à l’IA."
+    },
+    "assistant": {
+      "title": "Assistant RH IA 24/7",
+      "desc": "Un chatbot RH qui répond aux questions, aide vos équipes et apprend en continu."
+    },
+    "dashboard": {
+      "title": "Dashboard RH data-driven",
+      "desc": "Suivez vos KPIs RH clés en temps réel et recevez des alertes en cas d’anomalie."
+    },
     "chooseTitle": "Choisissez vos services",
     "recapTitle": "Récapitulatif",
     "selectedPlan": "Formule choisie",
@@ -277,5 +310,11 @@
     "title": "Prêt à utiliser KEEPIA pour votre entreprise ?",
     "contact": "Échanger avec un expert",
     "services": "Découvrir nos solutions"
+  },
+  "stepTitles": {
+    "plan": "Formule",
+    "services": "Services",
+    "recap": "Récapitulatif",
+    "contact": "Contact"
   }
 } 

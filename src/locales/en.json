@@ -171,12 +171,12 @@
         "name": "Starter",
         "price": "390€ - / 120€/month",
         "period": "",
-        "description": "Ideal for getting started risk-free, with a targeted automation for quick impact.",
+        "description": "Ideal to start risk-free, with targeted automation for quick impact.",
         "features": [
-          "1 automation pack included",
+          "1 automation service included",
           "Connect to your existing tools (forms, spreadsheets, emails, etc.)",
           "Onboarding support",
-          "Choose from our packs: HR management, reporting, reminders, etc."
+          "Choose from our services: HR management, reporting, reminders, etc."
         ],
         "cta": "Choose",
         "popular": false
@@ -187,8 +187,8 @@
         "period": "",
         "description": "Designed for teams who want to level up with several efficient automations.",
         "features": [
-          "3 automation packs included",
-          "Integrate multiple tools (Notion, Slack, Google, Airtable, CRM...)",
+          "3 automation services included",
+          "Integration between multiple tools (Notion, Slack, Google, Airtable, CRM...)",
           "Monthly follow-up + continuous adjustments",
           "Custom rules tailored to your workflow"
         ],
@@ -201,7 +201,7 @@
         "period": "",
         "description": "For organizations that want smooth, scalable, and almost invisible processes.",
         "features": [
-          "6 automation packs included",
+          "6 automation services included",
           "Deployment of advanced AI agents",
           "Custom architecture (APIs, complex scenarios)",
           "Strategic adjustments + priority support",
@@ -215,13 +215,52 @@
     "cta": "Contact KEEPIA"
   },
   "packs": {
-    "cv": { "title": "Automated CV Analysis (AI)", "desc": "Let AI analyze and score CVs for you." },
-    "leaves": { "title": "Automated Leave Management", "desc": "Approve, track, and manage leaves automatically." },
-    "onboarding": { "title": "Automated HR Onboarding", "desc": "Smooth onboarding for new hires, fully automated." },
-    "reporting": { "title": "Automated Monthly Reporting", "desc": "Get monthly reports generated and sent automatically." },
-    "reminders": { "title": "Auto Email & SMS Reminders", "desc": "Never forget a follow-up with automated reminders." },
-    "docs": { "title": "Automated HR Document Generation", "desc": "Generate contracts, letters, and more in one click." },
-    "booking": { "title": "Smart Appointment Scheduling", "desc": "Let users book meetings with AI-powered scheduling." },
+    "cv": {
+      "title": "Automated CV Analysis (AI)",
+      "desc": "Let AI analyze and score incoming CVs automatically, adapting to your usual intake channels."
+    },
+    "leaves": {
+      "title": "Automated Leave & Absence Management",
+      "desc": "Receive, approve, and track leave/absence requests automatically, directly in the tools you already use every day."
+    },
+    "onboarding": {
+      "title": "Automated Onboarding",
+      "desc": "Seamlessly onboard new employees: sending, access, tracking... everything is triggered automatically in your current environment."
+    },
+    "reporting": {
+      "title": "Automated Monthly Reporting",
+      "desc": "Receive a complete HR report every month, delivered directly to your internal tools, with zero manual action."
+    },
+    "reminders": {
+      "title": "Automatic Reminders (payroll, documents, signatures)",
+      "desc": "No more chasing people: automatic reminders sent via your usual channels."
+    },
+    "docs": {
+      "title": "Document Generation",
+      "desc": "Generate and send contracts, amendments, or certificates in one click, without leaving your usual workspace."
+    },
+    "booking": {
+      "title": "Smart Appointment Scheduling",
+      "desc": "Allow your employees or clients to book a slot automatically, fully integrated with your current tools."
+    },
+    "interviews": {
+      "title": "AI Interview Analysis (exit / satisfaction)",
+      "desc": "Understand the real reasons behind departures and improve retention with AI."
+    },
+    "assistant": {
+      "title": "24/7 AI HR Assistant",
+      "desc": "An HR chatbot that answers questions, helps your teams, and learns continuously."
+    },
+    "dashboard": {
+      "title": "Data-driven HR Dashboard",
+      "desc": "Track your key HR KPIs in real time and receive alerts in case of anomalies."
+    },
+    "stepTitles": {
+      "plan": "Plan",
+      "services": "Services",
+      "recap": "Recap",
+      "contact": "Contact"
+    },
     "chooseTitle": "Choose your packs",
     "recapTitle": "Recap",
     "selectedPlan": "Selected plan",
@@ -277,5 +316,11 @@
     "title": "Ready to use KEEPIA for your business?",
     "contact": "Talk to an expert",
     "services": "Discover our solutions"
+  },
+  "stepTitles": {
+    "plan": "Plan",
+    "services": "Services",
+    "recap": "Recap",
+    "contact": "Contact"
   }
 } 
