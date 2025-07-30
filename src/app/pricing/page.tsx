@@ -5,7 +5,7 @@ import { useLanguage } from '../components/LanguageProvider';
 import AnimatedSection from '../components/AnimatedSection';
 import ContactForm from '../components/ContactForm';
 import { FaArrowLeft } from 'react-icons/fa';
-import { FaBrain, FaCalendarCheck, FaRocket, FaChartBar, FaComments, FaFileInvoice, FaCalendarAlt, FaCommentDots, FaUserTie, FaChartLine, FaChevronDown } from 'react-icons/fa';
+import { FaBrain, FaCalendarCheck, FaRocket, FaChartBar, FaComments, FaFileInvoice, FaCalendarAlt, FaCommentDots, FaUserTie, FaChartLine, FaCheckCircle } from 'react-icons/fa';
 import Modal from '../components/Modal';
 
 interface PricingPlan {
@@ -29,20 +29,9 @@ type PackCardProps = {
   isSelected: boolean;
   disabled: boolean;
   onClick: () => void;
-  onOpenModal: (pack: { title: string; desc: string; icon: React.ReactNode }) => void;
 };
 
-function PackCard({ pack, isSelected, disabled, onClick, onOpenModal }: PackCardProps) {
-  const descRef = useRef<HTMLDivElement>(null);
-  const [isClamped, setIsClamped] = useState(false);
-
-  useEffect(() => {
-    const el = descRef.current;
-    if (el) {
-      setIsClamped(el.scrollHeight > el.clientHeight + 1);
-    }
-  }, [pack.desc]);
-
+function PackCard({ pack, isSelected, disabled, onClick }: PackCardProps) {
   return (
     <button
       className={`
@@ -67,8 +56,8 @@ function PackCard({ pack, isSelected, disabled, onClick, onOpenModal }: PackCard
         {pack.desc}
       </div>
       {isSelected && (
-        <span className="absolute top-3 right-3 bg-[#8B5CF6] text-white text-xs px-3 py-1 rounded-full shadow-lg animate-fade-in">
-          Sélectionné
+        <span className="absolute top-2 right-2 text-[#8B5CF6]">
+          <FaCheckCircle className="w-5 h-5" />
         </span>
       )}
     </button>
@@ -349,7 +338,6 @@ export default function PricingPage() {
                         setSelectedPacks(selectedPacks.filter((k) => k !== pack.key));
                       }
                     }}
-                    onOpenModal={setOpenPack}
                   />
                 ))}
               </div>
